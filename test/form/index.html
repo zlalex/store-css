@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="../../stylesheets/oecstore/buttons.css">
+    <link rel="stylesheet" href="../../stylesheets/oecstore/form.css">
+    <style>
+    body{
+        background:#f5f5f5;
+        padding:0 .3rem;
+        -webkit-font-smoothing: antialiased;
+    }
+    .form-wrapper1{
+        margin-top:20px;
+        /* background:#fff; */
+        /* border:1px solid #e1e1e1; */
+        border-radius:4px;
+        -webkit-filter: drop-shadow(0px 0px 1px rgba(0,0,0,.6));
+        /* font-size:1.25em; */
+    }
+    .input-group{
+        position:relative;
+        /* padding:0 0.26rem; */
+        /* background:#fff; */
+        /* background:
+            radial-gradient(circle at top left, transparent 15px,#e3e3e3 15px,#e3e3e3 17px,#fff 0) top left,
+            radial-gradient(circle at top right, transparent 15px,#e3e3e3 15px,#e3e3e3 17px,#fff 0) top right,
+            radial-gradient(circle at bottom right, transparent 15px,#e3e3e3 15px,#e3e3e3 17px,#fff 0) bottom right,
+            radial-gradient(circle at bottom left, transparent 15px,#e3e3e3 15px,#e3e3e3 17px,#fff 0) bottom left; */
+        /* background:
+            radial-gradient(circle at top left, transparent 15px,#fff 0) top left,
+            radial-gradient(circle at top right, transparent 15px,#fff 0) top right,
+            radial-gradient(circle at bottom right, transparent 15px,#fff 0) bottom right,
+            radial-gradient(circle at bottom left, transparent 15px,#fff 0) bottom left; */
+        background-size:51% 51%;
+        background-repeat:no-repeat;
+    }
+    .input-group:last-child{
+        /* background:
+            radial-gradient(circle at top left, transparent 15px,#fff 0) top left,
+            radial-gradient(circle at top right, transparent 15px,#fff 0) top right,
+            radial-gradient(circle at bottom right, transparent 0,#fff 0) bottom right,
+            radial-gradient(circle at bottom left, transparent 0,#fff 0) bottom left; */
+        background-size:51% 51%;
+        background-repeat:no-repeat;
+    }
+    .input-group:first-child{
+        /* background:
+            radial-gradient(circle at top left, transparent 0,#fff 0) top left,
+            radial-gradient(circle at top right, transparent 0,#fff 0) top right,
+            radial-gradient(circle at bottom right, transparent 15px,#fff 0) bottom right,
+            radial-gradient(circle at bottom left, transparent 15px,#fff 0) bottom left; */
+        background-size:51% 51%;
+        background-repeat:no-repeat;
+    }
+    /* .input-group:not(:last-child)::after{
+        content:'';
+        position:absolute;
+        bottom:0px;
+        left:5%;
+        width:90%;
+        height:1px;
+        background:#e3e3e3;
+    } */
+    .input-group .-col-content{
+        /* padding:.56rem 0; */
+        background: transparent;
+    }
+    </style>
+</head>
+<body>
+    <form action="" class="form-wrapper">
+        <div class="form-group-wrapper">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" placeholder="请填写收货人姓名" class="input-group-control">
+                </div>
+                <span class="form-group-domain"></span>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" placeholder="请填写收货人姓名" class="input-group-control">
+                </div>
+                <div class="form-group-domain">
+                    <i class="iconfont iconfont-eye"></i>
+                    <div class="btn btn-primary-light">获取验证码</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <span class="input-group-title">联系方式：</span>
+                <div class="input-group">
+                    <input type="text" placeholder="请填写收货人姓名" class="input-group-control">
+                </div>
+                <div class="form-group-domain">
+                    <i class="iconfont iconfont-close"></i>
+                </div>
+            </div>
+            <div class="form-group form-group-stretch">
+                <span class="input-group-title">联系方式：</span>
+                <div class="input-group">
+                    <textarea name="sd" id="" class="input-group-control"></textarea>
+                </div>
+                <div class="form-group-domain">
+                    <i class="iconfont iconfont-close"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <span class="input-group-title">联系方式：</span>
+                <div class="input-group">
+                    <input type="text" placeholder="请填写收货人姓名" class="input-group-control">
+                </div>
+                <div class="form-group-domain">
+                    <i class="iconfont iconfont-close"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                <textarea name="" id="" placeholder="描述您的意见"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-block btn-primary-light">提交</div>
+        <div class="">
+            <div class="search-group">
+                <i class="iconfont iconfont-search"></i>
+                <input type="text" placeholder="请填写收货人姓名" class="input-group-control">
+            </div>
+        </div>
+        <div class="">
+            <div class="search-group">
+                <i class="iconfont iconfont-search"></i>
+                <input type="text" placeholder="请填写收货人姓名" class="input-group-control">
+                <i class="iconfont iconfont-close"></i>
+            </div>
+        </div>
+    </form>
+
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/flexible.js"></script>
+</body>
+</html>

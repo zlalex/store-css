@@ -1,0 +1,138 @@
+/* line 4, ../sass/shopping-address.scss */
+body {
+  background-color: whitesmoke;
+}
+
+/* line 7, ../sass/shopping-address.scss */
+.shopping-address {
+  background-color: whitesmoke;
+}
+/* line 9, ../sass/shopping-address.scss */
+.shopping-address.layout-page.both-layout-page {
+  padding-bottom: 0px;
+  padding-top: 1.2rem;
+}
+/* line 14, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0.4rem;
+  padding-bottom: 0.22667rem;
+  font-size: 13px;
+  color: #333333;
+  background-color: white;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .shopping-address .shopping-address-list .shopping-address-item {
+  font-size: 26px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .shopping-address .shopping-address-list .shopping-address-item {
+  font-size: 39px;
+}
+/* line 21, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item.active {
+  background-color: #fffbf4;
+}
+/* line 23, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item.active .shopping-address-item-control-radio {
+  color: #ff317a !important;
+}
+/* line 28, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-title > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 34, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-title .shopping-address-item-phone {
+  margin-left: 1.2rem;
+}
+/* line 38, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-content {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+/* line 42, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control {
+  border-top-color: #e1e1e1;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 0.22667rem;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control {
+  border-top-width: 2px;
+}
+/* line 45, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 48, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control .shopping-address-item-control-radio {
+  padding-top: 0.13333rem;
+  font-size: 12px;
+  color: #999999;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control .shopping-address-item-control-radio {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control .shopping-address-item-control-radio {
+  font-size: 36px;
+}
+/* line 52, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control .shopping-address-item-control-radio label::before {
+  margin-right: 0.33333rem;
+}
+/* line 57, ../sass/shopping-address.scss */
+.shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control .shopping-address-item-control-btn-group > div {
+  border-color: #999999;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #999999;
+  font-size: 12px;
+  padding: 0.18667rem 0.42667rem;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control .shopping-address-item-control-btn-group > div {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .shopping-address .shopping-address-list .shopping-address-item .shopping-address-item-control .shopping-address-item-control-btn-group > div {
+  font-size: 36px;
+}
+/* line 68, ../sass/shopping-address.scss */
+.shopping-address .bottom-nav {
+  height: 1.28rem;
+  line-height: 1.28rem;
+  border-width: 0 !important;
+}
+/* line 72, ../sass/shopping-address.scss */
+.shopping-address .bottom-nav div {
+  height: 1.28rem;
+  line-height: 1.28rem;
+  font-size: 18px;
+  color: white;
+  border-width: 0;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .shopping-address .bottom-nav div {
+  font-size: 36px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .shopping-address .bottom-nav div {
+  font-size: 54px;
+}

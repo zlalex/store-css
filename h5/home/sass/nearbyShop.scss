@@ -1,0 +1,105 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+
+.nearby-shop{
+    // 当前位置
+    .nearby-shop-glob{
+        padding:px2rem(2 * $gap) px2rem(4 * $gap);
+        font-size:1.084em;
+        .iconfont-map-position{
+            font-size:1.1em;
+            margin-right: px2rem(4 * $gap);
+            color: $gray;
+        }
+        .-col-content{
+            font-size:1.154em;
+            font-weight: bold;
+            margin-right:px2rem($gap);
+        }
+        .btn-toggle{
+            padding-top:.425em;
+            padding-bottom:.425em;
+        }
+        &.act{
+            .iconfont-map-position{
+                color: $oec-primary-light;
+            }
+            .-col-content{
+                color: $text-color;
+            }
+        }
+        &.empty{
+            color: $gray-light;
+            .iconfont-map-position{
+                color:inherit;
+            }
+        }
+    }
+    // 门店列表
+    .nearby-shop-list{
+        .nearby-shop-item{
+            >div{
+                @include flex-align-items(stretch, stretch);
+            }
+            .-col-left{
+                margin: px2rem($gap);
+            }
+            .-col-content{
+                @include flex-cloumn-between();
+                margin: px2rem($gap);
+                padding: px2rem($gap);
+            }
+            .-col-right{
+                @include flex-row();
+                width: px2rem(112px);
+            }
+            .nearby-shop-item-img{
+                width: px2rem(180px);
+                height: px2rem(180px);
+            }
+            .nearby-shop-item-name{
+                font-size:1.1667em;
+                font-weight:bold;
+            }
+            .nearby-shop-item-shop-time{
+                > span{
+                    vertical-align: middle;
+                }
+                .label{
+                    padding:2px .33em;
+                    border-radius:px2rem(5px);
+                }
+                .nearby-shop-item-time-range{
+                    margin-left: px2rem(10px);
+                }
+            }
+            .nearby-shop-item-address{
+                width: px2rem(378px);
+                color: $gray;
+                @include nowrap();
+            }
+            .nearby-shop-item-nav{
+                width: 100%;
+                @include flex-cloumn-around();
+                margin: px2rem(35px) 0;
+                border-left:1px solid $border-color;
+                color: $gray;
+                .iconfont{
+                    font-size:1.5em;
+                    @include transform(rotate(45deg));
+                }
+                .nearby-shop-item-nav-space{
+                    font-size:.916em;
+                }
+            }
+        }
+    }
+    .nearby-shop-empty{
+        @include empty-style($regular-path+"/source/near-stores-and-details/nearby-stores/nearby-stores-empty.png",px2rem(245px));
+        margin-top:px2rem(205px);
+        .empty-info::before{
+            margin-bottom:px2rem(35px);
+        }
+    }
+}

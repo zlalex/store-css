@@ -1,0 +1,49 @@
+@import "../../../sass/oecstore/init.scss";
+.order-cancel-wrapper{
+    .well{
+        padding-left:px2rem(1.5 * $padding-base);
+        padding-right:px2rem(1.5 * $padding-base);
+        .header{
+            @include height(px2rem(83px));
+            font-size:1.084em;
+        }
+    }
+    .order-cancel-item{
+        border-top:1px solid $border-color;
+        @include height(px2rem(81px));
+        padding-left:px2rem($padding-small);
+        color:$gray-light;
+        &::before{
+            content:'';
+            display:inline-block;
+            width:.34em;
+            height:.34em;
+            margin-right: .75em;
+            border-radius:50%;
+            background:#e1e1e1;
+            vertical-align: .2em;
+        }
+        &.act{
+            color:$text-color;
+            &::after{
+                @include icon-check-bold();
+                font-size:1.2em;
+                display:inline-block;
+                float:right;
+                margin-right:px2rem(1.4 * $margin-base);
+                color: $oec-primary-light;
+            }
+            &::before{
+                background:$gray-light;
+            }
+        }
+    }
+    .order-cancel-note{
+        .main{
+            padding-bottom:px2rem(1.5 * $padding-base);
+        }
+        .cancel-note-ipt{
+            height:px2rem(140px);
+        }
+    }
+}

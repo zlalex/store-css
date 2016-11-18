@@ -1,0 +1,69 @@
+@import "oecstore/scaffold.scss";
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+.clearfix {
+    @include clearfix();
+}
+.hide {
+    display: none !important;
+}
+.fr{
+    float:right;
+}
+.fl{
+    float:left;
+}
+.line-text{
+    @include line-text($body-bg,$line-color:#ccc);
+}
+.line-nowrap{
+    @include nowrap();
+}
+.line-clamp{
+    @include line-clamp(2);
+}
+.oec-primary-light{
+    color:$oec-primary-light;
+}
+.oec-primary-dark{
+    color:$oec-primary-dark;
+}
+.brand-success{
+    color:$brand-success;
+}
+.brand-info{
+    color:$brand-info;
+}
+.brand-warning{
+    color:$brand-warning;
+}
+.brand-danger{
+    color:$brand-danger;
+}
+.placeholder{
+    color:$gray-light;
+    input{
+        @include placeholder($gray-light);
+    }
+}
+.dark-page{
+    background-color: $oec-primary-dark;
+}
+.bottom-nav{
+    .btn-block{
+        @include button-size($bottom-nav-height);
+        border-radius:0;
+        @include font-dpr(20px);
+    }
+}

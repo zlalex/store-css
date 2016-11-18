@@ -1,0 +1,162 @@
+@import "../../../sass/oecstore/init.scss";
+
+// 评论列表
+.comment-list{
+    .comment-item{
+        padding:0 px2rem(2 * $gap);
+        border-bottom: 1px solid transparent;
+        > div {
+            margin-bottom:px2rem(30px);
+        }
+    }
+    // 商品简介
+    .comment-item-brief{
+        border-bottom:1px solid $border-color;
+        padding: px2rem(2 * $gap) 0;
+        .-col-left{
+            width: px2rem(160px);
+            height: px2rem(160px);
+            border-radius:px2rem($border-radius-base);
+            overflow:hidden;
+            img{
+                height: 100%;
+            }
+        }
+        .-col-content{
+            margin-left: px2rem(2 * $gap);
+            padding-top: px2rem(2 * $gap);
+            padding-bottom: px2rem($gap);
+            @include flex-cloumn-between();
+        }
+    }
+    .comment-item-title{
+        margin-bottom:px2rem(15px);
+        font-size:px2em(13px);
+        line-height:1.2;
+        @include line-clamp(2);
+    }
+    .comment-item-business{
+        >span {
+            vertical-align:middle;
+        }
+        .label{
+            padding:2px .42em;
+            border-radius:px2rem(5px);
+        }
+    }
+    .comment-item-date{
+        color:#444;
+    }
+    .comment-item-address{
+        width:px2rem(400px);
+        color:$gray;
+        @include nowrap();
+    }
+    // 商品评分和关键词
+    .comment-item-rank{
+        color:$gray;
+        overflow: hidden;
+    }
+    .comment-item-scores{
+        margin-top: px2rem(15px);
+        margin-bottom: px2rem(35px);
+        text-align: center;
+        .scores{
+            font-size:px2em(23px,13px);
+        }
+    }
+    .comment-item-labels{
+        text-align: center;
+        .label{
+            padding: px2rem(7px) px2rem(20px);
+            margin: px2rem(5px);
+            border-radius:px2rem(5px);
+            color: $gray;
+            &.active{
+                border-color: currentColor;
+                color: rgb(250,189,61);
+            }
+        }
+    }
+    // 商品评论框
+    .comment-item-note{
+        textarea{
+            height: px2rem(140px);
+            padding: px2rem(22px);
+            font-size:px2em(11px);
+            resize:none;
+        }
+    }
+    // 评论图片
+    .comment-item-imgs-list{
+        font-size:px2em(10px);
+        .upload-imgs-list{
+            padding:0;
+            margin-bottom:px2rem(20px);
+            .upload-imgs-item{
+                $size:px2rem(138px);
+                width:$size;
+                height:$size;
+                color:#ddd;
+                @include setAttr3x(border);
+                .upload-desc{
+                    top:40%;
+                    &::before{
+                        font-size:px2rem(100px);
+                        margin-bottom:px2rem(10px);
+                    }
+                }
+            }
+        }
+    }
+    .comment-shop-item{
+        .comment-item-title{
+            font-weight:bold;
+            font-size:px2em(14px);
+        }
+        .comment-item-scores{
+            text-align:left;
+            margin:0;
+        }
+        .comment-item-brief{
+            .-col-right{
+                width:px2rem(100px);
+                margin-top: px2rem(2 * $gap);
+                margin-bottom: px2rem($gap);
+                color:$gray;
+                border-left:1px solid $border-color;
+                text-align:center;
+                .iconfont{
+                    display:block;
+                    @include height(px2rem(90px));
+                    font-size:px2em(18px);
+                    @include transform(rotate(45deg));
+                }
+                .shop-dis{
+                    font-weight:bold;
+                }
+            }
+        }
+        .comment-item-scores-list{
+            margin-left:px2rem(2 * $gap);
+            line-height:px2rem(40px);
+            > li{
+                &:not(:last-child){
+                    margin-bottom:px2rem(23px);
+                }
+            }
+            .-col-key{
+                width:px2rem(108px);
+            }
+            .-col-value{
+                margin-left:px2rem(108px);
+            }
+            .scores{
+                font-size:px2em(14px);
+                > div {
+                    vertical-align:top;
+                }
+            }
+        }
+    }
+}

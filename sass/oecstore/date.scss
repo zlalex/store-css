@@ -1,0 +1,59 @@
+
+@import "compass/css3";
+
+
+@import "oecstore/variables.scss";
+@import "oecstore/mixins/tools.scss";
+@import "oecstore/mixins/layout.scss";
+.pickup-date{
+    @include fullScreenContent();
+    height: px2rem($date-pickup-height);
+    color: $date-color;
+    font-size: font-dpr($date-font-size);
+    line-height: px2rem($date-line-height);
+    .pickup-days{
+        @include inline-block;
+        @include flex-cloumn-nowrap();
+        height: px2rem($date-pickup-height);
+        width: px2rem($date-width);
+        overflow-y: scroll;
+        .pickup-day{
+            @include inline-block();
+            height: px2rem($date-height);
+            background-color: $date-day-bg;
+            border-top: $date-day-border-color 1px solid;
+            border-left: $date-day-border-color 1px solid;
+            border-right: $date-day-border-color 1px solid;
+            &.active{
+                border-top: 0px;
+                border-right: 0px;
+                background-color: #fff;
+            }
+        }
+    }
+    .pickup-times-group{
+        overflow-y: scroll;
+        .pickup-times{
+            @include inline-block;
+            height: 100%;
+            display: none;
+            &.active{
+                display: block;
+            }
+            .pickup-time{
+                display: block;
+                padding-left: px2rem($date-time-padding-left);
+                padding-right: px2rem($date-time-padding-left);
+                line-height: px2rem($date-time-line-height);
+                &.active{
+                    color: $date-time-active-color;
+                    font-family: iconfont;
+                    &::after {
+                        float: right;
+                        content: "\e61c";
+                    }
+                }
+            }
+        }
+    }
+}

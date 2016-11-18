@@ -1,0 +1,43 @@
+@import "oecstore/scaffold.scss";
+
+.mask{
+    position:fixed;
+    z-index: $mask-z-index;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.dialog{
+    @include dialogBase($transition:true);
+    @include box-shadow(0 .3em .2em -.2em rgba(0, 0, 0, .3));
+    
+    .close{
+        position:absolute;
+        top:0;
+        right:.1em;
+        font-size:1.5em;
+        color:$gray-lighter;
+    }
+}
+.dialog-center{
+    @include dialogLayout(85%,3rem,center,true);
+    border-radius:$btn-border-radius-base;
+    overflow:hidden;
+}
+.dialog-bottom{
+    @include dialogLayout(85%,3rem,bottom,true);
+    border-radius:0;
+}
+.popup{
+    @include dialogBase($popup-background-color);
+    @include dialogLayout($popup-width,$popup-height,center);
+    @include font-dpr($popup-font-size);
+    line-height:$popup-height;
+    padding:0 px2rem(40px);
+    overflow:hidden;
+    text-align:center;
+    color:#fff;
+    border-radius:$popup-border-radius;
+}

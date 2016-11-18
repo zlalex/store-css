@@ -1,0 +1,81 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+body{
+    background-color: rgb(245,245,245);
+}
+.shopping-address{
+    background-color: rgb(245,245,245);
+    &.layout-page.both-layout-page{
+        padding-bottom: 0px;
+        padding-top: px2rem(90px);
+    }
+    .shopping-address-list{
+        .shopping-address-item{
+            @include border-radius(3px);
+            padding: px2rem(30px);
+            padding-bottom: px2rem(17px);
+            @include font-dpr(13px);
+            color: rgb(51,51,51);
+            background-color: rgb(255,255,255);
+            &.active{
+                background-color: rgb(255,251,244);
+                .shopping-address-item-control-radio{
+                    color: rgb(255,49,122) !important;
+                }
+            }
+            .shopping-address-item-title{
+                >div{
+                    @include inline-block;
+                }
+                .shopping-address-item-title-name{
+
+                }
+                .shopping-address-item-phone{
+                    margin-left: px2rem(90px);
+                }
+            }
+            .shopping-address-item-content{
+                margin-top: px2rem(30px);
+                margin-bottom: px2rem(30px);
+            }
+            .shopping-address-item-control{
+                @include setBorder(border-top, rgb(225,225,225), 1px);
+                padding-top: px2rem(17px);
+                >div{
+                    @include inline-block;
+                }
+                .shopping-address-item-control-radio{
+                    padding-top: px2rem(10px);
+                    @include font-dpr(12px);
+                    color: rgb(153,153,153);
+                    label::before{
+                        margin-right: px2rem(25px);
+                    }
+                }
+                .shopping-address-item-control-btn-group{
+                    >div{
+                        border-color: rgb(153,153,153);
+                        @include border-radius(5px);
+                        color: rgb(153,153,153);
+                        @include font-dpr(12px);
+                        padding: px2rem(14px) px2rem(32px);
+                    }
+                }
+            }
+        }
+    }
+    .bottom-nav{
+        height: px2rem(96px);
+        line-height: px2rem(96px);
+        border-width: 0 !important;
+        div{
+            height: px2rem(96px);
+            line-height: px2rem(96px);
+            @include font-dpr(18px);
+            color: rgb(255,255,255);
+            border-width: 0;
+            @include border-radius(0px);
+        }
+    }
+}

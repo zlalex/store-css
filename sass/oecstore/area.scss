@@ -1,0 +1,65 @@
+
+@import "compass/css3";
+
+
+@import "oecstore/variables.scss";
+@import "oecstore/mixins/tools.scss";
+@import "oecstore/mixins/layout.scss";
+
+.area-select{
+    @include fullScreenContent();
+    .area-select-title{
+        color: $area-title-color;
+        font-weight: bold;
+        @include font-dpr($area-title-size);
+        @include height(px2rem($area-title-height));
+        padding-left: px2rem($area-title-padding-left);
+        .area-select-close{
+            @include inline-block();
+            padding-right: px2rem($area-icoin-size);
+            line-height: px2rem($area-icoin-size * 3);
+            i{
+                color: $area-close-icoin;
+                @include font-dpr($area-icoin-size);
+            }
+        }
+    }
+    .area-select-content{
+        @include font-dpr($area-content-size);
+        .area-title-group{
+            background-color: $area-content-title-bg;
+            @include height(px2rem($area-content-title-height));
+            @include flex-row-around();
+            .area-item{
+                @include box-grow();
+                min-width: px2rem($area-content-title-width);
+                text-align: center;
+                color: $area-content-title-color;
+                &.active{
+                    color: $active;
+                    border-bottom: $active $active-border-bottom-size solid;
+                }
+            }
+        }
+        .area-content-group{
+            color: $area-content-item-color;
+            max-height: px2rem($area-content-item-max-height);
+            overflow-y: scroll;
+            .area-content-item{
+                padding-left: px2rem($area-title-padding-left);
+                padding-right: px2rem($area-title-padding-left);
+                @include height(px2rem($area-content-item-height));
+                &::after {
+                    content: " ";
+                }
+                &.active{
+                    color: $active;
+                    font-family: iconfont;
+                    &::after {
+                        content: "\e61c";
+                    }
+                }
+            }
+        }
+    }
+}

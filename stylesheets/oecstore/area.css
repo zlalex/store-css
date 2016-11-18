@@ -1,0 +1,124 @@
+/* line 9, ../../sass/oecstore/area.scss */
+.area-select {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+/* line 11, ../../sass/oecstore/area.scss */
+.area-select .area-select-title {
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  height: 1.33333rem;
+  line-height: 1.33333rem;
+  padding-left: 0.53333rem;
+}
+/* line 103, ../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .area-select .area-select-title {
+  font-size: 28px;
+}
+/* line 106, ../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .area-select .area-select-title {
+  font-size: 42px;
+}
+/* line 17, ../../sass/oecstore/area.scss */
+.area-select .area-select-title .area-select-close {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  padding-right: 0.26667rem;
+  line-height: 0.8rem;
+}
+/* line 21, ../../sass/oecstore/area.scss */
+.area-select .area-select-title .area-select-close i {
+  color: #CDCDCD;
+  font-size: 20px;
+}
+/* line 103, ../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .area-select .area-select-title .area-select-close i {
+  font-size: 40px;
+}
+/* line 106, ../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .area-select .area-select-title .area-select-close i {
+  font-size: 60px;
+}
+/* line 27, ../../sass/oecstore/area.scss */
+.area-select .area-select-content {
+  font-size: 13px;
+}
+/* line 103, ../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .area-select .area-select-content {
+  font-size: 26px;
+}
+/* line 106, ../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .area-select .area-select-content {
+  font-size: 39px;
+}
+/* line 29, ../../sass/oecstore/area.scss */
+.area-select .area-select-content .area-title-group {
+  background-color: #eee;
+  height: 0.93333rem;
+  line-height: 0.93333rem;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -moz-box-pack: justify;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+/* line 33, ../../sass/oecstore/area.scss */
+.area-select .area-select-content .area-title-group .area-item {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  min-width: 1.06667rem;
+  text-align: center;
+  color: #666;
+}
+/* line 38, ../../sass/oecstore/area.scss */
+.area-select .area-select-content .area-title-group .area-item.active {
+  color: #FF317A;
+  border-bottom: #FF317A 3px solid;
+}
+/* line 44, ../../sass/oecstore/area.scss */
+.area-select .area-select-content .area-content-group {
+  color: #666;
+  max-height: 6rem;
+  overflow-y: scroll;
+}
+/* line 48, ../../sass/oecstore/area.scss */
+.area-select .area-select-content .area-content-group .area-content-item {
+  padding-left: 0.53333rem;
+  padding-right: 0.53333rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+/* line 52, ../../sass/oecstore/area.scss */
+.area-select .area-select-content .area-content-group .area-content-item::after {
+  content: " ";
+}
+/* line 55, ../../sass/oecstore/area.scss */
+.area-select .area-select-content .area-content-group .area-content-item.active {
+  color: #FF317A;
+  font-family: iconfont;
+}
+/* line 58, ../../sass/oecstore/area.scss */
+.area-select .area-select-content .area-content-group .area-content-item.active::after {
+  content: "\e61c";
+}

@@ -1,0 +1,39 @@
+@import 'compass/css3';
+@import 'compass/reset';
+	/* == reset.css == */
+*
+{
+    @include box-sizing(border-box);
+}
+body
+{
+    background-color: #eff7d9;
+}
+a
+{
+    text-decoration: none;
+}
+.css-table{
+	table,tbody,thead{
+		display: block;
+	}
+	table{
+		border-top: 2px solid #4c6501;
+	}
+    width: 1000px;
+    margin: 20px auto;
+    background-color: #eff7d9;
+    tr{
+    	display: flex;
+    	td,th{
+    		flex:1;
+    		text-align: center;
+    		padding:10px;
+    		border-right:1px solid #4c6501;
+    		border-bottom: 1px solid #4c6501;
+    		&:last-child{
+    			border-right: 0;
+    		}
+    	}
+    }
+}

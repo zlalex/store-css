@@ -1,0 +1,157 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+
+.search{
+    // 当前城市标题
+    .search-title{
+        @include height($top-nav-height);
+        padding-left: px2rem(20px);
+        padding-right: px2rem(20px);
+        .flex-row-between{
+            .search-group{
+                height: px2rem(60px);
+                line-height: px2rem(60px);
+            }
+            .search-btn{
+                margin-left: px2rem(2 * $gap);
+                font-size:1.167em;
+                color: $oec-primary-dark;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    // 关键词列表
+    $search-keyword-item-height:px2rem(90px);
+    .search-keyword-list{
+        position: fixed;
+        max-height: $search-keyword-item-height * 6;
+        left:0;right:0;
+        overflow-y: scroll;
+        z-index: 999;
+        background-color: rgb(255, 255, 255);
+    }
+    .search-keyword-item{
+        display:table;
+        table-layout:fixed;
+        @include height($search-keyword-item-height);
+        width: 100%;
+        padding-left: px2rem(30px);
+        padding-right: px2rem(30px);
+        font-size: px2em(14px);
+        color: $gray;
+        border-bottom:1px solid $border-color;
+        > div {
+            display:table-cell;
+            vertical-align:middle;
+        }
+    }
+    .search-keyword-item-title{
+        @include nowrap();
+    }
+    .search-keyword-item-tips{
+        width:px2rem(320px);
+        font-size:px2em(13px,14px);
+        @include nowrap(false);
+
+        .tips-wrapper{
+            height:$search-keyword-item-height;
+            overflow:hidden;
+        }
+        .label{
+            float:right;
+            border-radius:px2rem(5px);
+            padding: px2rem(12px) px2rem(17px);
+            background-color: #eaebec;
+            border-width:0;
+            margin:px2rem(2 * $gap) 0;
+            &:not(:last-child){
+                margin-left: px2rem(2 * $gap);
+            }
+        }
+    }
+
+    // 热门搜索
+    .search-hot-labels{
+        border-bottom:1px solid $border-color;
+        background-color: rgb(255,255,255);
+        padding: px2rem(15px) px2rem(20px);
+        margin-bottom: px2rem(20px);
+        overflow: hidden;
+        .label{
+            float:left;
+            border-radius:px2rem(5px);
+            padding: px2rem(14px) px2rem(18px);
+            margin: px2rem(10px);
+            background-color: #eaebec;
+            border-width:0;
+            color: $gray;
+        }
+    }
+
+    // 搜索记录
+    .search-history{
+        margin-bottom: px2rem(20px);
+        background-color: rgb(255, 255, 255);
+        border-top:1px solid $border-color;
+        font-size:1.1667em;
+    }
+    .search-history-title{
+        @include height(px2rem(90px));
+        padding-left: px2rem(30px);
+        font-weight: bold;
+        border-bottom:1px solid $border-color;
+        .-col-right{
+            padding:0 px2rem(3 * $gap);
+            color:$gray;
+        }
+    }
+    .search-history-item{
+        height: px2rem(90px);
+        line-height: px2rem(90px);
+        padding-left: px2rem(30px);
+        padding-right: px2rem(30px);
+        color: rgb(102,102,102);
+        border-bottom:1px solid $border-color;
+        @include nowrap();
+    }
+    .search-history-more{
+        background-color: $body-bg;
+        text-align:center;  
+    }
+    .search-history-more-icon{
+        display:block;
+        @include height(px2rem(26px));
+        width: px2rem(77px);
+        margin:0 auto;
+        font-size:.8em;
+        color:$gray;
+        background-color: rgb(255, 255, 255);
+        border:1px solid $border-color;
+        border-top: 0px;
+        @include border-bottom-radius(px2rem(7px));
+    }
+    // 大家都在搜
+    .search-other-history{
+        margin-bottom: px2rem(20px);
+        background-color: rgb(255, 255, 255);
+        border-top:1px solid $border-color;
+        border-bottom:1px solid $border-color;
+        .goods-item-label{
+            background-color:#f45a5a;
+        }
+    }
+    .search-other-history-title{
+        @include height(px2rem(90px));
+        padding-left: px2rem(30px);
+        padding-right: px2rem(30px);
+        font-size:px2em(14px);
+        font-weight: bold;
+        border-bottom:1px solid $border-color;
+    }
+    .search-other-history-list{
+        padding-left: px2rem(2 * $gap);
+        padding-right: px2rem(2 * $gap);
+    }
+}

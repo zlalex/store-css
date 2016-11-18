@@ -1,0 +1,222 @@
+@import "../../../sass/oecstore/init.scss";
+
+/* ----------------------------- 订单提交 -------------------------------*/
+
+
+// 请选择支付方式 < this is base.css ===>>> home/payMentent.scss >
+.payment-method{
+    padding-left: px2rem(30px);
+    padding-right: px2rem(30px);
+    .payment-method-title{
+        height: px2rem(90px);
+        line-height: px2rem(90px);
+        @include font-dpr(13px);
+        color: rgb(51,51,51);
+        i{
+            @include font-dpr(15px);
+            color: rgb(153,153,153);
+        }
+    }
+    .payment-method-list{
+        .payment-method-item{
+            @include setBorder(border-top, rgb(225,225,225), 1px);
+            height: px2rem(100px);
+            >div{
+                @include inline-block;
+            }
+            .payment-method-item-check{
+
+            }
+            .payment-method-item-img{
+                margin-left: px2rem(30px);
+                margin-right: px2rem(20px);
+                img{
+                    width: px2rem(60px);
+                    height: px2rem(60px);
+                }
+            }
+            .payment-method-item-content{
+                height: px2rem(100px);
+                .payment-method-item-content-h1{
+                    margin-top: px2rem(18px);
+                    margin-bottom: px2rem(10px);
+                    @include font-dpr(15px);
+                    color: rgb(51,51,51);
+                    line-height: px2rem(30px);
+                }
+                .payment-method-item-content-h2{
+                    @include font-dpr(12px);
+                    line-height: px2rem(24px);
+                    color: rgb(153,153,153);
+                }
+            }
+        }
+    }
+}
+
+// payments.css 
+
+.payments-wrapper{
+	.payments-content{
+		padding: 0 px2rem($padding-large);
+		.payments-status-row{
+			position: relative;
+			font-size: 0;
+			padding: px2rem(62.5px) 0;
+			border-bottom: 1px solid $border-color;
+		}
+		.payments-status-col{
+			display: inline-block;
+			font-size: px2rem(26px);
+		}
+		.payments-row{
+		    @include flex-row-between();
+		    @include flex-align-items(center, center);
+		}
+		.payments-col{
+		    @include flex-num(1);
+		    &:nth-child(2n){
+		    	text-align: right;
+		    }
+		}
+		.payments-status-left{
+			font-size: px2rem(100px);
+			.iconfont-circle-check{
+				color: $brand-success;
+			}
+			.iconfont-circle-alarm{
+				color: $text-pink;
+			}
+			.iconfont-circle-clock{
+				color: $brand-warning;
+			}
+		}
+		.payments-header-h2{
+			font-size: px2rem(36px);
+		}
+		.payments-header-h3{
+			font-size: px2rem(26px);
+			margin-top: px2rem(20px);
+		}
+		.payments-info{
+			text-indent: px2rem(15px);
+		}
+		.payments-way,
+		.payments-money{
+			padding: px2rem(20px) 0;
+			padding-left: px2rem(20px);
+			font-size: px2rem(26px);
+			line-height: px2rem(44px);
+		}
+		.payments-way{
+			border-top: 1px solid $border-color;
+		}
+	}
+	.payment-method{
+		.-col-left{
+			font-size: px2rem(26px);
+		}
+		.payment-method-list{
+			display: none;
+			&.show-list{
+			display: block;
+			}
+		}
+	}
+	.font-color-pink{
+		color: $text-pink;
+	}
+	.ecommend-wrapper{
+		padding-top: 1px;
+		.line-text{
+			margin-bottom: 0;
+		}
+	}
+	.payments-btn-order{
+		position: absolute;
+		bottom: px2rem(70px);
+		right: 0;
+		.btn-order-info{
+			font-size: px2rem(24px);
+			color: $oec-primary-dark;
+			background-color: #FFF;
+		}
+	}
+}
+.password-dialog{
+	display: none;
+	&.show-dialog{
+		display: block;
+	}
+	.dialog-info{
+		padding: 0 px2rem(30px);
+	}
+	.dialog-center{
+		top: px2rem(450px);
+		width: px2rem(540px);
+		height: inherit;
+		border-radius: px2rem(10px);
+		visibility: inherit;
+		opacity: inherit;
+		&.error{
+			.password-info-warp{
+				.password-info-item{
+					border: 1px solid $text-pink;
+					border-left: 0;
+					&:first-child{
+						border-left: 1px solid $text-pink;
+					}
+				}
+			}
+		}
+
+	}
+	.password-dialog-header{
+		padding: px2rem(36px) 0;
+		border-bottom: 1px solid #cdcdcd;
+		p{
+			font-size: px2rem(30px);
+			text-align: center;
+		}
+	    .close{
+	        top: px2rem(24px);
+	        right: px2rem(24px);
+	        font-size: 2.5em;
+	    }
+	}
+	.dialog-order-money{
+		padding: px2rem(40px) 0;
+		font-size: px2rem(60px);
+		text-align: center;
+	}
+	.dialog-balance-info{
+		font-size: px2rem(20px);
+		line-height: px2rem(30px);
+	}
+	.password-info-warp{
+		margin-top: px2rem(20px);
+		padding: 0 px2rem(20px);
+		padding-bottom: px2rem(40px);
+		.password-info-list{
+		    @include flex-row-between();
+		    @include flex-align-items(center, center);
+		}
+		.password-info-item{
+		    @include flex-num(1);
+		    height: px2rem(80px);
+		    border: 1px solid $border-color;
+		    border-left: 0;
+		    input{
+		    	display: block;
+		    	width: px2rem(80px);
+		    	height: px2rem(80px);
+		    	text-align: center;
+		    	line-height: px2rem(80px);
+		    }
+		    &:first-child{
+		    	border-left: 1px solid $border-color;
+		    }
+		}
+	}
+}
+

@@ -1,0 +1,121 @@
+//
+//  $padding-top     : 表单每行的垂直padding值
+//  $input-height    : 输入框的高度
+//  $title-width     : 输入框描述最大宽度，默认5em，含冒号5个字符，例：联系方式：
+//  $iscutter        : 表单是否有切角，默认没有，设为true的话，必须提供父元素的水平间距 $wrapper-padding
+//  $wrapper-padding : 父元素的水平间距，用于计算切角的位置，padding或者是margin，单位是rem，否则不能计算切角的位置
+//  注：整个行的总高度 = $padding-top + $input-height + $padding-bottom
+//  其中： $padding-top = $padding-bottom
+//
+@mixin form-group($padding-top, $input-height, $title-width:5em, $iscutter:false,$wrapper-padding:0){
+    @include flex-row-between();
+    @include flex-align-items(center,center);
+
+    padding-top:$padding-top;
+    padding-bottom:$padding-top;
+    background-color: #fff;
+    &:not(:last-child) {
+        border-bottom:1px solid $border-color;
+        @if $iscutter == true {
+            $icon-size: px2rem(24px);
+            &::before,&::after{
+                content: '';
+                display: block;
+                position: absolute;
+                width: $icon-size;
+                height: $icon-size;
+                bottom: -$icon-size/2;
+            }
+            &::before{
+                left: -($wrapper-padding + $icon-size/2);
+                background:inline-image('cutter-left.png') no-repeat;
+                background-size: contain;
+            }
+            &::after{
+                right:-($wrapper-padding + $icon-size/2);
+                background:inline-image('cutter-right.png') no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+    & > .form-group-title {
+        @include nowrap(false);
+
+        width:$title-width;
+        margin-right:px2rem(15px);
+    }
+    .form-group-domain {
+        & > .iconfont {
+            @include height($input-height);
+            padding-left:.4em;
+            padding-right:.4em;
+            font-size:1.2em;
+            vertical-align: middle;
+            color:$gray-lighter;
+        }
+        & > .btn{
+            position: relative;
+            @include height($input-height);
+            margin:0 .2em;
+            padding-bottom: 0;
+            padding-top: 0;
+            top: -$padding-top;
+            @include border-top-radius(0);
+            @include border-bottom-radius($border-radius-large);
+        }
+    }
+    @at-root .form-group-stretch{
+        @include flex-align-items(stretch,stretch);
+        padding-top:$padding-top + $input-height*0.28;
+        .form-group-domain{
+            & > .iconfont {
+                height:$input-height*0.7;
+                line-height:1;
+            }
+        }
+    }
+}
+//
+//  $height        : 输入框高度
+//  $left          : icon的绝对位置，用于设置icon的水平padding值，用em单位
+//  $icon-location : icon位置，有left,right,both，
+//  设置非left属性后，输入框会有padding-right值用于隔开icon
+//
+@mixin input-group($height,$left,$icon-location:left){
+    position:relative;
+    & > .iconfont {
+        position:absolute;
+        left:0;
+        top:.08em;
+        @include height($height);
+        padding-left:$left;
+        padding-right:$left;
+        & + .input-group-control {
+            padding-left:1em + $left*2;
+        }
+    }
+    .input-group-control {
+        @include height($height);
+        padding-top:px2rem($padding-small);
+        padding-bottom:px2rem($padding-small);
+        @if $icon-location != left{
+            padding-right:1em + $left*2;
+        }
+        color:inherit;
+        & + .iconfont{
+            left:auto;
+            right:0;
+        }
+    }
+    textarea{
+        height: 2rem;
+        &.input-group-control{
+            max-height: 2em;
+            line-height: 1em;
+            padding: 0;
+            margin-top: -.1em;
+            border-width:0;
+            overflow: hidden;
+        }
+    }
+}

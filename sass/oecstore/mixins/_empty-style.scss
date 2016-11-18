@@ -1,0 +1,11 @@
+// 数据为空时展现的样式
+// .empty-style设置基础样式
+@mixin empty-style($img-path,$img-height){
+    .empty-info{
+        &::before{
+            height:$img-height;
+            background: url($img-path) no-repeat center;
+            background-size:contain;
+        }
+    }
+}

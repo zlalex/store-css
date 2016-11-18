@@ -1,0 +1,172 @@
+/* line 3, ../sass/order-detail.scss */
+.order-detail-wrapper .well {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 1.084em;
+}
+/* line 7, ../sass/order-detail.scss */
+.order-detail-wrapper .well .header {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 1.154em;
+}
+/* line 12, ../sass/order-detail.scss */
+.order-detail-wrapper .well .main {
+  line-height: 1.4;
+}
+/* line 17, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-list {
+  padding-top: 0.30667rem;
+  padding-bottom: 0.30667rem;
+}
+/* line 20, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-list > li:not(:last-child) {
+  margin-bottom: 0.13333rem;
+}
+/* line 23, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-list:not(:last-child) {
+  border-bottom: 1px solid #e1e1e1;
+}
+/* line 28, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status .btn {
+  line-height: 1;
+  padding-top: 0.23em;
+  padding-bottom: 0.23em;
+  font-size: inherit;
+}
+/* line 31, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status .iconfont {
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.3em;
+  margin-right: 0.13333rem;
+  border-radius: 50%;
+  color: #fff;
+}
+/* line 40, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status.been .iconfont {
+  background-color: #ff317a;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 43, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status.been .iconfont::before {
+  content: "\e60b";
+  font-family: "iconfont";
+}
+/* line 49, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status.done .iconfont {
+  background-color: #00ceb8;
+}
+/* line 51, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status.done .iconfont::before {
+  content: "\e641";
+  font-family: "iconfont";
+}
+/* line 56, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status .header {
+  height: 0.93333rem;
+  line-height: 1;
+  padding-top: 0.33333rem;
+  border: 0;
+  font-size: 1em;
+}
+/* line 63, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status .main {
+  font-size: 1.54em;
+  padding-bottom: 0.93333rem;
+  color: #333a49;
+  text-align: center;
+}
+/* line 64, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-status .main > * {
+  vertical-align: middle;
+}
+/* line 75, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-address .main {
+  padding: 0.26667rem 0;
+}
+/* line 77, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-address .main > p:not(:last-child) {
+  margin-bottom: 0.26667rem;
+}
+/* line 81, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-address .address-name, .order-detail-wrapper .order-detail-address .address-phone {
+  display: inline-block;
+  max-width: 15em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 88, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .goods-item {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+/* line 92, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .goods-item-main {
+  padding: 0;
+  height: 2.13333rem;
+}
+/* line 96, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .goods-item-img {
+  width: 2.13333rem;
+}
+/* line 99, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .goods-item-bottom {
+  height: 0.8rem;
+}
+/* line 102, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .goods-item-price {
+  margin-top: 0;
+  font-weight: normal;
+}
+/* line 105, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .goods-item-price .count {
+  margin-left: 2em;
+}
+/* line 107, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .goods-item-price .count::before {
+  content: 'x';
+}
+/* line 113, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .order-price-detail .-col-value {
+  text-align: right;
+}
+/* line 117, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-goods .order-price-total {
+  font-weight: bold;
+}
+/* line 122, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-shop .order-shop-address {
+  padding-top: 0.30667rem;
+  padding-bottom: 0.30667rem;
+}
+/* line 125, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-shop .order-shop-address .-col-value {
+  font-size: .923em;
+}
+/* line 128, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-shop .order-shop-address .-col-content {
+  margin-right: 0.53333rem;
+}
+/* line 131, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-shop .order-shop-address .-col-right {
+  font-size: 1.25em;
+  color: #ff317a;
+  width: 0.93333rem;
+  height: 1.2em;
+  line-height: 1.2em;
+  padding-left: 0.4rem;
+  border-left: 1px solid #e1e1e1;
+}
+/* line 138, ../sass/order-detail.scss */
+.order-detail-wrapper .order-detail-shop .order-shop-address .-col-right .iconfont {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

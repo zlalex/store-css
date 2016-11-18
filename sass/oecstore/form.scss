@@ -1,0 +1,46 @@
+@import "oecstore/scaffold.scss";
+.form-group-wrapper {
+    margin-top:    $form-margin-vertical;
+    margin-bottom: $form-margin-vertical;
+    padding-right: $form-padding-horizontal;
+    padding-left:  $form-padding-horizontal;
+    border-radius: px2rem(4px);
+    background-color:#fff;
+    @include box-shadow($form-box-shadow);
+    +.checkbox-form{
+        margin-top: $form-check-marginTop;
+        margin-bottom: $form-check-vertical;
+        padding-left:  $passport-padding-horizontal;
+    }
+}
+.form-group {
+    position:relative;
+    // 有切角
+    @include form-group(px2rem(25px),px2rem(70px),5em,true,$form-padding-horizontal);
+    // 无切角
+    // @include form-group(px2rem(25px),px2rem(70px),5em);
+    .input-group {
+        @include flex-num(1);
+        @include input-group(px2rem(70px),.5em);
+    }
+}
+.search-group {
+    $placeholder-color: #90949b;
+    @include input-group(inherit,.62em,both);
+    @include height(px2rem(70px));
+    color:$oec-primary-dark;
+    text-align:left;
+    .iconfont{
+        color:$placeholder-color;
+    }
+    .input-group-control {
+        border:1px solid #e8e8e8;
+        border-radius:$btn-border-radius-base;
+        background-color: #eee;
+        @include placeholder($placeholder-color);
+        & + .iconfont{
+            font-size:1.2em;
+            color:$gray-lighter;
+        }
+    }
+}

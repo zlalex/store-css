@@ -1,0 +1,293 @@
+
+ @import "compass/css3";
+ @import "compass/support";
+
+@import "oecstore/scaffold.scss";
+// page layout style
+.layout-page{
+    @include full-content();
+    .top-nav{
+        @include top-nav();
+        background-color:#fff;
+        border-bottom:1px solid $border-color;
+    }
+    .layout-content{
+        @include attr-dpr(max-width,$device-max-width);
+        height: 100%;
+        margin:0 auto;
+    }
+    .bottom-nav{
+        @include bottom-nav();
+        background-color:#fff;
+        .btn-group-justified{
+            height:100%;
+            font-size:1.5em;
+            > .btn{
+                border-radius:0;
+            }
+        }
+    }
+    &.top-layout-page{
+        padding-top: $top-nav-height;
+    }
+    &.bottom-layout-page{
+        padding-bottom: $bottom-nav-height;
+    }
+    &.both-layout-page{
+        padding-top: $top-nav-height;
+        padding-bottom: $bottom-nav-height;
+    }
+    &.top-nav-page{
+        padding-top: $top-nav-height + $nav-height;
+    }
+}
+
+// title layout
+.layout-title{
+    @include height($top-nav-height);
+    font-size:1.5em;
+    .title-content{
+        font-weight:bold;
+        max-width:50%;
+        @include nowrap();
+        margin:0 auto;
+        color:$oec-primary-dark;
+        .btn-group{
+            font-size:.78em;
+            top:px2rem(-2px);
+        }
+    }
+    .title-left,.title-right{
+        font-size:1.11em;
+        color:$gray-light;
+    }
+    .title-left{
+        @include title-left();
+    }
+    .title-right{
+        @include title-right();
+        margin-right:px2rem(10px);
+        > * {
+            display:block;
+            float:left;
+            padding-left:px2rem(15px);
+            padding-right:px2rem(15px);
+        }
+    }
+    .title-back{
+        display:inline-block;
+        width:px2rem(100px);
+        padding-left:px2rem(30px);
+        padding-right:px2rem(30px);
+    }
+    .title-nav{
+        position:absolute;
+        top:$top-nav-height + px2rem($padding-small);
+        right:px2rem($padding-small);
+        width:px2rem(237px);
+        padding:0 px2rem(18px);
+        border-radius:px2rem(3px);
+        font-size:.722em;
+        text-align:left;
+        color:#fff;
+        background-color:$oec-primary-dark;
+        opacity:0;
+        visibility:hidden;
+        @include transform(translateY(20px));
+        [data-dpr="1"] & {
+            @include transform(translateY(10px));
+        }
+        transition: all .3s;
+        &::before{
+            content:'';
+            position:absolute;
+            top:px2rem(-8px);
+            right:px2rem(28px);
+            @include triangle(px2rem(10px),$oec-primary-dark,px2rem(16px),$degree:0);
+        }
+        a{
+            display:block;
+            border-bottom:1px solid #4b556a;
+            padding-left:px2rem($margin-base);
+        }
+        .iconfont{
+            top:.12em;
+            font-size:1.37em;
+            margin-right:px2rem(1.5 * $margin-base);
+        }
+        &.act{
+            visibility:visible;
+            @include transform(translateY(0));
+            opacity:1;
+        }
+    }
+    .title-domain{
+        font-size:.75em;
+        color:$gray;
+        font-weight:bold;
+    }
+    .title-more{
+        width:px2rem(70px);
+    }
+}
+.layout-nav{
+    position:relative;
+    height:$nav-height;
+    font-size:$nav-font-size;
+    border-top:1px solid $border-color;
+    .btn{
+        position:relative;
+        height:$nav-height;
+        line-height:1;
+        padding:0;
+        >p{
+            &:not(:last-child){
+                margin-bottom:px2rem($gap);
+            }
+            &:only-child{
+                line-height:$nav-height;
+            }
+        }
+    }
+    .btn-group-justified{
+        height:100%;
+        > .btn-link:not(:last-child){
+            border-width:0;
+            &::after{
+                $height:1.4em;
+                content:'';
+                display:block;
+                width:1px;
+                height:$height;
+                right:0;
+                @include abs-center-Y();
+                background-color:$border-color;
+            }
+        }
+    }
+    
+    .layout-nav-status{
+        position:absolute;
+        width:25%;
+        bottom:0;
+        left:0;
+        @include css3(transition,left .5s);
+        &::after{
+            content: '';
+            display: block;
+            background-color:$oec-primary-light;
+            width: 4.5em;
+            height: 4px;
+            margin: 0 auto;
+        }
+    }
+    @for $i from 2 through 5{
+        &[data-length="#{$i}"]{
+            $width: 100% / $i;
+            .layout-nav-status{
+                width:$width;
+            }
+            @for $j from 1 through $i {
+                &[data-act="#{$j}"]{
+                    .layout-nav-status{
+                        left: 0 + ($j - 1) * $width;
+                    }
+                }
+            }
+        }
+    }
+}
+// cloumn layout
+.row{
+    display: block;
+    width: 100%;
+    float: left;
+    &::before, &::after {
+        content: ' ';
+        clear: both;
+        width: 100%;
+    }
+
+    [class*='-col-']{
+        float: left;
+        @include inline-block();
+    }
+    .-col-12 {
+        width: 100%;
+    }
+    .-col-6 {
+        width: 50%;
+    }
+    .-col-4 {
+        width: 1 / 3 * 100%;
+    }
+    .-col-3 {
+        width: 25%;
+    }
+    .-col-2 {
+        width: 1 / 6 * 100%;
+    }
+    .-col-1 {
+        width: 1 / 12 * 100%;
+    }
+}
+div,li {
+    .-col-key{
+        float:left;
+        width:5em;
+        @include nowrap(false);
+    }
+    .-col-value{
+        margin-left:5em;
+    }
+}
+.flex-row-between{
+    @include flex-row-between();
+    .-col-content{
+        @include box-grow(1);
+        // @include flex-grow(1);
+        @include flex(1);
+    }
+    .-col-grow-1{
+        @include box-grow(1);
+        // @include flex-grow(1);
+        @include flex(1);
+    }
+}
+.flex-cloumn-between{
+    width: 100%;
+    height: 100%;
+    @include flex-cloumn-between();
+    .-cloumn-content{
+        @include box-grow(1);
+        @include flex-grow(1);
+    }
+    .-cloumn-grow-1{
+        @include box-grow(1);
+        @include flex-grow(1);
+    }
+}
+.flex-start{
+    @include flex-align-items(flex-start, start);
+}
+.flex-end{
+    @include flex-align-items(flex-end, end);
+}
+.flex-center{
+    @include flex-align-items(center, center);
+}
+.flex-baseline{
+    @include flex-align-items(baseline, baseline);
+}
+.flex-stretch{
+    @include flex-align-items(stretch, stretch);
+}
+.full-screen{
+    @include fullScreen();
+}
+.well{
+    @include well($well-margin-vertical,$well-margin-horizontal);
+}
+.scores{
+    @include scores();
+}

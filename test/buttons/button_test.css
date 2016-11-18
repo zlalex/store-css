@@ -1,0 +1,57 @@
+a{
+    text-decoration:none;
+}
+h3{
+    font-size:1.3em;
+    margin:.3em 0;
+}
+body{
+    padding:0 0.33333rem;
+    -webkit-font-smoothing: antialiased;
+}
+input, textarea, button, a{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
+.flex-row-between{
+    margin:.2rem 0;
+}
+.cutter-wrapper{
+    margin:.5em 0;
+}
+.cutter-wrapper .btn{
+    position: relative;
+    height: 1rem;
+    line-height: 1rem;
+    width: 2rem;
+    padding: 0;
+    margin-left: 1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-width: 0;
+}
+.cutter-wrapper .cutter-up::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    left: -.8rem;
+    width: 1rem;
+    height: inherit;
+    background-image: url(../../images/cutter-btn-up.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.cutter-wrapper .cutter-down{
+    background-color:#f5eedf;
+    color:#333a49;
+}
+.cutter-wrapper .cutter-down::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    left: -.8rem;
+    width: 1rem;
+    height: inherit;
+    background-image: url(../../images/cutter-btn-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}

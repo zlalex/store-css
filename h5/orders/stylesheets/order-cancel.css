@@ -1,0 +1,56 @@
+/* line 3, ../sass/order-cancel.scss */
+.order-cancel-wrapper .well {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+/* line 6, ../sass/order-cancel.scss */
+.order-cancel-wrapper .well .header {
+  height: 1.10667rem;
+  line-height: 1.10667rem;
+  font-size: 1.084em;
+}
+/* line 11, ../sass/order-cancel.scss */
+.order-cancel-wrapper .order-cancel-item {
+  border-top: 1px solid #e1e1e1;
+  height: 1.08rem;
+  line-height: 1.08rem;
+  padding-left: 0.13333rem;
+  color: #999;
+}
+/* line 16, ../sass/order-cancel.scss */
+.order-cancel-wrapper .order-cancel-item::before {
+  content: '';
+  display: inline-block;
+  width: .34em;
+  height: .34em;
+  margin-right: .75em;
+  border-radius: 50%;
+  background: #e1e1e1;
+  vertical-align: .2em;
+}
+/* line 26, ../sass/order-cancel.scss */
+.order-cancel-wrapper .order-cancel-item.act {
+  color: #333;
+}
+/* line 28, ../sass/order-cancel.scss */
+.order-cancel-wrapper .order-cancel-item.act::after {
+  content: "\e641";
+  font-family: "iconfont";
+  font-size: 1.2em;
+  display: inline-block;
+  float: right;
+  margin-right: 0.37333rem;
+  color: #ff317a;
+}
+/* line 36, ../sass/order-cancel.scss */
+.order-cancel-wrapper .order-cancel-item.act::before {
+  background: #999;
+}
+/* line 42, ../sass/order-cancel.scss */
+.order-cancel-wrapper .order-cancel-note .main {
+  padding-bottom: 0.4rem;
+}
+/* line 45, ../sass/order-cancel.scss */
+.order-cancel-wrapper .order-cancel-note .cancel-note-ipt {
+  height: 1.86667rem;
+}

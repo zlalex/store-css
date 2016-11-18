@@ -1,0 +1,363 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+body{
+    background-color: rgb(245,245,245);
+}
+.good-list{
+    height:100%;
+    &.layout-page{
+        padding-top: $top-nav-height + px2rem(76px);
+    }
+    // 商品种类搜索框和排列按钮
+    .top-nav{
+        // height: $top-nav-height + px2rem(76px);
+        background-color: rgb(255,255,255);
+    }
+    .good-list-top-search{
+        height: 100%;
+        line-height: $top-nav-height;
+        background-color: rgb(255, 255, 255);
+        .good-list-top-addrselect{
+            padding-left: px2rem(30px);
+            .good-list-addrselect-name{
+                @include inline-block;
+                color: rgb(153, 153, 153);
+                i{
+                    @include font-dpr(20px);
+                }
+            }
+        }
+        .good-list-top-search-goods{
+            padding-left: px2rem(30px);
+            .search-group{
+                height: px2rem(61px);
+                line-height: px2rem(61px);
+                .input-group-control{
+                    @include font-dpr(13px);
+                    color: rgb(51,58,73);
+                }
+            }
+        }
+        .good-list-top-toggle{
+            padding-left: px2rem(31px);
+            padding-right: px2rem(28px);
+            @include font-dpr(20px);
+            color: rgb(153,153,153);
+            .iconfont-list-ul{
+                @include inline-block;
+            }
+            .iconfont-category{
+                display: none;
+            }
+            &.list-type{
+                .iconfont-list-ul{
+                    display: none;
+                }
+                .iconfont-category{
+                    @include inline-block;
+                }
+            }
+        }
+    }
+    // 筛选
+    .good-list-filter{
+        position: fixed;
+        top: $top-nav-height;
+        left: 0;
+        width: 100%;
+        height: px2rem(76px);
+        @include setBorder(border-top, rgb(225,225,225), 1px);
+        @include setBorder(border-left, rgb(225,225,225), 1px);
+        @include setBorder(border-right, rgb(225,225,225), 1px);
+        padding-top: px2rem(23px);
+        padding-bottom: px2rem(23px);
+        line-height: px2rem(30px);
+        @include flex-row();
+        background-color: rgb(255,255,255);
+        .good-list-filter-item{
+            @include flex-num(1);
+            @include inline-block;
+            @include setBorder(border-left, rgb(225,225,225), 1px);
+            @include font-dpr(13px);
+            color: rgb(51,51,51);
+            &:frist-child{
+              border-left-width:0;
+            }
+            &.active{
+                color: rgb(254,64,112);
+                .good-list-filter-item-images{
+                    .good-list-filter-item-price-up{
+                        @include triangle(px2rem(9px), rgb(190,190,190), px2rem(9px), $direction: top);
+                    }
+                    .good-list-filter-item-price-down{
+                        @include triangle(px2rem(9px), rgb(254,64,112), px2rem(9px), $direction: bottom);
+                    }
+                    .good-list-filter-item-filter-down{
+                        @include triangle(px2rem(9px), rgb(254,64,112), px2rem(9px), $direction: top);
+                    }
+                }
+            }
+            >div{
+                @include inline-block;
+            }
+            .good-list-filter-item-label{
+
+            }
+            .good-list-filter-item-images{
+                line-height: px2rem(9px);
+                width: px2rem(10px);
+                .good-list-filter-item-price-up{
+                    @include triangle(px2rem(9px), rgb(51,51,51), px2rem(9px), $direction: top);
+                }
+                .good-list-filter-item-price-down{
+                    @include triangle(px2rem(9px), rgb(51,51,51), px2rem(9px), $direction: bottom);
+                    margin-top: px2rem(6px);
+                }
+                .good-list-filter-item-filter-down{
+                    @include triangle(px2rem(9px), rgb(51,51,51), px2rem(9px), $direction: bottom);
+                }
+            }
+        }
+    }
+    // 阴影部分
+    .good-list-br{
+        position: fixed;
+        top: $top-nav-height + px2rem(76px);
+        left: 0;
+        width: 100%;
+        @include setBorder(border-bottom, rgb(225,225,225), 1px);
+        @include box-shadow(0 px2rem(2px) px2rem(10px) 0 rgba(0,0,0,.15));
+    }
+    // 筛选条件
+    .good-list-filter-content{
+        // display: none;
+        position: fixed;
+        top: $top-nav-height + px2rem(76px);
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding-bottom: $top-nav-height + px2rem(76px);
+        text-align: left;
+        background-color: rgb(255,255,255);
+        .good-list-filter-content-title{
+            @include setBorder(border, rgb(225,225,225), 1px);
+            padding-top: px2rem(30px);
+            padding-bottom: px2rem(28px);
+            padding-left: px2rem(41px);
+            padding-right: px2rem(40px);
+            @include font-dpr(12px);
+            color: rgb(51,51,51);
+            &:first-child{
+                border-bottom-width: 0;
+            }
+        }
+        .good-list-filter-content-list{
+            overflow-x: scroll;
+            .good-list-filter-content-list-left{
+                overflow-x: scroll;
+                .good-list-filter-content-menu{
+                    position: relative;
+                    width: px2rem(200px);
+                    height: px2rem(80px);
+                    line-height: px2rem(80px);
+                    background-color: rgb(245,245,245);
+                    @include setBorder(border-bottom, rgb(225,225,225), 1px);
+                    @include font-dpr(12px);
+                    color: rgb(51,51,51);
+                    text-align: center;
+                    &.select{
+                        &:after{
+                            position: absolute;
+                            top: px2rem(30px);
+                            right: px2rem(20px);
+                            @include font-dpr(10px);
+                            font-family: "iconfont";
+                            content: '\e61c';
+                            @include inline-block;
+                            width: px2rem(20px);
+                            height: px2rem(20px);
+                            line-height: px2rem(20px);
+                            color: rgb(254,64,112);
+                        }
+                    }
+                    &.active{
+                        background-color: rgb(255,255,255);
+                    }
+                }
+            }
+            .good-list-filter-content-right{
+                overflow-x: scroll;
+                @include setBorder(border-left, rgb(225,225,225), 1px);
+                .good-list-filter-content-menu-list{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                    .good-list-filter-content-menu-item{
+                        position: relative;
+                        @include inline-block;
+                        width: px2rem(246px);
+                        height: px2rem(56px);
+                        line-height: px2rem(56px);
+                        margin: px2rem(10px);
+                        @include border-radius(3px);
+                        color: rgb(51,51,51);
+                        text-align: center;
+                        background-color: rgb(240,240,240);
+                        &.active{
+                            @include setBorder(border, rgb(254,64,112), 1px);
+                            background-color: rgb(255,255,255);
+                            color: rgb(254,64,112);
+                            &:after{
+                                position: absolute;
+                                top: px2rem(17px);
+                                right: px2rem(17px);
+                                @include font-dpr(10px);
+                                font-family: "iconfont";
+                                content: '\e61c';
+                                @include inline-block;
+                                width: px2rem(20px);
+                                height: px2rem(20px);
+                                line-height: px2rem(20px);
+                                color: rgb(254,64,112);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .good-list-filter-content-btn-group{
+            >a{
+                @include border-radius(0px);
+                @include font-dpr(18px);
+                padding:0;
+                height: px2rem(96px);
+                line-height: px2rem(96px - 2px);
+            }
+            .good-list-filter-content-btn-reset{
+
+            }
+            .good-list-filter-content-btn-confirm{
+
+            }
+        }
+    }
+
+    // 商品列表
+    .good-list-wrap{
+        width: 100%;
+        .good-list-item{
+            height: px2rem(231px);
+            margin: px2rem(10px);
+            @include border-radius(3px);
+            background-color: rgb(255,255,255);
+            @include box-shadow(0 px2rem(2px) px2rem(10px) 0 rgba(0,0,0,.15));
+            .good-list-item-img{
+                @include inline-block;
+                padding-left: px2rem(31px);
+                padding-right: px2rem(41px);
+                padding-top: px2rem(15px);
+                padding-bottom: px2rem(15px);
+                img{
+                    width: px2rem(200px);
+                    height: px2rem(200px);
+                }
+            }
+            .good-list-item-detail{
+                padding-top: px2rem(36px);
+                padding-bottom: px2rem(19px);
+                >div{
+                    width: px2rem(425px);
+                }
+                .good-list-item-detail-top{
+                    @include font-dpr(13px);
+                    line-height: px2rem(26px + 10px);
+                    color: rgb(51,51,51);
+                }
+                .good-list-item-detail-bottom{
+                    .good-list-item-detail-bottom-left{
+                        .good-list-item-detail-bottom-left-top{
+                            @include font-dpr(18px);
+                            color: rgb(254,64,112);
+                            margin-bottom: px2rem(26px);
+                        }
+                        .good-list-item-detail-bottom-left-bottom{
+                            @include font-dpr(12px);
+                            color: rgb(153,153,153);
+                        }
+                    }
+                    .good-list-item-detail-bottom-right{
+                        @include font-dpr(12px);
+                        color: rgb(153,153,153);
+                        padding-top: px2rem(36px + 26px);
+                        span{
+                            @include font-dpr(12px);
+                            color: rgb(51,51,51);
+                        }
+                    }
+                }
+            }
+        }
+        &.goog-type{
+            .good-list-item{
+                @include inline-block;
+                width: px2rem(360px);
+                height: px2rem(466px);
+                margin-bottom: 0;
+                >div{
+                    display: block;
+                }
+                .good-list-item-img{
+                    padding-left: px2rem(31px);
+                    padding-right: px2rem(31px);
+                    padding-top: px2rem(31px);
+                    padding-bottom: px2rem(44px);
+                    img{
+                        width: px2rem(300px);
+                        height: px2rem(300px);
+                    }
+                }
+                .good-list-item-detail{
+                    padding: 0;
+                    >div{
+                        width: px2rem(297px);
+                        margin-left: px2rem(31px);
+                        margin-right: px2rem(31px);
+                    }
+                    .good-list-item-detail-top{
+                        @include nowrap();
+                        @include font-dpr(12px);
+                        line-height: px2rem(24px);
+                        color: rgb(51,51,51);
+                    }
+                    .good-list-item-detail-bottom{
+                        margin-top: px2rem(20px);
+                        .good-list-item-detail-bottom-left{
+                            .good-list-item-detail-bottom-left-top{
+                                @include font-dpr(15px);
+                                margin-bottom: 0;
+
+                            }
+                            .good-list-item-detail-bottom-left-bottom{
+                                display: none;
+                            }
+                        }
+                        .good-list-item-detail-bottom-right{
+                            padding-top: px2rem(10px);
+                            @include font-dpr(10px);
+                            line-height: px2rem(20px);
+                            span{
+                                @include font-dpr(10px);
+
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2n){
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

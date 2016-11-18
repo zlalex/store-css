@@ -1,0 +1,274 @@
+//
+// Variables
+// --------------------------------------------------
+
+// px转rem值
+@function px2rem($px, $base-font-size: $design-unit) {
+    @return ($px / $base-font-size) * 1rem;
+}
+// 设计稿宽度 用于定义rem基准
+$design-width:            750px !default;
+$design-unit:             $design-width/10 !default;
+$device-max-width:        540px;
+//== Colors
+//
+// 灰度
+$gray-base:               #000 !default;
+
+$gray-dark:               #333 !default;
+$gray:                    #666 !default;
+$gray-light:              #999 !default;
+$gray-lighter:            #bbb !default;
+
+$gray-3e:                 #eee !default;
+
+// o2o-ecstore 主色调
+$oec-primary-light:       #ff317a !default;
+$oec-primary-dark:        #333a49 !default;
+
+$brand-success:           #00ceb8 !default;
+$brand-info:              #14b2f6 !default;
+$brand-warning:           #ef7b2e !default;
+$brand-danger:            #ff317a !default;
+
+// 字体粉红色
+$text-pink:               #FF317A !default;
+
+// 关闭图标颜色
+$close-icon:              #CDCDCD !default;
+
+//** Background color for `<body>`.
+$body-bg:                 #f5f5f5 !default;
+//** Background color for block box.
+$box-bg:                  #fff !default;
+$sub-bg:                  #f5eedf !default;
+
+//** Global text color on `<body>`.
+$text-color:              $gray-dark !default;
+//** Global border color.
+$border-color:            #e1e1e1 !default;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more. "HiraginoSans",
+$font-family-sans-serif:  "PingFang SC", "Helvetica Neue", "Microsoft Yahei",Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          12px !default;
+$font-size-large:         ceil(($font-size-base * 1.15)) !default; // ~14px
+$font-size-small:         ceil(($font-size-base * 0.83)) !default; // ~10px
+
+$font-size-10:            10px !default; // ~10px
+$font-size-12:            12px !default; // ~12px
+$font-size-13:            13px !default; // ~13px
+$font-size-14:            14px !default; // ~14px
+$font-size-15:            15px !default; // ~15px
+$font-size-18:            18px !default; // ~18px
+$font-size-20:            20px !default; // ~20px
+$font-size-26:            26px !default; // ~26px
+$font-size-28:            28px !default; // ~28px
+
+$font-size-h1:            floor(($font-size-base * 1.67)) !default; // ~20px
+$font-size-h2:            floor(($font-size-base * 1.5)) !default;  // ~18px
+$font-size-h3:            ceil(($font-size-base * 1.25)) !default;  // ~15px
+$font-size-h4:            ceil(($font-size-base * 1.15)) !default;  // ~14px
+$font-size-h5:            $font-size-base !default;  // ~12px
+$font-size-h6:            $font-size-small !default; // ~10px
+
+// 图标大小
+$icoin-size:              20px !default;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1 !default;
+
+//== Iconography
+$font-path:               "../fonts/" !default;
+
+//** File name for all font files.
+//icon font
+$iconfont-name:          "iconfont" !default;
+$iconfont-svg-id:        "iconfont" !default;
+// font
+$font-name:               "Hiragino_Sans_GB_W3.otf" !default;
+
+// 卡片边距
+//
+$padding-small:           10px;
+$padding-base:            20px;
+$padding-large:           30px;
+$padding-larger:          40px;
+
+$margin-small:            10px;
+$margin-base:             20px;
+$margin-large:            30px;
+$margin-larger:           40px;
+
+$gap:                     10px;
+// height
+
+$height-50:               50px;
+$height-70:               70px;
+$height-80:               80px;
+$height-90:               90px;
+$height-450:              450px;
+
+// 选中的颜色和边框粗细
+$active:                  $text-pink;
+$active-border-bottom-size: 3px;
+
+//== Buttons
+//
+//
+$btn-default-color:              #fff !default;
+$btn-default-bg:                 $gray-lighter !default;
+$btn-default-border:             $border-color !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-light-bg:           $oec-primary-light !default;
+$btn-primary-light-border:       $btn-primary-light-bg !default;
+$btn-primary-dark-bg:            $oec-primary-dark !default;
+$btn-primary-dark-border:        $btn-primary-dark-bg !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             $btn-success-bg !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $btn-info-bg !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             $btn-warning-bg !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              $btn-danger-bg !default;
+
+$btn-link-disabled-color:        $gray-light !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         px2rem(5px) !default;
+$btn-border-radius-large:        px2rem(10px) !default;
+$btn-border-radius-small:        px2rem(3px) !default;
+$btn-border-radius-circle:       50% !default;
+$btn-border-radius-max:          5rem !default;
+
+// 通用border-radius
+$border-radius-base:             3px;
+$border-radius-large:            10px;
+// -------------------- 图片路径 ------------------------
+$regular-path:                   "../../../images" !default;
+$member-path:                    "../../../images/member/" !default;
+$coupon-path:                    "../../../images/coupon/" !default;
+$cart-path:                      "../../../images/cart/" !default;
+// body
+//
+$body-padding-horizon:           px2rem($padding-small);
+// mask z-index
+$mask-z-index:                   2000 !default;
+$mask-content-z-index:           $mask-z-index+10 !default;
+// 全屏幕的z index
+$full-screen-z-index:            9999;
+// layout variabal
+$layout-z-index:                 1000 !default;
+$top-nav-height:                 px2rem(90px) !default;
+$nav-height:                     px2rem(80px) !default;
+$nav-font-size:                  1.25em !default;//30px;
+$bottom-nav-height:              px2rem(100px) !default;
+$bottom-nav-tooltip-height:      px2rem(60px) !default;
+// 顶部两侧边距
+$fixed-header-left:              px2rem(40px);
+$fixed-header-right:             px2rem(40px);
+
+// dialog弹框
+$dialog-border-radius:           px2rem(10px) !default;
+// popup消息弹框
+$popup-font-size:                13px !default;
+$popup-background-color :        rgba(0,0,0,.7) !default;
+$popup-width:                    px2rem(500px) !default;
+$popup-height:                   px2rem(80px) !default;
+$popup-border-radius:            $dialog-border-radius !default;
+
+// 登录注册表单
+$form-padding-horizontal:        px2rem($padding-base); //30px
+$form-margin-vertical:           px2rem($margin-larger); //40px
+// $form-box-shadow:                0 .08em px2rem(10px) -.03em rgba(0,0,0,.2);
+$form-box-shadow:                0 px2rem(2px) px2rem(12px) -1px rgba(0,0,0,.15);
+// $form-box-shadow-bottom:         0 .1em px2rem(4px) -.03em rgba(0,0,0,.2);
+$form-box-shadow-bottom:         0 px2rem(2px) px2rem(12px) -1px rgba(0,0,0,.15);
+// form-check 用于注册登录表单下方确认选项如 两周内自动登录等
+$form-check-vertical:            px2rem($margin-large);  //30px
+$form-check-marginTop:           $form-check-vertical - $form-margin-vertical; // -10px
+$passport-padding-horizontal:    $form-padding-horizontal + px2rem($padding-small);
+// 数量选择控件
+$number-ipt-height:              px2rem(55px);
+$number-ipt-background:          #f0f0f0;
+$number-ipt-width:               px2rem(60px);
+$number-ipt-width-large:         px2rem(88px);
+$number-minus-icon-width:        px2rem(26px);
+$number-minus-icon-height:       px2rem(2px);
+
+// 数据为空时的图片展示
+$empty-margin-top:               px2rem(130px);
+$empty-margin-bottom:            px2rem(45px);
+// 时间选择控件
+
+$date-pickup-height: 751px;
+
+$date-width: 200px;
+$date-height: $date-pickup-height / 8;
+$date-time-line-height: $date-pickup-height / 9;
+
+$date-font-size: 26px;
+$date-line-height: $date-height;
+$date-time-padding-left: $padding-larger;
+
+$date-day-bg: #F5F5F5;
+$date-day-border-color: #E1E1E1;
+$date-color: #333333;
+$date-time-active-color: $text-pink;
+
+// 地址选择控件
+
+$area-close-icoin: $close-icon;
+$area-icoin-size: $icoin-size;
+
+$area-title-color: $gray-dark;
+$area-title-size: $font-size-14;
+$area-title-height: $height-50 * 2;
+$area-title-padding-left:$padding-larger;
+
+$area-content-size: $font-size-13;
+$area-content-title-bg: $gray-3e;
+$area-content-title-color: $gray;
+$area-content-title-height: $height-70;
+$area-content-title-width: $height-80;
+$area-content-item-max-height: $height-450;
+$area-content-item-color: $gray;
+$area-content-item-height: $height-90;
+
+// 毛玻璃像素
+$ground-glass-num: 10;
+$ground-glass-px: 10px;
+
+// 轮播插件
+$slider-height: 300px;
+
+// well参数
+$well-margin-vertical: 20px;
+$well-margin-horizontal: $padding-small;
+$wellRaius: 3px;
+$wellBg: rgb(255, 255, 255);
+$well-boxshadow: 0 px2rem(2px) px2rem(12px) -1px rgba(0,0,0,.1);
+
+// 个人中心
+$member-head-background:                $oec-primary-dark;
+$member-head-avatar-size:               px2rem(150px);
+$member-head-padding-vertical:          px2rem(55px);
+$member-head-padding-horizontal:        px2rem(55px);
+

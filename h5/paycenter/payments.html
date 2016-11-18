@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单提交</title>
+    <script src="../lib/flexible.js"></script>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/payments.css">
+</head>
+<body>
+<div class="layout-page top-layout-page member">
+    <div class="top-nav text-center">
+        <div class="layout-title">
+            <div class="title-left">
+                <a href="#" class="title-back">
+                    <i class="iconfont iconfont-angle-left"></i>
+                </a>
+            </div>
+            <div class="title-content">订单提交</div>
+            <div class="title-right">
+                <div class="title-more">
+                    <i class="iconfont iconfont-ellipsis-v"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-content payments-wrapper">
+        <section class="payments-content well">
+            <div class="payments-status payments-status-row">
+                <div class="payments-status-left payments-status-col">
+                    <i class="iconfont iconfont-circle-check hide"></i><!-- 提交完成 -->
+                    <i class="iconfont iconfont-circle-alarm hide"></i><!-- 支付失败 -->
+                    <i class="iconfont iconfont-circle-clock"></i><!-- 支付等待 -->
+                </div>
+                <div class="payments-info payments-status-col hide"><!-- 提交完成 -->
+                    <p class="payments-success payments-header-h2">订单提交完成</p>
+                    <p class="payments-point-title payments-header-h3">请您尽快支付，完成交易</p>
+                </div>
+                <div class="payments-info payments-status-col hide"><!-- 支付失败 -->
+                    <p class="payments-error payments-header-h2">订单支付失败</p>
+                    <p class="payments-error-title payments-header-h3">订单支付失败，请尽快支付</p>
+                </div>
+                <div class="payments-info payments-status-col "><!-- 支付等待 -->
+                    <p class="payments-error payments-header-h2">订单支付等待</p>
+                    <p class="payments-error-title payments-header-h3">您已支付 ¥ 130，请尽快支付剩余金额</p>
+                </div>
+            </div>
+            <div class="payments-money">
+                <div class="payments-row ">
+                    <p class="payments-col">优惠金额</p>
+                    <p class="payments-col favourable-money">-¥32.00</p>
+                </div>
+                <div class="payments-row">
+                    <p class="payments-col ">订单金额</p>
+                    <p class="payments-col order-money font-color-pink">-¥32.00</p>
+                </div>
+                <div class="payments-row">
+                    <p class="payments-col ">预存款金额</p>
+                    <p class="payments-col balance-money">-¥32.00</p>
+                </div>
+            </div>
+            <div class="payments-way payments-row">
+                <p class="payments-col">支付方式</p>
+                <p class="payments-col">预存款支付</p>
+            </div>
+        </section>
+
+        <!-- 请选择支付方式 -->
+        <section class="payment-method well">
+            <div class="payment-method-title">
+                <div class="flex-row-between flex-center">
+                    <div class="-col-left">请选择支付方式</div>
+                    <div class="-col-right"><i class="iconfont iconfont-angle-up"></i></div><!-- 当show-list 展示时，iconfont 添加类名 iconfont-angle-down -->
+                </div>
+            </div>
+            <div class="payment-method-list"><!-- 有 show-list 时展示，无则隐藏 -->
+                <div class="payment-method-item">
+                    <div class="payment-method-item-check checkbox"><input type="checkbox" name="changeShop" id="ChangeShop"><label for="ChangeShop"></label></div><div class="payment-method-item-img"><img src="" alt=""></div><div class="payment-method-item-content">
+                        <div class="payment-method-item-content-h1">微信支付</div>
+                        <div class="payment-method-item-content-h2">推荐已安装微信客户端的用户使用</div>
+                    </div>
+                </div>
+                <div class="payment-method-item">
+                    <div class="payment-method-item-check checkbox"><input type="checkbox" name="changeShop" id="ChangeShop"><label for="ChangeShop"></label></div><div class="payment-method-item-img"><img src="" alt=""></div><div class="payment-method-item-content">
+                        <div class="payment-method-item-content-h1">微信支付</div>
+                        <div class="payment-method-item-content-h2">推荐已安装微信客户端的用户使用</div>
+                    </div>
+                </div>
+                <div class="payment-method-item">
+                    <div class="payment-method-item-check checkbox"><input type="checkbox" name="changeShop" id="ChangeShop"><label for="ChangeShop"></label></div><div class="payment-method-item-img"><img src="" alt=""></div><div class="payment-method-item-content">
+                        <div class="payment-method-item-content-h1">微信支付</div>
+                        <div class="payment-method-item-content-h2">推荐已安装微信客户端的用户使用</div>
+                    </div>
+                </div>
+                <div class="payment-method-item">
+                    <div class="payment-method-item-check checkbox"><input type="checkbox" name="changeShop" id="ChangeShop"><label for="ChangeShop"></label></div><div class="payment-method-item-img"><img src="" alt=""></div><div class="payment-method-item-content">
+                        <div class="payment-method-item-content-h1">微信支付</div>
+                        <div class="payment-method-item-content-h2">推荐已安装微信客户端的用户使用</div>
+                    </div>
+                </div>
+                <div class="payment-method-item">
+                    <div class="payment-method-item-check checkbox"><input type="checkbox" name="changeShop" id="ChangeShop"><label for="ChangeShop"></label></div><div class="payment-method-item-img"><img src="" alt=""></div><div class="payment-method-item-content">
+                        <div class="payment-method-item-content-h1">微信支付</div>
+                        <div class="payment-method-item-content-h2">推荐已安装微信客户端的用户使用</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 立即支付按钮 -->
+        <div class="bottom-nav">
+            <div class="payment-edit-sure btn btn-block btn-danger">立即支付</div>
+        </div>
+        <div class="password-dialog show-dialog"><!-- 弹出时添加 show-dialog 类名 -->
+            <div class="mask"></div>
+            <!-- 密码有误 error 类 -->
+            <div class="dialog dialog-center error">
+                <div class="password-dialog-header">
+                    <p>请输入支付密码</p>
+                    <p class="hide">密码输入有误</p><!--  -->
+                    <div class="close"><i class="iconfont iconfont-error"></i></div>
+                </div>
+                <div class="dialog-info">
+                    <div class="dialog-order-money">
+                        <p>¥ 350.05</p>
+                    </div>
+                    <div class="dialog-balance-info">
+                        <p class="dialog-balance-money">预存款余额:<em class="font-color-pink">¥ 130.00</em></p>
+                        <p class="dialog-surplus-order"><em class="font-color-pink">剩余 ¥ 215.00</em>可通过其他支付方式支付</p>
+                    </div>
+                </div>
+                <div class="password-info-warp">
+                    <ul class="password-info-list">
+                        <li class="password-info-item"><input type="password"></li>
+                        <li class="password-info-item"><input type="password"></li>
+                        <li class="password-info-item"><input type="password"></li>
+                        <li class="password-info-item"><input type="password"></li>
+                        <li class="password-info-item"><input type="password"></li>
+                        <li class="password-info-item"><input type="password"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

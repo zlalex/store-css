@@ -1,0 +1,369 @@
+@import "../../../sass/oecstore/init.scss";
+
+/* ----------------------------- 预存款 -------------------------------*/
+
+.balance-header{
+    padding:px2rem($padding-large) px2rem($padding-base);
+    height:px2rem(330px);
+}
+.balance-header-inner{
+    height:100%;
+    padding:px2rem(40px) px2rem(40px) px2rem(70px) px2rem(40px);
+    background-color: #fff;
+    border-radius:$border-radius-large;
+    .balance-header-brief{
+        position: relative;
+        font-size: 1.25em;
+        margin-right: 0.26667rem;
+        overflow: hidden;
+        .balance-value{
+            position:absolute;
+            bottom: -.1em;
+            font-size:3.33em; //50px 50/15 ~= 3.33
+            font-weight:bold;
+        }
+        .unit{
+            margin-left:.5em;
+            font-size:.33em; //15px 15/50 ~= 0.33
+        }
+    }
+}
+.balance-header-side{
+    position:relative;
+    text-align:right;
+    width:px2rem(186px);
+    .balance-header-desc{
+        .iconfont{
+            top:2px;
+            margin-right:.2em;
+            font-size:1.2em;
+        }
+    }
+    .balance-header-bottom{
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+    }
+    .btn{
+        // margin-top:px2rem(72px);
+        @include button-size(px2rem(60px));
+        width:100%;
+        .iconfont{
+            top:-1px;
+            font-size:1.6em;
+            margin-right: px2rem(15px);
+        }
+    }
+}
+.balance-wrapper{
+    .balance-empty{
+        @include empty-style($member-path+'balance-empty.png', px2rem(190px));
+        margin-top: px2rem(245px);
+        font-size: px2rem(27px);
+    }
+    .empty-info{
+        &:before{
+            content: "";
+            width: px2rem(167px);
+            height: px2rem(190px);
+            margin: 0 auto;
+            margin-bottom: px2rem(57px);
+        }
+    }
+}
+.balance-detail-wrapper{
+    padding-left:px2rem($padding-large);
+    padding-right:px2rem($padding-large);
+    font-size:1.17em;
+    .balance-detail-header{
+        padding:px2rem($padding-large) 0;
+        line-height:1.1;
+        border-bottom:1px solid $border-color;
+        .-col-right{
+            color: $gray;
+        }
+    }
+}
+.balance-detail-list{
+    .balance-detail-title{
+        margin-bottom:px2rem($padding-small);
+    }
+    .balance-detail-date{
+        font-size:.86em;
+        color:$gray-light;
+    }
+    .flex-row-between{
+        padding:px2rem($padding-large) 0;
+        line-height:1.1;
+        &:not(:last-child){
+            border-bottom:1px solid $border-color;
+        }
+    }
+    .balance-detail-add{
+        .-col-right{
+            color:$brand-info;
+        }
+    }
+    .-col-right{
+        width:4em;
+        font-size:1.07em;
+        text-align:right;
+    }
+}
+.balance-note-wrapper{
+    .balance-note-item{
+        padding:0 px2rem($padding-large);
+    }
+    .balance-note-header{
+        @include height(px2rem(90px));
+        @include nowrap();
+        border-bottom:1px solid $border-color;
+        font-size:1.17em;
+        font-weight:bold;
+    }
+    .balance-note-main{
+        padding-top: px2rem($padding-large);
+        padding-bottom: px2rem($padding-large);
+        text-indent:1em;
+        line-height:1.4;
+    }
+}
+
+/*--------------------- 充值 ---------------------*/
+
+.deposit-wrapper{
+    &.well{
+        background-color: transparent;
+        @include box-shadow(inherit);
+    }
+    .form-group-wrapper{
+        margin: px2rem($padding-small*2) 0;
+        padding: 0;
+        .form-group{
+            padding:px2rem(15px) 0;
+            .iconfont{
+                font-size: 1.5em;
+                padding-left: 0;
+                padding-right: 0.8em;
+            }
+        }
+        .input-group-control{
+            padding: 0;
+            text-indent: px2rem(31px);
+            font-size: px2rem(30px);
+            line-height: 1;
+        }
+    }
+}
+.deposit-way{
+    font-size:1.08em;
+    padding-left:px2rem($padding-large);
+    padding-right:px2rem($padding-large);
+    background-color: $box-bg;
+    @include box-shadow(0 px2rem(2px) px2rem(10px) -1px rgba(0,0,0,.15));
+    .deposit-main{
+        border-top:1px solid $border-color;
+    }
+    .deposit-header{
+        height:px2rem(83px);
+        font-size: px2rem(25px);
+        line-height:px2rem(83px);
+        [class*="price"]{
+            color:$gray-dark;
+        }
+        .-col-content{
+            font-weight:normal;
+        }
+    }
+}
+.deposit-way-item{
+    .-col-content{
+        position:relative;
+        padding-top:px2rem(15px);
+        padding-bottom:px2rem(15px);
+        height:px2rem(100px);
+    }
+    &:not(:last-child){
+        .-col-content{
+            border-bottom:1px solid $border-color;
+        }
+    }
+    .deposit-way-side{
+        position:absolute;
+        right:0;
+        top:0;
+        font-size:.77em;
+        margin-top:px2rem(35px);
+    }
+    .deposit-way-img,
+    .deposit-way-info{
+        display:inline-block;
+        vertical-align:middle;
+        height:px2rem(70px);
+        line-height:1.3;
+    }
+    .deposit-way-img{
+        width:px2rem(60px);
+        height:px2rem(60px);
+        margin-right:px2rem($padding-base - 4px);
+        border-radius: px2rem(6px);
+        overflow: hidden;
+        img{
+            width:100%;
+        }
+    }
+    .deposit-way-title{
+        font-size:1.16em;
+    }
+    .deposit-way-tip{
+        color:$gray-light;
+        font-size:.9em;
+    }
+    .checkbox{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: px2rem(40px);
+    }
+}
+.deposit-submit{
+    margin-top: px2rem(31px);
+    @include box-shadow(0 px2rem(2px) px2rem(10px) -1px rgba(0,0,0,.15));
+    .btn-block{
+        height: px2rem(100px);
+        padding: 0;
+        font-size: px2rem(40px);
+        line-height: px2rem(100px);
+        border-radius: px2rem(3px);
+    }
+}
+
+/* ------------------- dialog 基础样式 ------------------- */
+
+.deposit-dialog{
+    &.show{
+        .mask{
+            display: block;
+        }
+        .dialog{
+            visibility: inherit;
+            opacity: 1;
+            top: px2rem(260px);
+            @include transform(translate(-50%,0));
+        }
+        .dialog-bottom{
+            visibility: inherit;
+        }
+    }
+    .mask{
+        display: none;
+    }
+}
+.deposit-dialog{
+    .close{
+        top: px2rem(15px);
+        right: px2rem(15px);
+        font-size: 2.5em;
+    }
+    .dialog-info{
+        position: relative;
+        width: inherit;
+        height: inherit;
+        padding-top: px2rem(64px);
+    }
+    .dialog-content{
+        .error-title{
+            font-size: px2rem(24px);
+            text-align: center;
+        }
+        .depositinfo{
+            margin-top: px2rem(45px);
+            font-size: px2rem(24px);
+            text-indent: px2rem(95px);
+            line-height: px2rem(30px);
+            .deposit-money{
+                padding-left: px2rem(22px);
+            }
+        }
+    }
+    .dialog-head{
+        margin-bottom: px2rem(70px);
+        .mark-title{
+            margin-top: px2rem(20px);
+            text-align: center;
+            font-size: px2rem(30px);
+        }
+        .dialog-mark{
+            margin: 0 auto; 
+            width: px2rem(90px);
+            height: px2rem(90px);
+            font-size: px2rem(90px);
+        }
+    }
+    .dialog-bottom{
+        position: absolute;
+        height: px2rem(76px);
+        bottom: 0;
+        .btn{
+            padding: 0;
+            margin: 0;
+            line-height: px2rem(78px);
+            font-size: px2rem(30px);
+            border: 0;
+            @include border-radius(0px);
+        }
+    }
+    .btn,
+    .iconfont-circle-check,
+    .iconfont-circle-alarm,
+    .success-title,
+    .lost-title,
+    .title-success,
+    .title-error,
+    .info-success,
+    .info-error{
+        display: none;
+    }
+}
+.deposit-dialog{
+    .dialog{
+        width: px2rem(445px);
+        height: px2rem(527px);      
+        border-radius: px2rem(30px);
+        overflow: hidden;
+        /* -------------------- 充值成功 -------------------- */
+        &.success{
+            .dialog-head{
+                .iconfont{
+                    color: $brand-success;
+                }
+            }
+            .iconfont-circle-check,
+            .success-title,
+            .title-success,
+            .info-success,
+            .btn-success{
+                display: block;
+            }
+        }
+    /* -------------------- 充值失败 -------------------- */
+        &.lose{
+            .dialog-bottom{
+                bottom: 0;
+            }
+            .dialog-head{
+                .iconfont{
+                    color: $oec-primary-light;
+                }
+            }
+            .iconfont-circle-alarm,
+            .lost-title,
+            .title-error,
+            .info-error,
+            .btn-primary-light{
+                display: block;
+            }
+        }
+    }
+}

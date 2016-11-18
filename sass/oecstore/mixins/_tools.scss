@@ -1,0 +1,356 @@
+@import "compass/css3";
+
+@mixin full-content(){
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+@mixin nouserselect(){
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;
+}
+// 清除浮动
+@mixin clearfix(){
+    *zoom:1;
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden
+    }
+}
+// 单行溢出
+@mixin nowrap($isEllipsis:true) {
+    overflow: hidden;
+    white-space : nowrap;
+    @if $isEllipsis == true {
+        text-overflow: ellipsis;
+    }
+}
+// 多行溢出
+@mixin line-clamp($line){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line;
+}
+// 分割线
+// $background-color:背景色
+// $padding-horizontal: 文字两边间距
+// $width: 文字宽度
+@mixin line-text($background-color,$padding-horizontal:.5em,$width:null,$type:solid,$line-color:currentColor){
+    position:relative;
+    text-align:center;
+    margin-top:1em;
+    margin-bottom: .5em;
+    span{
+        display:inline-block;
+        position:relative;
+        @if $width == null{
+            padding-left:$padding-horizontal;
+            padding-right:$padding-horizontal;
+        }@else{
+            width:$width;
+        }
+        bottom:.5em;
+        background:$background-color;
+    }
+    &::before{
+        content: '';
+        display: block;
+        @include setAttr3x(height,1px,true);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        @if $type == dashed{
+            @include dashed($color:$line-color,$border-width:1px);
+            [data-dpr="3"] & {
+                background-size:1em 2px;
+            }
+        }@else{
+            background-color: $line-color;
+        }
+    }
+}
+// 垂直文本
+// $direction:文本方向 right-自右而左 left-自左而右
+@mixin vertical-text($direction:right){
+    @if $direction == right{
+        writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+    }@else{
+        writing-mode: lr-tb;
+        -webkit-writing-mode: vertical-lr;
+        writing-mode: vertical-lr;
+    }
+}
+// px转rem值
+@function px2rem($px, $base-font-size: $design-unit) {
+    @return ($px / $base-font-size) * 1rem;
+}
+// px转em值
+@function px2em($px,$parent-font-size:$font-size-base){
+    @return ($px / $parent-font-size) * 1em;
+}
+// 字体适配
+@mixin font-dpr($font-size){
+  font-size: $font-size;
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+// 前缀
+@mixin css3($property, $value, $prefixValue:false) {
+    @if $prefixValue == true {
+        @each $prefix in -webkit-, -moz-,'' {
+            #{$property}: #{$prefix}$value;
+        }
+    }@else{
+        @each $prefix in -webkit-, -moz-, -o-, -ms-,'' {
+            #{$prefix}#{$property}: $value;
+        }
+    }
+
+}
+// 元素水平垂直居中--绝对布局
+@mixin abs-center(){
+    position: absolute;
+    top:50%;
+    left:50%;
+    // @include translateY(-50%);
+    // @include translateX(-50%);
+    // transform:translateY(-50%) translateX(-50%);
+    @include css3(transform,translateY(-50%) translateX(-50%));
+}
+@mixin abs-center-Y($top:50%){
+    position: absolute;
+    top:$top;
+    @include translateY(-50%);
+}
+// 元素水平居中--绝对布局
+@mixin abs-center-horizontal($width){
+    position: absolute;
+    left:50%;
+    margin-left:-1 * $width/2;
+}
+// 元素垂直居中--绝对布局
+@mixin abs-center-vertical($height){
+    position: absolute;
+    top:50%;
+    margin-top:-1 * $height/2;
+}
+// 通用适配 单属性
+@mixin attr-dpr($property,$size,$prefix:false){
+    @if $prefix == true {
+        @include css3($property,$size);
+    }@else{
+        #{$property}:$size;
+    }
+    [data-dpr="2"] & {
+        @if $prefix == true {
+            @include css3($property,$size*2);
+        }@else{
+            #{$property}:$size * 2;
+        }
+    }
+    [data-dpr="3"] & {
+        @if $prefix == true {
+            @include css3($property,$size*3);
+        }@else{
+            #{$property}:$size * 3;
+        }
+    }
+}
+
+// 通用适配 双属性
+@mixin attrs-dpr($prop, $size ,$prop2, $size2, $prefix:false){
+    @if $prefix == true {
+        @include css3($prop,$size);
+        @include css3($prop2,$size2);
+    }@else{
+        #{$prop}: $size;
+        #{$prop2}: $size2;
+    }
+    [data-dpr="2"] & {
+        @if $prefix == true {
+            @include css3($prop,$size * 2);
+            @include css3($prop2,$size2 * 2);
+        }@else{
+            #{$prop}: $size * 2;
+            #{$prop2}: $size2 * 2;
+        }
+    }
+    [data-dpr="3"] & {
+        @if $prefix == true {
+            @include css3($prop,$size*3);
+            @include css3($prop2,$size2*3);
+        }@else{
+            #{$prop}: $size * 3;
+            #{$prop2}: $size2 * 3;
+        }
+    }
+}
+// 文字居中
+@mixin height($value){
+    @if type-of($value) == "number"{
+        @if unit($value) == "px"{
+            @include attrs-dpr(height, $value, line-height, $value);
+        }@else{
+            height:$value;
+            line-height:$value;
+        }
+    }@else{
+        @if $value == auto{
+            height:$value;
+            line-height:initial;
+        }@else{
+            height:$value;
+            line-height:$value;
+        }
+    }
+}
+// 三角形
+// $height            三角形高度
+// $background-color  三角形颜色
+// $width             三角形宽度
+// $degree            三角形底角大小, 默认60deg, 设置后$width失效
+// $direction         三角形方向 top bottom left right
+@mixin triangle($height,$background-color,$width:0,$degree:60deg,$direction:top){
+    $unit-width : $width / 2; 
+    display:inline-block;
+    width:0;
+    height:0;
+    vertical-align:bottom;
+    @if $degree == 0 {} @else {
+        $unit-width : $height/tan($degree);
+    }
+    @if $direction == top or $direction == bottom{
+        border-left:$unit-width solid transparent;
+        border-right:$unit-width solid transparent;
+        @if $direction == top{
+            border-top:0 solid $background-color;
+            border-bottom: $height solid $background-color;
+        }@else{
+            border-top: $height solid $background-color;
+            border-bottom:0 solid $background-color;
+        }
+    }@else{
+        border-top:$unit-width solid transparent;
+        border-bottom:$unit-width solid transparent;
+        @if $direction == left{
+            border-left:0 solid $background-color;
+            border-right: $height solid $background-color;
+        }@else{
+            border-left: $height solid $background-color;
+            border-right:0 solid $background-color;
+        }
+    }
+}
+@mixin triangle-color($color,$direction:top){
+    @if $direction == top or $direction == bottom{
+        border-left-color: transparent;
+        border-right-color: transparent;
+        @if $direction == top{
+            border-top-color:$color;
+            border-bottom-color: $color;
+        }@else{
+            border-top-color: $color;
+            border-bottom-color:$background-color;
+        }
+    }@else{
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        @if $direction == left{
+            border-left-color: $color;
+            border-right-color: $color;
+        }@else{
+            border-left-color: $color;
+            border-right-color:$color;
+        }
+    }
+}
+// 虚线
+// $unit-width: 单位宽度
+// $border-width: 虚线高度,默认1px,
+// $color: 虚线颜色, 默认边框颜色,
+// $stop: 实线部分宽度, 单位：百分比
+// $direction: 边框位置, 位置默认底部
+@mixin dashed($unit-width:1em,$border-width:1px,$color:$border-color,$stop:66%,$direction:bottom){
+    @if $direction == bottom or $direction == top{
+        @include background-image(linear-gradient(90deg,$color $stop,transparent $stop,transparent 100%));
+        background-repeat: repeat-x;
+        background-size:$unit-width $border-width;
+    }@else{
+        @include background-image(linear-gradient($border-color $stop,transparent $stop,transparent 100%));
+        background-repeat: repeat-y;
+        background-size:$border-width $unit-width;
+    }
+    background-position:$direction;
+}
+// 背景图片适配
+@mixin imgage-dpr($url,$url-3x){
+    background-image: url($url);
+    background-image: -webkit-image-set( url($url) 2x, url($url-3x) 3x);
+}
+
+@mixin nowrapEllipsis(){
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space : nowrap;
+}
+@mixin fullScreen(){
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0,0,0,.5);
+    @include full-content();
+}
+@mixin fullScreenContent(){
+    position: fixed;
+    z-index: $full-screen-z-index;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
+// 毛玻璃样式
+@mixin groundGlass() {
+
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+
+    @include filter(blur($ground-glass-px));/* Chrome, Opera */
+
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=$ground-glass-num, MakeShadow=false); /* IE6~IE9 */
+    // @include filter(blur($ground-glass-px));
+}
+// 设置边框宽度
+@mixin setBorder($borderName:border, $borderC:transparent, $borderW:1px, $borderS:solid){
+    #{$borderName}-color: $borderC;
+    #{$borderName}-width:$borderW;
+    [data-dpr="3"] & {
+        #{$borderName}-width:$borderW + 1px;
+    }
+    // @include attr-dpr(#{$borderName}-width, $borderW);
+    #{$borderName}-style: $borderS;
+}
+// 针对1px在6s plus上太细 设置6s plus边框宽度
+@mixin setAttr3x($attr, $value:1px, $isfill:false, $isBold:false){
+    @if $isfill == true{
+        #{$attr}:$value;
+    }
+    @if isBold == true{
+        $value : $value + 1px;
+    }
+    [data-dpr="3"] & {
+        #{$attr}:$value + 1px;
+    }
+}

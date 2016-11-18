@@ -1,0 +1,270 @@
+/* line 5, ../sass/category.scss */
+body {
+  background-color: white;
+}
+
+/* line 8, ../sass/category.scss */
+.category {
+  height: 100%;
+}
+/* line 10, ../sass/category.scss */
+.category.layout-page {
+  padding-top: 1.2rem;
+}
+/* line 14, ../sass/category.scss */
+.category .category-top-search {
+  height: 100%;
+  border-color: #e1e1e1;
+  border-width: 1px;
+  border-style: solid;
+  line-height: 1.2rem;
+  background-color: white;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-top-search {
+  border-width: 2px;
+}
+/* line 19, ../sass/category.scss */
+.category .category-top-search .category-top-addrselect {
+  padding-left: 0.4rem;
+}
+/* line 21, ../sass/category.scss */
+.category .category-top-search .category-top-addrselect .category-addrselect-name {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  color: #999999;
+}
+/* line 24, ../sass/category.scss */
+.category .category-top-search .category-top-addrselect .category-addrselect-name i {
+  font-size: 20px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .category .category-top-search .category-top-addrselect .category-addrselect-name i {
+  font-size: 40px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-top-search .category-top-addrselect .category-addrselect-name i {
+  font-size: 60px;
+}
+/* line 29, ../sass/category.scss */
+.category .category-top-search .category-top-search-goods {
+  padding-left: 0.4rem;
+  padding-right: 0.53333rem;
+}
+/* line 32, ../sass/category.scss */
+.category .category-top-search .category-top-search-goods .search-group {
+  height: 0.81333rem;
+  line-height: 0.81333rem;
+}
+/* line 35, ../sass/category.scss */
+.category .category-top-search .category-top-search-goods .search-group .input-group-control {
+  font-size: 13px;
+  color: #333a49;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .category .category-top-search .category-top-search-goods .search-group .input-group-control {
+  font-size: 26px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-top-search .category-top-search-goods .search-group .input-group-control {
+  font-size: 39px;
+}
+/* line 43, ../sass/category.scss */
+.category .category-content {
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+/* line 47, ../sass/category.scss */
+.category .category-content > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+/* line 53, ../sass/category.scss */
+.category .category-content .category-content-first {
+  width: 2.66667rem;
+  border-color: #e1e1e1;
+  border-width: 1px;
+  border-style: solid;
+  border-top-width: 0 !important;
+  vertical-align: top;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-content .category-content-first {
+  border-width: 2px;
+}
+/* line 58, ../sass/category.scss */
+.category .category-content .category-content-first .category-content-first-item {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 2.66667rem;
+  height: 1.06667rem;
+  line-height: 1.06667rem;
+  border-top-color: #e1e1e1;
+  border-top-width: 1px;
+  border-top-style: solid;
+  font-size: 12px;
+  text-align: center;
+  color: #333333;
+  background-color: whitesmoke;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-content .category-content-first .category-content-first-item {
+  border-top-width: 2px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .category .category-content .category-content-first .category-content-first-item {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-content .category-content-first .category-content-first-item {
+  font-size: 36px;
+}
+/* line 68, ../sass/category.scss */
+.category .category-content .category-content-first .category-content-first-item:first-child {
+  border-top: 0;
+}
+/* line 71, ../sass/category.scss */
+.category .category-content .category-content-first .category-content-first-item.active {
+  background-color: white;
+}
+/* line 76, ../sass/category.scss */
+.category .category-content .category-content-second {
+  width: 7.33333rem;
+  background-color: white;
+  vertical-align: top;
+}
+/* line 83, ../sass/category.scss */
+.category .category-content .category-content-second .category-content-second-item .category-content-second-item-title > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  line-height: 0.48rem;
+}
+/* line 87, ../sass/category.scss */
+.category .category-content .category-content-second .category-content-second-item .category-content-second-item-title .category-content-second-item-title-squre {
+  width: 0.14667rem;
+  height: 0.14667rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-left: 0.16rem;
+  margin-right: 0.13333rem;
+  background-color: #666666;
+}
+/* line 95, ../sass/category.scss */
+.category .category-content .category-content-second .category-content-second-item .category-content-second-item-title .category-content-second-item-title-h1 {
+  margin-right: 0.08rem;
+  font-size: 12px;
+  color: #333333;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .category .category-content .category-content-second .category-content-second-item .category-content-second-item-title .category-content-second-item-title-h1 {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-content .category-content-second .category-content-second-item .category-content-second-item-title .category-content-second-item-title-h1 {
+  font-size: 36px;
+}
+/* line 100, ../sass/category.scss */
+.category .category-content .category-content-second .category-content-second-item .category-content-second-item-title .category-content-second-item-title-h2 {
+  font-size: 12px;
+  color: #333333;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .category .category-content .category-content-second .category-content-second-item .category-content-second-item-title .category-content-second-item-title-h2 {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-content .category-content-second .category-content-second-item .category-content-second-item-title .category-content-second-item-title-h2 {
+  font-size: 36px;
+}
+/* line 106, ../sass/category.scss */
+.category .category-content .category-content-second .category-content-second-item .category-content-second-item-list .category-content-second-item-item {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin-top: 0.25333rem;
+  margin-left: 0.25333rem;
+  margin-bottom: 0.25333rem;
+  width: 2.09333rem;
+  height: 2.81333rem;
+  border-color: #e1e1e1;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-content .category-content-second .category-content-second-item .category-content-second-item-list .category-content-second-item-item {
+  border-width: 2px;
+}
+/* line 115, ../sass/category.scss */
+.category .category-content .category-content-second .category-content-second-item .category-content-second-item-list .category-content-second-item-item img {
+  width: 1.86667rem;
+  height: 1.86667rem;
+  margin-left: 0.12rem;
+  margin-right: 0.10667rem;
+  margin-top: 0.14667rem;
+}
+/* line 122, ../sass/category.scss */
+.category .category-content .category-content-second .category-content-second-item .category-content-second-item-list .category-content-second-item-item .category-content-second-item-item-label {
+  text-align: center;
+  font-size: 12px;
+  line-height: 0.8rem;
+  color: #333333;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .category .category-content .category-content-second .category-content-second-item .category-content-second-item-list .category-content-second-item-item .category-content-second-item-item-label {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .category .category-content .category-content-second .category-content-second-item .category-content-second-item-list .category-content-second-item-item .category-content-second-item-item-label {
+  font-size: 36px;
+}
+/* line 135, ../sass/category.scss */
+.category .bottom-nav {
+  background-color: white;
+}
+/* line 139, ../sass/category.scss */
+.category .bottom-nav ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+/* line 144, ../sass/category.scss */
+.category .bottom-nav ul li {
+  height: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 147, ../sass/category.scss */
+.category .bottom-nav ul li .iconfont {
+  line-height: 0.96rem;
+  font-size: 0.58667rem;
+}
+/* line 151, ../sass/category.scss */
+.category .bottom-nav ul li div {
+  line-height: 0.26667rem;
+  font-size: 0.26667rem;
+}

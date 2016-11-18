@@ -1,0 +1,186 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+.myorders{
+    background-color: rgb(245,245,245);
+    &.layout-page.both-layout-page{
+        padding-bottom: 0px;
+        padding-top: px2rem(90px + 80px + 4px);
+    }
+    .orders-item,.order-status-done{
+        .orders-item-checkout{
+            .btn{
+                display:none;
+            }
+        }
+    }
+    // 待支付
+    .order-status-pay{
+        .orders-item-checkout{
+            .btn-order-pay,
+            .btn-order-cancel{
+                display:inline-block;
+            }
+        }
+    }
+    // 待收货
+    .order-status-receive{
+        .orders-item-checkout{
+            .btn-order-receive,.btn-order-logistic{
+                display:inline-block;
+            }
+        }
+    }
+    // 待评论
+    .order-status-appraise{
+        .orders-item-checkout{
+            .btn-order-appraise{
+                display:inline-block;
+            }
+        }
+    }
+    // 备货中
+    .order-status-stockup{
+        .orders-item-checkout{
+            .btn-order-changeshop,
+            .btn-order-cancel{
+                display:inline-block;
+            }
+        }
+    }
+    // 待自提
+    .order-status-pickup{
+        .orders-item-checkout{
+            .btn-order-pickupcode{
+                display:inline-block;
+            }
+        }
+    }
+    // 评论分类
+    .myorders-category-list{
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: px2rem(90px);
+        width: 10rem;
+        @include flex-row-around();
+        background-color: rgb(255,255,255);
+        @include setBorder(border, rgb(225,225,225), 1px);
+        .myorders-category-item{
+            @include box-flex(1);
+            @include flex(1);
+            margin-top: px2rem(26px);
+            margin-bottom: px2rem(24px);
+            margin-left: px2rem(30px);
+            margin-right: px2rem(30px);
+            @include inline-block;
+            @include font-dpr(15px);
+            color: rgb(51,51,51);
+
+            text-align: center;
+            &.active{
+                @include setBorder(border-bottom, rgb(255,49,122), 2.5px);
+                margin-bottom: px2rem(1px);
+            }
+            .myorders-category-group{
+
+                .myorders-category-item-label{
+
+                }
+            }
+        }
+    }
+}
+
+// 收货成功弹出框 开始
+.myorders-dialog-succss{
+    height: px2rem(450px);
+    width: px2rem(550px);
+    @include border-radius(10px);
+    .close{
+        @include font-dpr(22px);
+        color: rgb(255,255,255);
+        top: px2rem(10px);
+        right: px2rem(10px);
+    }
+    .myorders-dialog-succss-title{
+        height: px2rem(450px - 44px * 2 - 60px);
+        background-image: inline-image("../../../images/source/my-order/image.png");
+        .myorders-dialog-succss-title-h1{
+            @include font-dpr(24px);
+            color: rgb(255,255,255);
+            padding-top: px2rem(100px);
+        }
+        .myorders-dialog-succss-title-h2{
+            @include font-dpr(15px);
+            color: rgb(255,255,255);
+            padding-top: px2rem(43px);
+
+        }
+    }
+    .myorders-dialog-succss-bottom{
+        padding-top: px2rem(40px);
+        @include font-dpr(18px);
+        color: rgb(51,51,51);
+        .myorders-dialog-succss-bottom-appr{
+            @include border-radius(30px);
+        }
+    }
+}
+// 收货成功弹出框 结束
+
+// 商品提货码 开始
+.myorders-dialog-take-off{
+    height: px2rem(888px);
+    width: px2rem(550px);
+    @include border-radius(10px);
+    .close{
+        @include font-dpr(22px);
+        color: rgb(205,205,205);
+        top: px2rem(10px);
+        right: px2rem(10px);
+    }
+    .myorders-dialog-take-off-title{
+        margin-top: px2rem(82px - 16px);
+        margin-bottom: px2rem(50px + 16px);
+        margin-left: px2rem(28px);
+        margin-right: px2rem(26px);
+        text-align: center;
+            @include setBorder(border-bottom, rgb(225,225,225), 1px);
+        .myorders-dialog-take-off-title-content{
+            @include inline-block;
+            margin-bottom: px2rem(-16px);
+            padding-left: px2rem(38px);
+            padding-right: px2rem(38px);
+            background-color: rgb(255,255,255);
+
+        }
+    }
+    .myorders-dialog-take-off-bcore{
+        img{
+            height: px2rem(166px);
+            width: px2rem(470px);
+        }
+    }
+    .myorders-dialog-take-off-qcore-wrap{
+        .myorders-dialog-take-off-qcore-content{
+            @include inline-block;
+            height: px2rem(502px);
+            width: px2rem(460px);
+            @include setBorder(border, rgb(225,225,225), 1px);
+            border-top-width: 0;
+            padding-top: px2rem(30px);
+            img{
+                height: px2rem(367px);
+                width: px2rem(367px);
+                margin-bottom: px2rem(18px);
+            }
+            >div{
+                @include font-dpr(12px);
+                color: rgb(51,51,51);
+                margin-bottom: px2rem(10px);
+            }
+        }
+    }
+}
+// 商品提货码 结束

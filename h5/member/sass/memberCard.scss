@@ -1,0 +1,188 @@
+@import "../../../sass/oecstore/init.scss";
+
+$cpns-height : px2rem(200px);
+$cutter-border-width: 35px;
+$memberCard-color: #333a49;
+// 设置优惠券颜色
+@mixin setCouponColor($color){
+    .coupon-item-side{
+        background-color:$color;
+    }
+    .coupon-item-key,
+    .coupon-item-type,
+    .coupon-item-status{
+        color:$color;
+    }
+}
+// 设置优惠券详情颜色
+@mixin setCouponCardColor($color){
+    .btn-use{
+        background-color:$color;
+    }
+    .memberCard-title{
+        color:$color;
+    }
+}
+
+.memberCard-wrapper{
+    $memberCard-cutter-width: px2rem(20px);
+    $btn-width:px2rem(300px);
+    .memberCard{
+        margin:px2rem($padding-base) px2rem($padding-base) px2rem(70px);
+    }
+    .memberCard-header{
+        position: relative;
+        padding:px2rem(40px);
+        @include border-top-radius(px2rem($border-radius-large));
+        background-color:#fafafa;
+        @include dashed($border-width:2px);
+        font-weight:bold;
+        color: $memberCard-color; 
+    }
+    .memberCard-header-main{
+        position:relative;
+        overflow:hidden;
+        z-index:1;
+    }
+    .memberCard-avator,.memberCard-info{
+        float:left;
+        height: px2rem(101px);
+    }
+    .memberCard-avator{
+        width: px2rem(101px);
+        background-color: #fff;
+        border-radius:50%;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .memberCard-info{
+        $btn-width: px2rem(160px);
+        $btn-height: px2rem(60px);
+        $btn-cutter-width: 40px;
+        position: relative;
+        left:px2rem(20px);
+        width: px2rem(300px);
+        .usrname{
+            height: px2rem(24px);
+            line-height: px2rem(24px);
+            margin-top: px2rem(30px);
+        }
+        .rank{
+            margin-top: px2rem(10px);
+            height: px2rem(30px);
+            line-height: px2rem(30px);
+            .iconfont{
+                margin-right: px2rem(5px);
+                font-size: px2rem(30px);
+            }
+        }
+    }
+    .memberCard-domain{
+        position: absolute;
+        bottom: px2rem(40px);
+        right: px2rem(40px);
+        .btn-favorite{
+            border-color: $memberCard-color;
+            font-size: px2rem(24px);
+            font-weight: normal;
+        }
+    }
+    .memberCard-main{
+        position:relative;
+        margin-top:-1px;
+        background-color:#fff;
+        text-align:center;
+        padding-top:px2rem(55px);
+        border-radius: 0 0 px2rem(10px) px2rem(10px);
+        img{
+            width:100%;
+        }
+        &::before,&::after{
+            content:'';
+            position:absolute;
+            width:$memberCard-cutter-width;
+            height:$memberCard-cutter-width;
+            top:-$memberCard-cutter-width/2;
+            border-radius:50%;
+            background-color:$oec-primary-dark;
+        }
+        &::before{
+            left:-$memberCard-cutter-width/2;
+        }
+        &::after{
+            right:-$memberCard-cutter-width/2;
+        }
+    }
+    .memberCard-code-wrapper{
+    }
+    .split-line{
+        color:$gray-light;
+        @include line-text(#fff,$width:$btn-width,$type:dashed,$line-color:$border-color);
+        font-size:.92em;
+    }
+    .memberCard-barcode{
+        margin-bottom: px2rem(55px);
+    }
+    .memberCard-qrcode{
+        margin-bottom: px2rem(47px);
+    }
+    .memberCard-barcode{
+        img{
+            width:px2rem(540px);
+        }
+    }
+    .memberCard-qrcode{
+        img{
+            width:px2rem(330px);
+        }
+    }
+    .memberCard-code-domain{
+        padding-bottom:px2rem(40px);
+        font-size:1.09em;
+        color:$gray;
+        .iconfont{
+            font-size:.85em;
+            margin-left:.3em;
+        }
+    }
+    .memberCard-code-refresh{
+        padding: px2rem(25px) 0;
+        background-color: #fafafa;
+        border-radius: 0 0 px2rem(10px) px2rem(10px);
+    }
+    .memberCard-footer{
+        margin-top:-1px;
+        padding:px2rem(35px) px2rem(30px) px2rem(45px);
+        @include border-bottom-radius(px2rem($border-radius-large));
+        @include dashed($border-width:2px,$direction:top);
+        border-radius: px2rem(10px);
+        background-color:#fff;
+    }
+    .memberCard-row{
+        display: -webkit-box;
+        display: box;
+        .memberCard-col{
+            -webkit-box-flex: 1;
+            box-flex: 1;
+            text-align: center;
+            img{
+                width: px2rem(60px);
+                height: px2rem(60px);
+            }
+        }
+    }
+    .memberCard-normal{
+        @include setCouponCardColor($oec-primary-light);
+    }
+    .memberCard-mall{
+        @include setCouponCardColor($brand-info);
+        .memberCard-code-wrapper{
+            display:none;
+        }
+    }
+    .memberCard-branch{
+        @include setCouponCardColor($brand-success);
+    }
+}

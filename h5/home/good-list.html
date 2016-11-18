@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/good-list.css">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/flexible.js"></script>
+</head>
+<body>
+<div class="layout-page both-layout-page good-list">
+    <!-- 商品种类搜索框和排列按钮 -->
+    <div class="top-nav text-center">
+        <div class="flex-row-between flex-center good-list-top-search">
+            <div class="-col-left good-list-top-addrselect">
+                <span class="good-list-addrselect-name"><i class="iconfont iconfont-angle-left"></i></span>
+            </div>
+            <div class="-col-content good-list-top-search-goods">
+                <div class="search-group">
+                    <i class="iconfont iconfont-search"></i>
+                    <input type="text" placeholder="搜索热门商品" class="input-group-control">
+                </div>
+            </div>
+            <div class="-col-right good-list-top-toggle"><i class="iconfont iconfont-category"></i><i class="iconfont iconfont-list-ul"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 筛选 -->
+    <div class="good-list-filter">
+        <div class="good-list-filter-item">
+            <div class="good-list-filter-item-label">综合</div>
+            <div class="good-list-filter-item-images"></div>
+        </div>
+        <div class="good-list-filter-item active">
+            <div class="good-list-filter-item-label">价格</div>
+            <div class="good-list-filter-item-images"><div class="good-list-filter-item-price-up"></div><div class="good-list-filter-item-price-down"></div></div>
+        </div>
+        <div class="good-list-filter-item">
+            <div class="good-list-filter-item-label">销量</div>
+            <div class="good-list-filter-item-images"></div>
+        </div>
+        <div class="good-list-filter-item">
+            <div class="good-list-filter-item-label">筛选</div>
+            <div class="good-list-filter-item-images">
+                <div class="good-list-filter-item-filter-down"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="good-list-br"></div>
+    <!-- 筛选条件 -->
+    <div class="good-list-filter-content flex-cloumn-between">
+        <div class="good-list-filter-content-title -cloumn-top">支持门店自提</div>
+        <div class="good-list-filter-content-title -cloumn-top">有货商品</div>
+        <div class="good-list-filter-content-list flex-row-between -cloumn-content">
+            <div class="good-list-filter-content-list-left -col-left">
+                <div class="good-list-filter-content-menu active">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu select">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu select">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+                <div class="good-list-filter-content-menu">品牌</div>
+            </div>
+            <div class="good-list-filter-content-right -col-content">
+                <div class="good-list-filter-content-menu-list active">
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item active">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                </div>
+                <div class="good-list-filter-content-menu-list">
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item active">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                </div>
+                <div class="good-list-filter-content-menu-list">
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item active">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                </div>
+                <div class="good-list-filter-content-menu-list">
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item active">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                    <div class="good-list-filter-content-menu-item">高跟鞋</div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-group-justified good-list-filter-content-btn-group">
+            <a href="#" class="btn btn-primary-dark good-list-filter-content-btn-reset">重置</a>
+            <a href="#" class="btn btn-primary-light good-list-filter-content-btn-confirm">确认</a>
+        </div>
+    </div>
+    <!-- 商品列表 -->
+    <div class="good-list-wrap goog-type">
+    <!-- <div class="good-list-wrap"> -->
+        <div class="good-list-item flex-row-between">
+            <div class="good-list-item-img -col-left">
+                <img src="" alt="">
+            </div>
+            <div class="good-list-item-detail -col-content flex-cloumn-between"><div class="good-list-item-detail-top -cloumn-top">2015秋季新款厚底松糕高帮休闲鞋时 尚侧拉链按扣舒适短靴</div>
+                <div class="good-list-item-detail-bottom -cloumn-bottom flex-row-between">
+                    <div class="good-list-item-detail-bottom-left -col-left">
+                        <div class="good-list-item-detail-bottom-left-top">￥179</div>
+                        <div class="good-list-item-detail-bottom-left-bottom">好评率79%</div>
+                    </div>
+                    <div class="good-list-item-detail-bottom-right -col-right">
+                        已有<span>34567</span>人购买
+                    </div>
+                </div>
+            </div>
+        </div><div class="good-list-item flex-row-between">
+            <div class="good-list-item-img -col-left">
+                <img src="" alt="">
+            </div>
+            <div class="good-list-item-detail -col-content flex-cloumn-between"><div class="good-list-item-detail-top -cloumn-top">2015秋季新款厚底松糕高帮休闲鞋时 尚侧拉链按扣舒适短靴</div>
+                <div class="good-list-item-detail-bottom -cloumn-bottom flex-row-between">
+                    <div class="good-list-item-detail-bottom-left -col-left">
+                        <div class="good-list-item-detail-bottom-left-top">￥179</div>
+                        <div class="good-list-item-detail-bottom-left-bottom">好评率79%</div>
+                    </div>
+                    <div class="good-list-item-detail-bottom-right -col-right">
+                        已有<span>34567</span>人购买
+                    </div>
+                </div>
+            </div>
+        </div><div class="good-list-item flex-row-between">
+            <div class="good-list-item-img -col-left">
+                <img src="" alt="">
+            </div>
+            <div class="good-list-item-detail -col-content flex-cloumn-between"><div class="good-list-item-detail-top -cloumn-top">2015秋季新款厚底松糕高帮休闲鞋时 尚侧拉链按扣舒适短靴</div>
+                <div class="good-list-item-detail-bottom -cloumn-bottom flex-row-between">
+                    <div class="good-list-item-detail-bottom-left -col-left">
+                        <div class="good-list-item-detail-bottom-left-top">￥179</div>
+                        <div class="good-list-item-detail-bottom-left-bottom">好评率79%</div>
+                    </div>
+                    <div class="good-list-item-detail-bottom-right -col-right">
+                        已有<span>34567</span>人购买
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

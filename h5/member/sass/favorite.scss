@@ -1,0 +1,156 @@
+@import "../../../sass/oecstore/init.scss";
+/* ----------------------------- 收藏 -------------------------------*/
+
+.favorite-empty{
+    @include empty-style($member-path+'favorite-empty.png', px2rem(185px));
+    margin-top: px2rem(100px);
+    margin-bottom: px2rem(90px);
+    .empty-info{
+        font-size: 1.084em;
+        line-height: px2rem(30px);
+        &:before{
+            margin-bottom:px2rem(60px);
+            height: px2rem(280px);
+        }
+    }
+}
+
+.favorite-wrapper{
+
+    .-col-right{
+        width: px2rem(15px);
+        margin: 0 px2rem($padding-small*2) 0 ;
+        font-size: px2rem(30px);
+        text-align: left;
+        color: $gray-light;
+    }
+    .btn-icon-cart{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: px2rem(50px);
+        height: px2rem(40px);
+        padding-top: px2rem(5px);
+        border: 1px solid $gray-light;
+        border-radius: px2rem(4px);
+        text-align: center;
+        font-size: px2rem(30px);
+    }
+    .goods-item{
+        $left-side-width: px2rem(50px);
+        $img-size:        200px;
+        $good-height:     $img-size+$padding-small*2;
+        $top-height:      100px;
+        $top-padding:     15px;
+        $top-lineheight:  ($top-height - ($top-padding * 2))/2;
+        $bottom-height:   $img-size - $top-height;
+        padding-left:px2rem($padding-small);
+        padding-right:px2rem($padding-small);
+        &.edit{
+            .goods-item-main{
+                @include transform(translate(px2rem(40px),0));
+            }
+            .goods-item-aside{
+                left: px2rem(-43px);
+            }
+            .-col-right{
+                visibility: hidden;
+            }
+        }
+        .goods-item-main{
+            position: relative;
+            padding:px2rem($padding-small) 0;
+            height:px2rem($good-height);
+            @include flex-row-between();
+            @include flex-align-items(center, center);
+            @include transition(transform .5s);
+            @include transition-delay(.2s);
+        }
+        .goods-item-sub{
+            margin-left:$left-side-width;
+            margin-right:$margin-small;
+            border-top:1px solid $border-color;
+            font-size:.92em;
+            overflow:hidden;
+        }
+        .goods-item-aside{
+            position: absolute;
+            left: px2rem(-1000px);
+            top: px2rem(85px);
+            width:$left-side-width;
+            text-align:center;
+            font-size:1.2em;
+            .checkbox{
+                label{
+                    &:after{
+                        top: .3em;
+                    }
+                }
+            }
+            // padding:($img-size - 40px)/2 0;
+        }
+        .goods-item-img{
+            width:px2rem($img-size);
+            height:100%;
+            margin-right:px2rem($padding-small);
+            border-radius:px2rem($border-radius-base);
+            overflow: hidden;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .goods-item-info{
+            height:100%;
+            @include flex-num(1);
+            padding-left: px2rem($padding-small);
+            font-size:1.09em;
+        }
+        .goods-item-top{
+            height:px2rem($top-height);
+            padding:px2rem($top-padding) 0;
+            line-height:px2rem($top-lineheight);
+        }
+        .goods-item-bottom{
+            position: relative;
+            height: px2rem($bottom-height);
+        }
+        .goods-item-title{
+            @include line-clamp(2);
+        }
+        .goods-item-spec{
+            color:$gray;
+        }
+        .goods-item-price{
+            margin-top:px2rem($margin-large);
+            font-size: px2rem(24px);
+            line-height: px2rem(30px);
+            color: $gray-dark;
+        }
+        .goods-item-domain{
+            position:absolute;
+            right:px2rem($padding-small);
+            bottom:px2rem($padding-small);
+        }
+        .goods-item-present{
+            padding:px2rem(14px) 0;
+            line-height:1.5;
+            .present-title{
+                float:left;
+                > .label{
+                    display:inline;
+                    padding:.05em .65em;
+                }
+            }
+            .present-list{
+                margin-left:px2rem(95px);
+            }
+        }
+
+    }
+    .ecommend-wrapper{
+        overflow:hidden;
+        margin-top:px2rem($padding-base);
+    }
+}

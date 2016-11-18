@@ -1,0 +1,236 @@
+@import "../../../sass/oecstore/init.scss";
+.member{
+    .layout-title{
+        .title-cog{
+            font-size:1.15em;
+            padding-right:px2rem(1.5 * $padding-base);
+        }
+    }
+}
+
+.member-wrapper{
+    .member-header{
+        position:relative;
+        background-color:$member-head-background;
+        padding:$member-head-padding-vertical px2rem(2 * $padding-base) $member-head-padding-vertical px2rem(74px);
+        overflow: hidden;
+        &::before{
+            @include icon-vip();
+            font-size:7rem;
+            position:absolute;
+            left:-2.5rem;
+            top:-3rem;
+            color: hsla(0, 0%, 0%, 0.1);
+        }
+    }
+    .member-header-main{
+        position:relative;
+        overflow:hidden;
+        z-index:1;
+    }
+    .member-avator,.member-info{
+        float:left;
+        height: $member-head-avatar-size;
+    }
+    .member-avator{
+        width: $member-head-avatar-size;
+        background-color: #fff;
+        border-radius:50%;
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+    .member-info{
+        $btn-width: px2rem(160px);
+        $btn-height: px2rem(60px);
+        $btn-cutter-width: 40px;
+        position: relative;
+        left:px2rem(30px);
+        width: px2rem(300px);
+        .btn{
+            position: absolute;
+            display: block;
+            min-width: $btn-width;
+            max-width: 3.5rem;
+            @include button-size($btn-height,$border-radius:0);
+            padding-left:px2rem($padding-base);
+            padding-right:px2rem($padding-base + $btn-cutter-width/2);
+            border:none;
+        }
+        .btn-login{
+            top:px2rem(7px);
+            @include button-variant($btn-primary-color, $btn-primary-light-bg);
+            border-top-right-radius:px2rem(10px);
+            &:before{
+                content:'';
+                position:absolute;
+                left:-1 * px2rem($btn-cutter-width - 2px);
+                background:url(../../../images/cutter-btn-up.png) no-repeat;
+                background-size:cover;
+                width:px2rem($btn-cutter-width);
+                height:100%;
+            }
+        }
+        .btn-register,.btn-usr{
+            bottom: px2rem(7px);
+            @include button-variant($oec-primary-dark, $sub-bg);
+            border-bottom-right-radius:px2rem(10px);
+            &:before{
+                content:'';
+                position:absolute;
+                left: -1 * px2rem($btn-cutter-width);
+                width:px2rem($btn-cutter-width + 2px);
+                height:100%;
+            }
+        }
+        .btn-register{
+            &:before{
+                background:url(../../../images/cutter-btn-down.png) no-repeat;
+                background-size:100% 100%;
+            }
+        }
+        .btn-usr{
+            left:px2rem(-6px);
+            bottom:.2em;
+            padding-left:px2rem($padding-small);
+            padding-right:px2rem($padding-base);
+            @include font-dpr(11px);
+            text-align:left;
+            &:before{
+                background:url(../../../images/cutter-btn-down-large.png) no-repeat;
+                background-size:100% 100%;
+            }
+        }
+        .btn-rank{
+            bottom:$btn-height;
+            @include height(auto);
+            padding:px2rem(5px) px2rem($padding-small+6px);
+            text-align:left;
+            color:$sub-bg;
+            @include font-dpr($font-size-h6);
+            > * {
+                    vertical-align: initial;
+            }
+            .iconfont{
+                margin-right:0;
+                font-size:1.5em;
+            }
+        }
+        .iconfont-male{
+            color:$brand-info;
+        }
+        .iconfont-female{
+            color:$oec-primary-light;
+        }
+
+    }
+    .member-domain{
+        .btn-signin{
+            @include button-variant($sub-bg,transparent,$sub-bg);
+            padding-left:px2rem($padding-base);
+            padding-right:px2rem($padding-base);
+            .iconfont{
+                font-size:1.45em;
+            }
+        }
+    }
+    .member-orders{
+        .value{
+            margin-left:.3em;
+            font-size:.8em;
+            vertical-align:.1em;
+            color:$oec-primary-light;
+        }
+    }
+
+}
+.member-overview{
+    padding-top:px2rem(45px);
+    padding-bottom:px2rem(45px);
+    .member-overview-offset{
+        position:relative;
+        top:px2rem(15px);
+    }
+    .-col-grow-1{
+        text-align:center;
+        &:not(:last-child){
+            border-right:1px solid $border-color;
+        }
+    }
+}
+.member-overview-value{
+    padding-bottom:px2rem(16px);
+    @include font-dpr(20px);
+    font-weight: bold;
+    > .member-overview-unit{
+        margin-left:.5em;
+        font-size:.5em;
+    }
+}
+.member-overview-deposit{
+    .member-overview-value{
+        color:$oec-primary-light;
+    }
+}
+.member-overview-vantages{
+    .member-overview-value{
+        color:$brand-info;
+    }
+}
+.member-overview-coupons{
+    .member-overview-value{
+        color:$brand-success;
+    }
+}
+.member-list{
+    $spacing:px2rem($padding-large);
+
+    padding:0 $spacing;
+    @include font-dpr($font-size-h3);
+    a:not(:last-child){
+        .member-line{
+            border-bottom:1px solid $border-color;
+        }
+    }
+    .member-line{
+        @include flex-row-between();
+        @include flex-align-items(center, center);
+        @include height(px2rem($padding-large*2+$font-size-h3));
+        
+        .iconfont{
+            @include font-dpr($font-size-h3+2px);
+        }
+
+    }
+    .member-stretch{
+        margin-left:-$spacing;
+        margin-right:-$spacing;
+    }
+    .member-line-info{
+        .iconfont{
+            margin-right:.5em;
+        }
+    }
+    .member-line-right{
+        color:$gray-light;
+        font-size:.8em;
+        > .iconfont{
+            margin-left:.3em;
+            margin-right: -.2em;
+        }
+        > * {
+            vertical-align:middle;
+        }
+    }
+    .btn-group-justified{
+        padding-top:$spacing/2;
+        padding-bottom:$spacing/2;
+        > .btn-link:not(:last-child){
+            border-right-color:$border-color;
+        }
+    }
+    .btn{
+        @include button-size(px2rem(50px));
+    }
+}

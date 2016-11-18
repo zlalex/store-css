@@ -1,0 +1,130 @@
+@import "../../../sass/oecstore/init.scss";
+
+.footprint-wrapper{}
+.timeline{
+    $gap:45px;
+    position:relative;
+    margin-left:px2rem(34px);
+    .well{
+        margin:0;
+    }
+    &::after{
+        content:'';
+        display:block;
+        position:absolute;
+        width:2px;
+        top:px2rem(33px);
+        bottom:0;
+        background-color:$oec-primary-light;
+    }
+    .timeline-item{
+        position:relative;
+        margin-left:px2rem($gap);
+    }
+    .timeline-item-header{
+        position:relative;
+        padding-top:px2rem(33px);
+        padding-bottom:px2rem(33px);
+        font-weight:bold;
+        color:$oec-primary-light;
+        &::before{
+            $mark-size:30px;
+            @include icon-date();
+            left:-1 * px2rem($gap + $mark-size / 2 - 1px);
+            display:block;
+            width:px2rem($mark-size);
+            @include height(px2rem($mark-size));
+            @include abs-center-vertical(px2rem($mark-size));
+            background-color: $oec-primary-light;
+            color:$body-bg;
+            text-align:center;
+            font-size:px2rem(31px);
+            font-weight:normal;
+            border-radius:50%;
+            z-index:10;
+        }
+    }
+    .goods-item{
+        position:relative;
+        margin-bottom:px2rem($padding-base);
+        margin-right:px2rem($padding-base);
+        padding:0;
+        &:last-child{
+            margin-bottom:0;
+        }
+        &::before{
+            $mark-size:20px;
+            @include icon-foot();
+            left:-1 * px2rem($gap + $mark-size/ 2 - 1px);
+            display:block;
+            width:px2rem($mark-size);
+            @include height(px2rem($mark-size));
+            @include abs-center-vertical(px2rem($mark-size));
+            background-color: $oec-primary-light;
+            color:$body-bg;
+            text-align:center;
+            font-size:px2rem(20px);
+            @include transform(rotate(-45deg));
+            border-radius:5rem;
+            z-index:10;
+            [data-dpr="1"] & {
+                $mark-size : $mark-size/2;
+                left:-1 * px2rem($gap + $mark-size/ 2 + 3px);
+                width:$mark-size;
+                height:$mark-size;
+                line-height:$mark-size;
+                @include abs-center-vertical($mark-size);
+            }
+        }
+        &::after{
+            $triangle-size:27px;
+            content:'';
+            display:block;
+            position:absolute;
+            left:px2rem(- $triangle-size / 2);
+            width:px2rem($triangle-size);
+            height:px2rem($triangle-size);
+            @include abs-center-vertical(px2rem($triangle-size));
+            background:inherit;
+            @include transform(rotate(45deg));
+            @include box-shadow($well-boxshadow);
+        }
+    }
+    .goods-item-main{
+        position:relative;
+        height:px2rem(200px);
+        padding-left:px2rem($padding-base/2);
+        padding-right:px2rem($padding-base);
+        background:inherit;
+        z-index:10;
+        .goods-item-img{
+            width:px2rem(180px);
+        }
+        .goods-item-top{
+            position:relative;
+            padding-right:px2rem(65px);
+        }
+        .btn-delete{
+            position: absolute;
+            top: 0;
+            right: px2rem(-$padding-base);
+            font-size: 1.2em;
+            color: #999;
+        }
+        .goods-item-bottom{
+            height:px2rem(80px);
+        }
+        .goods-item-price{
+            font-weight:normal;
+        }
+        .goods-item-domain{
+            right:0;
+        }
+        .btn-default{
+            padding-top: .23em;
+            padding-bottom: .23em;
+            border-color: currentColor;
+            color: #999;
+        }
+    }
+}

@@ -1,0 +1,199 @@
+/* line 5, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales {
+  background-color: whitesmoke;
+}
+/* line 7, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales.layout-page.both-layout-page {
+  padding-bottom: 0px;
+}
+/* line 11, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list {
+  margin-bottom: 1.46667rem;
+}
+/* line 13, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list > div {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+/* line 17, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item {
+  height: 2.4rem;
+  border-top-color: #e1e1e1;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 0.26667rem;
+  padding-bottom: 0.26667rem;
+}
+/* line 18, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item:first-child {
+  border-top-width: 0 !important;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item {
+  border-top-width: 2px;
+}
+/* line 25, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item > div {
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -ms-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+/* line 29, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-left img {
+  width: 1.86667rem;
+  height: 1.86667rem;
+}
+/* line 34, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content {
+  margin-left: 0.26667rem;
+  padding-top: 0.26667rem;
+  padding-bottom: 0.13333rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 39, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-title {
+  font-size: 13px;
+  color: #333333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-title {
+  font-size: 26px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-title {
+  font-size: 39px;
+}
+/* line 45, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 48, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-label {
+  font-size: 12px;
+  color: #333333;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-label {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-label {
+  font-size: 36px;
+}
+/* line 52, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-shop {
+  font-size: 14px;
+  color: #ff317a;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-shop {
+  font-size: 28px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-shop {
+  font-size: 42px;
+}
+/* line 56, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-mart {
+  font-size: 10px;
+  color: #999999;
+  text-decoration: line-through;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-mart {
+  font-size: 20px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-price .nearby-shop-detail-more-sales-sales-item-price-mart {
+  font-size: 30px;
+}
+/* line 62, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-time-range {
+  font-size: 10px;
+  color: #333333;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-time-range {
+  font-size: 20px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-content .nearby-shop-detail-more-sales-sales-item-time-range {
+  font-size: 30px;
+}
+/* line 67, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+/* line 69, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-right .nearby-shop-detail-more-sales-sales-item-sales-num {
+  font-size: 12px;
+  color: #666666;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-right .nearby-shop-detail-more-sales-sales-item-sales-num {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-right .nearby-shop-detail-more-sales-sales-item-sales-num {
+  font-size: 36px;
+}
+/* line 72, ../sass/nearbyShopDetailMoreSales.scss */
+.nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-right .nearby-shop-detail-more-sales-sales-item-sales-num .iconfont {
+  font-size: 10px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-right .nearby-shop-detail-more-sales-sales-item-sales-num .iconfont {
+  font-size: 20px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .nearby-shop-detail-more-sales .nearby-shop-detail-more-sales-list .nearby-shop-detail-more-sales-sales-item .-col-right .nearby-shop-detail-more-sales-sales-item-sales-num .iconfont {
+  font-size: 30px;
+}

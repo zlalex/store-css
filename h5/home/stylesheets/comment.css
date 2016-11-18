@@ -1,0 +1,205 @@
+/* line 5, ../sass/comment.scss */
+.comment-list .comment-item {
+  padding: 0 0.26667rem;
+  border-bottom: 1px solid transparent;
+}
+/* line 8, ../sass/comment.scss */
+.comment-list .comment-item > div {
+  margin-bottom: 0.4rem;
+}
+/* line 13, ../sass/comment.scss */
+.comment-list .comment-item-brief {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0.26667rem 0;
+}
+/* line 16, ../sass/comment.scss */
+.comment-list .comment-item-brief .-col-left {
+  width: 2.13333rem;
+  height: 2.13333rem;
+  border-radius: 0.04rem;
+  overflow: hidden;
+}
+/* line 21, ../sass/comment.scss */
+.comment-list .comment-item-brief .-col-left img {
+  height: 100%;
+}
+/* line 25, ../sass/comment.scss */
+.comment-list .comment-item-brief .-col-content {
+  margin-left: 0.26667rem;
+  padding-top: 0.26667rem;
+  padding-bottom: 0.13333rem;
+  display: -moz-box;
+  display: -webkit-box;
+  display: box;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -moz-box-pack: justify;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 32, ../sass/comment.scss */
+.comment-list .comment-item-title {
+  margin-bottom: 0.2rem;
+  font-size: 1.08333em;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+/* line 39, ../sass/comment.scss */
+.comment-list .comment-item-business > span {
+  vertical-align: middle;
+}
+/* line 42, ../sass/comment.scss */
+.comment-list .comment-item-business .label {
+  padding: 2px .42em;
+  border-radius: 0.06667rem;
+}
+/* line 47, ../sass/comment.scss */
+.comment-list .comment-item-date {
+  color: #444;
+}
+/* line 50, ../sass/comment.scss */
+.comment-list .comment-item-address {
+  width: 5.33333rem;
+  color: #666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 56, ../sass/comment.scss */
+.comment-list .comment-item-rank {
+  color: #666;
+  overflow: hidden;
+}
+/* line 60, ../sass/comment.scss */
+.comment-list .comment-item-scores {
+  margin-top: 0.2rem;
+  margin-bottom: 0.46667rem;
+  text-align: center;
+}
+/* line 64, ../sass/comment.scss */
+.comment-list .comment-item-scores .scores {
+  font-size: 1.76923em;
+}
+/* line 68, ../sass/comment.scss */
+.comment-list .comment-item-labels {
+  text-align: center;
+}
+/* line 70, ../sass/comment.scss */
+.comment-list .comment-item-labels .label {
+  padding: 0.09333rem 0.26667rem;
+  margin: 0.06667rem;
+  border-radius: 0.06667rem;
+  color: #666;
+}
+/* line 75, ../sass/comment.scss */
+.comment-list .comment-item-labels .label.active {
+  border-color: currentColor;
+  color: #fabd3d;
+}
+/* line 83, ../sass/comment.scss */
+.comment-list .comment-item-note textarea {
+  height: 1.86667rem;
+  padding: 0.29333rem;
+  font-size: 0.91667em;
+  resize: none;
+}
+/* line 91, ../sass/comment.scss */
+.comment-list .comment-item-imgs-list {
+  font-size: 0.83333em;
+}
+/* line 93, ../sass/comment.scss */
+.comment-list .comment-item-imgs-list .upload-imgs-list {
+  padding: 0;
+  margin-bottom: 0.26667rem;
+}
+/* line 96, ../sass/comment.scss */
+.comment-list .comment-item-imgs-list .upload-imgs-list .upload-imgs-item {
+  width: 1.84rem;
+  height: 1.84rem;
+  color: #ddd;
+}
+/* line 353, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .comment-list .comment-item-imgs-list .upload-imgs-list .upload-imgs-item {
+  border: 2px;
+}
+/* line 102, ../sass/comment.scss */
+.comment-list .comment-item-imgs-list .upload-imgs-list .upload-imgs-item .upload-desc {
+  top: 40%;
+}
+/* line 104, ../sass/comment.scss */
+.comment-list .comment-item-imgs-list .upload-imgs-list .upload-imgs-item .upload-desc::before {
+  font-size: 1.33333rem;
+  margin-bottom: 0.13333rem;
+}
+/* line 113, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-title {
+  font-weight: bold;
+  font-size: 1.16667em;
+}
+/* line 117, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-scores {
+  text-align: left;
+  margin: 0;
+}
+/* line 122, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-brief .-col-right {
+  width: 1.33333rem;
+  margin-top: 0.26667rem;
+  margin-bottom: 0.13333rem;
+  color: #666;
+  border-left: 1px solid #e1e1e1;
+  text-align: center;
+}
+/* line 129, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-brief .-col-right .iconfont {
+  display: block;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 1.5em;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 135, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-brief .-col-right .shop-dis {
+  font-weight: bold;
+}
+/* line 140, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-scores-list {
+  margin-left: 0.26667rem;
+  line-height: 0.53333rem;
+}
+/* line 144, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-scores-list > li:not(:last-child) {
+  margin-bottom: 0.30667rem;
+}
+/* line 148, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-scores-list .-col-key {
+  width: 1.44rem;
+}
+/* line 151, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-scores-list .-col-value {
+  margin-left: 1.44rem;
+}
+/* line 154, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-scores-list .scores {
+  font-size: 1.16667em;
+}
+/* line 156, ../sass/comment.scss */
+.comment-list .comment-shop-item .comment-item-scores-list .scores > div {
+  vertical-align: top;
+}

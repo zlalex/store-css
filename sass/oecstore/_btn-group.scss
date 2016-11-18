@@ -1,0 +1,73 @@
+//
+// Button groups
+// --------------------------------------------------
+@import "oecstore/mixins/border-radius.scss";
+// Make the div behave like a button
+.btn-group{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle; // match .btn alignment given font-size hack above
+    > .btn {
+        position: relative;
+        float: left;
+    }
+    > .btn-link:not(:last-child){
+        border-right:1px solid currentColor;
+    }
+}
+.btn-group {
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        margin-left: -1px;
+    }
+}
+.btn-group > .btn:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+.btn-group > .btn:first-child {
+    margin-left: 0;
+    &:not(:last-child) {
+        @include border-right-radius(0);
+    }
+}
+// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+.btn-group > .btn:last-child:not(:first-child) {
+    @include border-left-radius(0);
+}
+
+.btn-group > .btn-group {
+    float: left;
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
+}
+.btn-group > .btn-group:first-child:not(:last-child) {
+    > .btn:last-child,
+    > .dropdown-toggle {
+        @include border-right-radius(0);
+    }
+}
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+    @include border-left-radius(0);
+}
+
+.btn-group-justified {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    > .btn,
+    > .btn-group {
+        float: none;
+        display: table-cell;
+        width: 1%;
+    }
+    > .btn-group .btn {
+        width: 100%;
+    }
+    > .btn-link:not(:last-child){
+        border-right:1px solid $border-color;
+    }
+}

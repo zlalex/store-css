@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单</title>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <!-- <link rel="stylesheet" href="../member/stylesheets/index.css"> -->
+    <link rel="stylesheet" href="../cart/stylesheets/cart.css">
+    <link rel="stylesheet" href="stylesheets/order-cancel.css">
+    <script src="../lib/flexible.js"></script>
+</head>
+<body>
+    <div class="layout-page both-layout-page order-wrapper">
+        <div class="top-nav text-center">
+            <div class="layout-title">
+                <div class="title-left">
+                    <a href="#" class="title-back">
+                        <i class="iconfont iconfont-angle-left"></i>
+                    </a>
+                </div>
+                <div class="title-content">取消订单</div>
+            </div>
+        </div>
+        <div class="layout-content order-cancel-wrapper">
+            <div class="well order-cancel-list">
+                <div class="header">选择取消原因</div>
+                <div class="main">
+                    <ul>
+                        <li class="order-cancel-item act">选错商品了</li>
+                        <li class="order-cancel-item">不想要了</li>
+                        <li class="order-cancel-item">质量太差</li>
+                        <li class="order-cancel-item">好评度不高</li>
+                        <li class="order-cancel-item">其他原因</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="well order-cancel-note">
+                <div class="header">还想说的原因</div>
+                <div class="main">
+                    <textarea class="cancel-note-ipt" name="cancel-reason" id="" placeholder="您取消订单的原因(非必填)"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-nav text-center order-cancel-bottom">
+            <div class="btn btn-primary-dark btn-block">立即提交</div>
+        </div>
+    </div>
+</body>
+</head>

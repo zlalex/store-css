@@ -1,0 +1,184 @@
+// layout style
+
+// import files
+
+// layout with these mixins
+// page layout
+@mixin float-nav($float-nav-row-direction: left, $float-nav-column-direction: top){
+    @content;
+    z-index: $layout-z-index;
+    #{$float-nav-row-direction}: 0;
+    #{$float-nav-column-direction}: 0;
+    display: block;
+}
+
+@mixin float-nav-top(){
+    @include float-nav(left, top){
+        position: fixed;
+    };
+}
+
+@mixin float-nav-bottom(){
+    @include float-nav(left, bottom){
+        position: fixed;
+    };
+}
+
+@mixin float-nav-left(){
+    @include float-nav(left, top){
+        position: absolute;
+    };
+}
+
+@mixin float-nav-right(){
+    @include float-nav(right, top){
+        position: absolute;
+    };
+}
+
+@mixin top-nav(){
+    @include float-nav-top();
+    width: 100%;
+}
+
+@mixin bottom-nav($bottomNav: $bottom-nav-height){
+    @include float-nav-bottom();
+    width: 100%;
+    height: $bottomNav;
+    // @include setBorder(border, rgb(225,225,225), 1px);
+}
+
+// title layout
+@mixin title-left(){
+    @include float-nav-left();
+}
+@mixin title-right(){
+    @include float-nav-right();
+}
+
+// box layout
+@mixin display-box(){
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+}
+@mixin box-orient($box-direction: horizontal){
+    -moz-box-orient: $box-direction;
+    -webkit-box-orient: $box-direction;
+    box-orient: $box-direction;
+}
+@mixin box-pack($box-pack: start){
+    -moz-box-pack: $box-pack;
+    -webkit-box-pack: $box-pack;
+    box-pack: $box-pack;
+}
+@mixin box-align($box-align: start){
+    -moz-box-align: $box-align;
+    -webkit-box-align: $box-align;
+    box-align: $box-align;
+};
+
+@mixin box-grow($box-grow: 1){
+    -moz-box-flex: $box-grow;
+    -webkit-box-flex: $box-grow;
+    box-flex: $box-grow;
+    // -webkit-box-flex-group: $box-grow;
+    // box-flex-group: $box-grow;
+}
+
+// flex layout
+@mixin flex-row(){
+    @include display-box;
+    @include box-orient(horizontal);
+    @include display-flex;
+    @include flex-direction(row);
+}
+
+@mixin flex-row-nowrap(){
+    @include flex-row();
+    @include flex-wrap(nowrap);
+}
+
+@mixin flex-row-around(){
+    @include flex-row-nowrap();
+    @include box-pack(justify);
+    @include justify-content(space-around);
+}
+
+@mixin flex-row-between(){
+    @include flex-row-nowrap();
+    @include box-pack(justify);
+    @include justify-content(space-between);
+}
+
+@mixin flex-cloumn(){
+    @include display-box;
+    @include box-orient(vertical);
+    @include display-flex;
+    @include flex-direction(column);
+}
+
+@mixin flex-cloumn-nowrap(){
+    @include flex-cloumn();
+    @include flex-wrap(no-wrap);
+}
+
+@mixin flex-cloumn-between(){
+    @include flex-cloumn-nowrap();
+    @include box-pack(justify);
+    @include justify-content(space-between);
+}
+@mixin flex-cloumn-around(){
+    @include flex-cloumn-nowrap();
+    @include box-pack(justify);
+    @include justify-content(space-around);
+}
+
+@mixin flex-align-items($align-items: flex-start, $box-items: start) {
+    @include box-align($box-items);
+    @include align-items($align-items);
+}
+
+@mixin flex-num($flex){
+    @include box-grow($flex);
+    @include flex($flex);
+}
+
+@mixin well($well-vertical,$well-horizontal,$boxshaow:$well-boxshadow){
+    margin: px2rem($well-vertical) px2rem($well-horizontal);
+    @include border-radius(px2rem($wellRaius));
+    background-color: $wellBg;
+    @include box-shadow($well-boxshadow);
+}
+
+@mixin scores(){
+    font-size:px2em(13px);
+    >div{
+        @include inline-block;
+    }
+    @at-root (without: all){
+      .scores-img{
+            color: rgb(250,189,61);
+            >.iconfont{
+                padding-right: .23em;
+            }
+        }
+    }
+    @at-root (without: all){
+        .scores-wg{
+            margin-left: px2rem(4px);
+        }
+    }
+    @at-root (without: all){
+        .scores-dian{
+            margin-right: .167em;
+        }
+    }
+    @at-root (without: all){
+        .scores-xs{
+            font-size:px2em(9px,13px);
+            vertical-align: top;
+        }
+    }
+
+}

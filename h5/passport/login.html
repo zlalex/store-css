@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <script src="../lib/flexible.js"></script>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/passport.css">
+    <style>
+    .box{
+        height:3em;
+        margin-right:1em;
+        background-color:#999;
+    }
+    .box:last-child{
+        margin-right:0;
+    }
+    </style>
+</head>
+<body>
+<div class="layout-page top-layout-page">
+    <div class="top-nav text-center">
+        <div class="layout-title">
+            <div class="title-left">
+                <a href="#" class="title-back">
+                    <i class="iconfont iconfont-angle-left"></i>
+                </a>
+            </div>
+            <div class="title-content">登录</div>
+        </div>
+
+    </div>
+
+    <div class="layout-content passport-wrapper passport-login">
+        <div class="passport-feedback show">您输入的用户名不存在</div>
+        <form action="" class="form-wrapper">
+            <div class="form-group-wrapper">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" placeholder="请输入您的手机号码或邮箱" class="input-group-control ipt-usrname">
+                    </div>
+                    <div class="form-group-domain">
+                        <i class="iconfont iconfont-close"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="password" placeholder="请输入您的登录密码" class="input-group-control ipt-password">
+                    </div>
+                    <div class="form-group-domain">
+                        <i class="iconfont iconfont-eye"></i>
+                        <i class="iconfont iconfont-close"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" placeholder="请输入验证码" class="input-group-control">
+                    </div>
+                    <div class="form-group-domain">
+                        <i class="iconfont iconfont-close"></i>
+                        <div class="btn btn-default btn-image">
+                            <img src="../../images/validate.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkbox checkbox-form">
+                <input type="checkbox" name="autologin" id="autologin"><label for="autologin">两周内自动登录</label>
+            </div>
+            <input type="submit" class="btn btn-block btn-primary-light" value="提交">
+        </form>
+        <section class="btn-group btn-group-justified passport-links">
+            <a href="#" class="btn btn-link">忘记密码</a>
+            <a href="#" class="btn btn-link">快速注册</a>
+        </section>
+        <section class="other-login">
+            <div class="line-text"><span>还可以使用第三方网站账户登录</span></div>
+            <div class="flex-row-between flex-center">
+                <div class="-col-content box">1</div>
+                <div class="-col-content box">2</div>
+                <div class="-col-content box">3</div>
+                <div class="-col-content box">4</div>
+                <div class="-col-content box">5</div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

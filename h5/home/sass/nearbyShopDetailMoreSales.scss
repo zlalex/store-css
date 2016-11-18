@@ -1,0 +1,80 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+
+.nearby-shop-detail-more-sales{
+    background-color: rgb(245,245,245);
+    &.layout-page.both-layout-page{
+        padding-bottom: 0px;
+    }
+    // 优惠列表
+    .nearby-shop-detail-more-sales-list{
+        margin-bottom: px2rem(110px);
+        >div{
+            margin-left: px2rem(30px);
+            margin-right: px2rem(30px);
+        }
+        .nearby-shop-detail-more-sales-sales-item{
+            &:first-child{
+                border-top-width: 0 !important;
+            }
+            height: px2rem(180px);
+            @include setBorder(border-top, rgb(225,225,225), 1px);
+            padding-top: px2rem(20px);
+            padding-bottom: px2rem(20px);
+            >div{
+                @include flex-align-items(stretch, stretch);
+            }
+            .-col-left{
+                img{
+                    width: px2rem(140px);
+                    height: px2rem(140px);
+                }
+            }
+            .-col-content{
+                margin-left: px2rem(20px);
+                padding-top: px2rem(20px);
+                padding-bottom: px2rem(10px);
+                @include flex-cloumn-between();
+                .nearby-shop-detail-more-sales-sales-item-title{
+                    @include font-dpr(13px);
+                    color: rgb(51,51,51);
+                    @include nowrap();
+                }
+                .nearby-shop-detail-more-sales-sales-item-price{
+                    >div{
+                        @include inline-block();
+                    }
+                    .nearby-shop-detail-more-sales-sales-item-price-label{
+                        @include font-dpr(12px);
+                        color: rgb(51,51,51);
+                    }
+                    .nearby-shop-detail-more-sales-sales-item-price-shop{
+                        @include font-dpr(14px);
+                        color: rgb(255,49,122);
+                    }
+                    .nearby-shop-detail-more-sales-sales-item-price-mart{
+                        @include font-dpr(10px);
+                        color: rgb(153,153,153);
+                        text-decoration:line-through;
+                    }
+                }
+                .nearby-shop-detail-more-sales-sales-item-time-range{
+                        @include font-dpr(10px);
+                        color: rgb(51,51,51);
+                }
+            }
+            .-col-right{
+                @include flex-cloumn-around();
+                .nearby-shop-detail-more-sales-sales-item-sales-num{
+                    @include font-dpr(12px);
+                    color: rgb(102,102,102);
+                    .iconfont{
+                        @include font-dpr(10px);
+                    }
+                }
+            }
+        }
+    }
+
+}

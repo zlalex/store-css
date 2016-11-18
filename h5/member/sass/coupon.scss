@@ -1,0 +1,517 @@
+@import "../../../sass/oecstore/init.scss";
+
+$cpns-height : px2rem(200px);
+$cutter-border-width: 35px;
+// 设置优惠券颜色
+@mixin setCouponColor($color){
+    .coupon-item-side{
+        background-color:$color;
+    }
+    .coupon-item-key,
+    .coupon-item-type,
+    .coupon-item-status{
+        color:$color;
+    }
+}
+// 设置优惠券详情颜色
+@mixin setCouponCardColor($color){
+    .btn-use{
+        background-color:$color;
+    }
+    .cpncard-title,
+    .cpncard-code-domain{
+        color:$color;
+    }
+}
+.coupon-getentry{
+    .btn-group-justified{
+        padding-top:px2rem(25px);
+        padding-bottom:px2rem(25px);
+    }
+    .btn{
+        @include button-size(px2rem(80px));
+        &::before{
+            content:'';
+            display:inline-block;
+            width:px2rem(70px);
+            height:px2rem(70px);
+            margin-right:px2rem(20px);
+            vertical-align:middle;
+        }
+    }
+    .coupon-get{
+        &::before{
+            background:url(../../../images/icon-coupon.png) no-repeat;
+            background-size:contain;
+        }
+    }
+    .coupon-exchange{
+        &::before{
+            background:url(../../../images/icon-purse.png) no-repeat;
+            background-size:contain;
+        }
+    }
+}
+.coupon-list-wrapper{
+    margin:px2rem($padding-base) 0;
+}
+.coupon-empty{
+    @include empty-style($coupon-path+'coupon-empty.png', px2rem(350px));
+    &.show{
+        + .coupon-domain{
+            margin-top:px2rem(150px);
+        }
+    }
+}
+.coupon-domain{
+    margin:px2rem(60px) px2rem($padding-small);
+    @include btn-link-border-color($gray-light);
+    .iconfont{
+        margin-left:.5em;
+        margin-right:0;
+        font-size:.8em;
+
+    }
+}
+.coupon-item{
+    $font-size: px2rem($font-size-base*2);
+    $cutter-circle-width: 18px;
+
+    position:relative;
+    font-size:$font-size;
+    @include flex-row-between();
+    height:px2rem(200px);
+    color:#444;
+    &::before,&::after{
+        content:'';
+        display:block;
+        width:px2rem($cutter-border-width);
+        position:absolute;
+        top:px2rem(-6px);
+        bottom:px2rem(-6px);
+        z-index:1;
+    }
+    &::before{
+        left:px2rem(-2px);
+        background:url($coupon-path+'coupon-cutter-left.png') no-repeat;
+        background-size:100% 100%;
+    }
+    &::after{
+        right:px2rem(-2px);
+        background:url($coupon-path+'coupon-cutter-right.png') no-repeat;
+        background-size:100% 100%;
+    }
+    .coupon-item-side{
+        position:relative;
+        width:px2rem(83px);
+        height:100%;
+        padding-left:px2rem($cutter-border-width);
+        background-color:$gray-lighter;
+        font-size:.92em;
+        font-weight:bold;
+        color:#fff;
+        &::before,&::after{
+            content:'';
+            display:block;
+            width:px2rem($cutter-circle-width);
+            height:px2rem($cutter-circle-width);
+            right:px2rem(-$cutter-circle-width/2);
+            position:absolute;
+            z-index:1;
+            background: #f5f5f5;
+            border-radius:50%;
+        }
+        &::before{
+            top:px2rem(-$cutter-circle-width/2);
+            @include css3(box-shadow, inset 0 -.1em .15em rgba(0,0,0,.1));
+        }
+        &::after{
+            bottom:px2rem(-$cutter-circle-width/2);
+            @include css3(box-shadow, inset 0 .1em .15em rgba(0,0,0,.1));
+        }
+    }
+    .coupon-item-sideinfo{
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 65%;
+        width:1em;
+        line-height:1.2;
+        text-align: center;
+        @include css3(transform,translate(-50%,-50%));
+    }
+    .coupon-item-main{
+        position:relative;
+        padding-left:px2rem(50px);
+        padding-right:px2rem($cutter-border-width);
+        @include flex-num(1);
+        height:100%;
+        overflow: hidden;
+        &::after{
+            @include icon-ticket();
+            position:absolute;
+            top:px2rem(-65px);
+            right:px2rem(-25px);
+            font-size:$cpns-height * 1.05;
+            color:rgba(0,0,0,.05);
+            @include transform(rotate(-30deg));
+            z-index:1;
+        }
+        + .coupon-item-side{
+            width:px2rem(130px);
+            padding-right:px2rem($cutter-border-width);
+            padding-left:0;
+            &::before,&::after{
+                left: px2rem(-$cutter-circle-width/2);
+            }
+            .coupon-item-sideinfo{
+                left: 40%;
+            }
+        }
+        
+    }
+    .coupon-item-title{
+        position:relative;
+        height:$cpns-height * 0.67;
+        padding-top: px2rem(40px);
+        padding-bottom: px2rem(20px);
+        font-weight:bold;
+        z-index:10;
+    }
+    .coupon-item-subinfo{
+        width:100%;
+        height:$cpns-height * 0.33;
+        line-height:$cpns-height * 0.33;
+    }
+    
+    .coupon-item-key{
+        display:inline-block;
+        font-size:3.5em;
+        margin-right:.3em;
+        .unit{
+            font-size:.6em;
+        }
+        + .coupon-item-brief{
+            width:10.5em;
+        }
+    }
+    .coupon-item-brief{
+        display:inline-block;
+        width:80%;
+        font-size:1.083em;
+        line-height:1.2;
+    }
+    .coupon-item-type{
+        display:block;
+        margin-bottom:.2em;
+        font-size:.85em;
+        font-weight:normal;
+    }
+    .coupon-item-require{
+        display:block;
+        width:100%;
+        @include nowrap();
+    }
+    .coupon-item-assit{
+        position:absolute;
+        height:$cpns-height * 0.67;
+        right:0;
+        top:0;
+        font-weight:normal;
+    }
+    .coupon-item-guide{
+        position:absolute;
+        top:px2rem(62px);
+        right:0;
+        font-size: 1.25em;
+        color: $gray-light;
+    }
+    .coupon-item-status{
+        display:block;
+        margin-top:px2rem(20px);
+    }
+    .coupon-item-date,
+    .coupon-item-range{
+        display:inline-block;
+        vertical-align:top;
+    }
+    .coupon-item-date{
+        width:70%;
+        position:relative;
+        &::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:px2rem(480px);
+            @include dashed($border-width:2px,$direction:top);
+            @include attr-dpr(height,1px);
+        }
+        
+    }
+    .coupon-item-range{
+        width:28%;
+        text-align:right;
+        @include nowrap();
+    }
+}
+.coupon-normal{
+    @include setCouponColor($oec-primary-light);
+}
+.coupon-mall{
+    @include setCouponColor($brand-info);
+}
+.coupon-branch{
+    @include setCouponColor($brand-success);
+}
+.coupon-used,.coupon-overdue{
+    color: $gray-lighter;
+    @include setCouponColor($gray-lighter);
+    .coupon-item-assit{
+        display:none;
+    }
+    .coupon-item-main{
+        &::after{
+            @include icon-ticket-used();
+            position:absolute;
+            top:px2rem(-40px);
+            right:px2rem(-18px);
+            font-size:$cpns-height * 1;
+            color:rgba(0,0,0,.1);
+            @include transform(rotate(10deg));
+            z-index:1;
+        }
+    }
+}
+.coupon-overdue{
+    .coupon-item-main{
+        &::after{
+            @include icon-ticket-overdue();
+        }
+    }
+}
+.cpnfetch-wrapper{
+    .coupon-item-main{
+        padding-left:px2rem($cutter-border-width+30px);
+        padding-right:px2rem($padding-base);
+        &::after{
+            display:none;
+        }
+    }
+    .coupon-exhaust{
+        .coupon-item-side{
+            background-color:$gray-lighter;
+        }
+        .coupon-item-main{
+            &::after{
+                display:block;
+            }
+        }
+    }
+    .coupon-item-range,
+    .coupon-item-assit{
+        display:none;
+    }
+}
+.cpndetail-wrapper{
+    $cpncard-cutter-width: px2rem(20px);
+    $btn-width:px2rem(300px);
+    padding-top:px2rem($padding-small);
+    .cpncard{
+        margin:px2rem($padding-base) px2rem($padding-base) px2rem(70px);
+    }
+    .cpncard-header{
+        @include height(px2rem(100px));
+        padding-left:px2rem($padding-large);
+        @include border-top-radius(px2rem($border-radius-large));
+        background-color:#fafafa;
+        @include dashed($border-width:2px);
+        font-weight:bold;
+    }
+    .cpncard-main{
+        position:relative;
+        margin-top:-1px;
+        background-color:#fff;
+        text-align:center;
+        padding-top:px2rem(50px);
+        img{
+            width:100%;
+        }
+        &::before,&::after{
+            content:'';
+            position:absolute;
+            width:$cpncard-cutter-width;
+            height:$cpncard-cutter-width;
+            top:-$cpncard-cutter-width/2;
+            border-radius:50%;
+            background-color:$oec-primary-dark;
+        }
+        &::before{
+            left:-$cpncard-cutter-width/2;
+        }
+        &::after{
+            right:-$cpncard-cutter-width/2;
+        }
+    }
+    .cpncard-title{
+        margin-bottom:px2rem($margin-base);
+        @include height(3.55em);
+        color:$oec-primary-light;
+        font-weight:bold;
+    }
+    .cpncard-key,
+    .cpncard-brief{
+        &:only-child{
+            font-weight:normal;
+            font-size:2em;
+            margin:0;
+            color:inherit;
+        }
+    }
+    .cpncard-key{
+        font-size:3.55em;
+        margin-right:.1em;
+        .unit{
+            font-size:.58em;
+        }
+    }
+    .cpncard-brief{
+        font-size:1.09em;
+        color:$gray-dark;
+    }
+    .cpncard-action{
+        padding-bottom:px2rem(62px);
+        .btn-use{
+            width:$btn-width;
+            @include button-size(px2rem(68px),$border-radius:px2rem($border-radius-large));
+            @include button-variant($btn-primary-color, $btn-primary-light-bg);
+            border-width:0;
+            font-size:1.25em;
+            font-weight:bold;
+        }
+    }
+    .cpncard-code-wrapper{
+        &::before,&::after{
+            content:'';
+            position:absolute;
+            width:$cpncard-cutter-width;
+            height:$cpncard-cutter-width;
+            bottom:-$cpncard-cutter-width/2;
+            border-radius:50%;
+            background-color:$oec-primary-dark;
+        }
+        &::before{
+            left:-$cpncard-cutter-width/2;
+        }
+        &::after{
+            right:-$cpncard-cutter-width/2;
+        }
+    }
+    .split-line{
+        color:$gray-light;
+        @include line-text(#fff,$width:$btn-width,$type:dashed,$line-color:$border-color);
+        font-size:.92em;
+    }
+    .cpncard-barcode,.cpncard-qrcode{
+        margin:px2rem($margin-large) 0;
+    }
+    .cpncard-barcode{
+        img{
+            width:px2rem(540px);
+        }
+    }
+    .cpncard-qrcode{
+        img{
+            width:px2rem(274px);
+        }
+    }
+    .cpncard-code-domain{
+        padding-bottom:px2rem(25px);
+        font-size:1.09em;
+        color:$oec-primary-light;
+        .iconfont{
+            font-size:.85em;
+            margin-left:.3em;
+        }
+    }
+    .cpncard-footer{
+        margin-top:-1px;
+        padding:px2rem(35px) px2rem(30px) px2rem(45px);
+        background-color:#fff;
+        @include border-bottom-radius(px2rem($border-radius-large));
+        @include dashed($border-width:2px,$direction:top);
+    }
+    .cpncard-info{
+        line-height:px2rem(40px);
+        .key,.value{
+            display:block;
+        }
+        .key{
+            width:5.5em;
+            float:left;
+        }
+        .value{
+            margin-left:5.5em;
+        }
+    }
+    .cpncard-normal{
+        @include setCouponCardColor($oec-primary-light);
+    }
+    .cpncard-mall{
+        @include setCouponCardColor($brand-info);
+        .cpncard-code-wrapper{
+            display:none;
+        }
+    }
+    .cpncard-branch{
+        @include setCouponCardColor($brand-success);
+    }
+}
+$coupon-others-width: px2rem(590px);
+.coupon-others-header{
+    height:px2rem(780px);
+    padding-top:px2rem(124px);
+    margin-bottom:px2rem(60px);
+    background:url($coupon-path+"coupon-other-background.png") no-repeat;
+    background-size:contain;
+    .coupon-others-main{
+        width:$coupon-others-width;
+        padding:0 px2rem(65px);
+        margin:px2rem(65px) auto 0;
+        text-align:center;
+    }
+    .coupon-others-title{
+        font-size:1.5em;
+        margin-bottom:px2rem(105px);
+    }
+    .coupon-others-info{
+        margin-bottom:px2rem(135px);
+    }
+    .coupon-others-action{
+        .btn{
+            @include button-size(px2rem(80px),$font-size:1.25em,$border-radius:.1em);
+            @include box-shadow(0 2px .3em rgba(0,0,0,.2));
+            font-weight:bold;
+        }
+    }
+    .ipt-other-coupon{
+        padding-top:px2rem($padding-base);
+        padding-bottom:px2rem($padding-base);
+        font-size:1.25em;
+        border-bottom:1px solid $gray-base;
+    }
+}
+.coupon-others-rules{
+    width:$coupon-others-width;
+    margin:0 auto;
+    font-size:1.09em;
+}
+.coupon-others-rules-title{
+    margin-bottom:px2rem($margin-large);
+}
+.coupon-others-rules-list{
+    color:$gray;
+    li{
+        padding-bottom:.8em;
+    }
+}

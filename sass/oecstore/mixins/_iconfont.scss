@@ -1,0 +1,68 @@
+@mixin icon-check(){
+    content: "\e61c";
+    font-family:$iconfont-name;
+}
+@mixin icon-check-bold(){
+    content: "\e641";
+    font-family:$iconfont-name;
+}
+@mixin icon-vip(){
+    content: "\e613";
+    font-family:$iconfont-name;
+}
+@mixin icon-ticket(){
+    content: "\e630";
+    font-family:$iconfont-name;
+}
+@mixin icon-ticket-used(){
+    content: "\e62f";
+    font-family:$iconfont-name;
+}
+@mixin icon-ticket-overdue(){
+    content: "\e62e";
+    font-family:$iconfont-name;
+}
+@mixin icon-double-arrow-down(){
+    content: "\e63d";
+    font-family:$iconfont-name;
+}
+@mixin icon-error(){
+    content: "\e62a";
+    font-family:$iconfont-name;
+}
+@mixin icon-more(){
+    content: "\e60b";
+    font-family:$iconfont-name;
+}
+@mixin icon-foot(){
+    content: "\e62d";
+    font-family:$iconfont-name;
+}
+@mixin icon-date(){
+    content: "\e646";
+    font-family:$iconfont-name;
+}
+@mixin icon-user-solid(){
+    content: "\e605";
+    font-family:$iconfont-name;
+}
+@mixin icon-category-solid(){
+    content: "\e607";
+    font-family:$iconfont-name;
+}
+@mixin icon-home-solid(){
+    content: "\e603";
+    font-family:$iconfont-name;
+}
+@mixin icon-cart-solid(){
+    content: "\e609";
+    font-family:$iconfont-name;
+}
+@mixin icon-cart-empty(){
+    content: "\e600";
+    font-family:$iconfont-name;
+}
+@mixin icon-cart-empty-solid(){
+    content: "\e601";
+    font-family:$iconfont-name;
+}

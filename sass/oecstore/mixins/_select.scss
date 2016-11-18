@@ -1,0 +1,309 @@
+// 自定义选择框
+// $color : 主色, 主背景色, 用于选中状态
+// $border-color : 边框色, 未选中的默认边框, 默认$gray-lighter - #bbb
+// $disable-color : 用于禁用状态的主题色
+// $solid : 选择框是否是实心，默认空心
+@mixin select-base($color,$border-color:$gray-lighter,$disable-color:$gray-lighter,$solid:false){
+    $size:1.1em;
+    input[type='checkbox'],
+    input[type='radio']{
+        position: absolute;
+        visibility: hidden;
+        + label{
+            position:relative;
+            &::before{
+                content:'\a0';/*空格*/
+                display:inline-block;
+                
+                width:$size;
+                height:$size;
+                line-height: $size;
+                margin-right:.4em;
+                border-radius:50%;
+                border:1px solid $border-color;
+            }
+            &::after{
+                @include icon-check-bold();
+                background-image: none;
+                position:absolute;
+                left:.06em;
+                top: .3em;
+                [data-dpr="1"] & {
+                    left:.1em;
+                    top: .2em;
+                }
+                line-height:1;
+                font-weight:bold;
+                font-size: 1em;
+                color:transparent;
+            }
+        }
+        &:checked + label{
+            &::before{
+                @if $solid == true{
+                    border-color:$color;
+                    background-color:$color;
+                }
+            }
+            &::after{
+                @if $solid == true{
+                    color:#fff;
+                }@else{
+                    color:$color;
+                } 
+            }
+        }
+        &:disabled + label,.disabled + label {
+            &::before{
+                border-color:$disable-color;
+                @if $solid == true{
+                    background-color:$disable-color;
+                }
+            }
+            &::after{
+                @if $solid == true{
+                    color:#fff;
+                }@else{
+                    color: $disable-color;
+                }
+            }
+        }
+    }
+}
+// 选择框颜色修改
+// $color : 主色, 主背景色, 用于选中状态
+// $border-color : 边框色, 未选中的默认边框, 默认$gray-lighter - #bbb
+// $disable-color : 用于禁用状态的主题色, 默认: false, 不设置禁用颜色
+// $solid : 选择框是否是实心，默认空心
+@mixin select-variant($color,$border-color:$gray-lighter,$disable-color:false,$solid:false){
+    @if $disable-color == true {
+        $disable-color : $gray-lighter;
+    }
+    input[type='checkbox'],
+    input[type='radio']{
+        &:checked + label{
+            &::before{
+                border-color : $color;
+                @if $solid == true {
+                    background-color : $color;
+                }@else{
+                    background-color: transparent;
+                }
+            }
+            &::after{
+                @if $solid == true {
+                    color : #fff;
+                }@else{
+                    color:$color;
+                }
+            }
+        }
+        @if type-of($disable-color) == color {
+            &:disabled + label,.disabled + label {
+                &::before{
+                    border-color:$disable-color;
+                    @if $solid == true {
+                        background-color : $disable-color;
+                    }@else{
+                        background-color: transparent;
+                    }
+                }
+                &::after{
+                    @if $solid == true {
+                        color : #fff;
+                    }@else{
+                        color:$disable-color;
+                    }
+                }
+            }
+        }
+    }
+}
+// 选择框间隔修改
+@mixin select-margin($margin-right){
+    input[type='checkbox'],
+    input[type='radio']{
+        + label{
+            &::before{
+                margin-right:$margin-right;
+            }
+        }
+    }
+}
+// 自定义开关
+// $color : 主色 用于选中状态
+// $width : 开关宽度 默认2.4em, 即2倍高度, 单位用em
+@mixin switch($color,$width:2.4em){
+    $height:1.2em;
+    input[type='checkbox'],
+    input[type='radio']{
+        position: absolute;
+        visibility: hidden;
+        + label{
+            position:relative;
+
+            &::before{
+                content: '\a0';
+                display: inline-block;
+                width: $width;
+                height: $height;
+                line-height: $height;
+                background-color: #fdfdfd;
+                border-radius: $height;
+                border: 3px solid #e1e1e1;
+                transition:background .3s,border .3s;
+            }
+            &::after{
+                content:'';
+                position:absolute;
+                width: $height - 0.04em;
+                height: $height - 0.04em;
+                margin-top: .02em;
+                border-radius: 50%;
+                background-color: #fdfdfd;
+                border: 1px solid #e1e1e1;
+                left: 0;
+                -webkit-transform: translate(2px,2px);
+                transform: translate(2px,2px);
+                -webkit-box-shadow: 0.04em 0.1em 0.04em rgba(0, 0, 0, 0.1);
+                box-shadow: 0.04em 0.1em 0.04em rgba(0, 0, 0, 0.1);
+                -webkit-transition:left .3s;
+                transition:left .3s;
+            }
+        }
+        &:checked + label{
+            &::before{
+                border-color:$color;
+                background-color: $color;
+            }
+            &::after{
+                content:'';
+                left:$width - $height + 0.02em;
+            }
+        }
+        &:disabled + label,.disabled + label {
+            &::before{
+                border-color:transparent;
+                background-color: $gray-lighter;
+            }
+        }
+    }
+}
+// 筛选
+// $size: 默认大小80px
+// $color: 主色
+// $z-index: z-index层叠 默认1
+// $position: 定位 默认relative
+// $background-color: 背景色 默认rgba(0,0,0,.6)
+//  
+@mixin select-list($size:80px, $color:$oec-primary-light, $z-index:1, $position:relative,$background-color:rgba(0,0,0,.6)){
+    @if unit($size) == "px"{
+        $size : px2rem($size);
+    }
+    position: $position;
+    width: $size;
+    text-align: center;
+    color: #fff;
+    > .header{
+        position: relative;
+        width: $size;
+        height: $size;
+        line-height: $size;
+        border-radius: 50%;
+        box-shadow: 0 .1em .5em rgba(0,0,0,.15);
+        transition: background-color .3s;
+        z-index: $z-index + 1;
+        &:hover{
+            background-color: $color;
+            + ul,
+            + .list-wrapper{
+                padding-top: .5em;
+            }
+
+            + ul > li ,
+            + .list-wrapper > .list-item{
+                @include height($size);
+                visibility:visible;
+            }
+        }
+    }
+
+    > ul ,
+    > .list-wrapper{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: $size;
+        border-radius: $size;
+        background-color: $background-color;
+        z-index: $z-index;
+    }
+
+    > ul > li,
+    > .list-wrapper > .list-item{
+        @include height(0);
+        visibility:hidden;
+        transition:height .3s;
+    }
+
+    &.act{
+        > .header {
+            background-color: $color;
+        }
+
+        + ul,
+        + .list-wrapper{
+            padding-top: .5em;
+        }
+
+        + ul > li ,
+        + .list-wrapper > .list-item{
+            @include height($size);
+            visibility:visible;
+        }
+    }
+}
+
+@mixin select-number(){
+    overflow: hidden;
+    .btn{
+        float:left;
+        position:relative;
+        @include button-size($number-ipt-height,$border-radius:px2rem($border-radius-base));
+        background-color:$number-ipt-background;
+        padding-left:0;
+        padding-right:0;
+    }
+    .btn-minus,.btn-plus{
+        width:$number-ipt-width;
+        &::before{
+            content: '';
+            display: block;
+            @include abs-center();
+            width:$number-minus-icon-width;
+            height:$number-minus-icon-height;
+            background-color:currentColor;
+        }
+    }
+    .btn-plus{
+        &::after{
+            content: '';
+            display: block;
+            @include abs-center();
+            width:$number-minus-icon-height;
+            height:$number-minus-icon-width;
+            background-color:currentColor;
+        }
+    }
+    .btn-ipt{
+        width:$number-ipt-width-large;
+        margin:0 px2rem(5px);
+        input{
+            height:inherit;
+            margin-top:-1px;
+            padding:0;
+            text-align:center;
+            vertical-align:top;
+        }
+    }
+}

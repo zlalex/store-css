@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <script src="../lib/flexible.js"></script>
+</head>
+<body>
+<div class="layout-page both-layout-page home">
+    <!-- 首页搜索框和lbs -->
+    <div class="top-nav text-center">
+        <div class="flex-row-between flex-center home-top-search">
+            <div class="-col-left home-top-addrselect">
+                <span class="home-addrselect-name">上海<i class="iconfont iconfont-angle-down"></i></span>
+            </div>
+            <div class="-col-content home-top-search-goods">
+                <div class="search-group">
+                    <i class="iconfont iconfont-search"></i>
+                    <input type="text" placeholder="搜索热门商品" class="input-group-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout-content home-wrapper">
+        <!-- 首页轮播插件 -->
+        <div class="widget-silder">
+            <div class="oec-slider">
+                <div class="oec-slider-item-group">
+                    <div class="oec-slider-item" data-index="0"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNzc3OiM1NTUvdGV4dDpGaXJzdCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1NTQzN2UxNDNiIHRleHQgeyBmaWxsOiM1NTU7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NDVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU1NDM3ZTE0M2IiPjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNzc3Ii8+PGc+PHRleHQgeD0iMzA4LjI5Njg3NSIgeT0iMjcwLjEiPkZpcnN0IHNsaWRlPC90ZXh0PjwvZz48L2c+PC9zdmc+" alt=""></div>
+                    <div class="oec-slider-item active" data-index="1"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNjY2OiM0NDQvdGV4dDpTZWNvbmQgc2xpZGUKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU0MzdkZTJjNiB0ZXh0IHsgZmlsbDojNDQ0O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjQ1cHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTQzN2RlMmM2Ij48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiIvPjxnPjx0ZXh0IHg9IjI2NC45NTMxMjUiIHk9IjI3MC4xIj5TZWNvbmQgc2xpZGU8L3RleHQ+PC9nPjwvZz48L3N2Zz4=" alt=""></div>
+                    <div class="oec-slider-item" data-index="2"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDkwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzkwMHg1MDAvYXV0by8jNTU1OiMzMzMvdGV4dDpUaGlyZCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1NTQzN2U1NGM3IHRleHQgeyBmaWxsOiMzMzM7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NDVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTU1NDM3ZTU0YzciPjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNTU1Ii8+PGc+PHRleHQgeD0iMjk4LjMyMDMxMjUiIHk9IjI3MC4xIj5UaGlyZCBzbGlkZTwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- 首页功能导航栏 -->
+        <div class="widget-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="">
+                        <img src="../../images/icon-purse.png" alt=""><p>优惠券</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="">
+                        <img src="../../images/icon-purse.png" alt=""><p>会员卡</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="">
+                        <img src="../../images/icon-purse.png" alt=""><p>附近门店</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="">
+                        <img src="../../images/icon-purse.png" alt=""><p>扫一扫</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="">
+                        <img src="../../images/icon-purse.png" alt=""><p>活动</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 门店模块 -->
+        <div class="well widget-shop">
+            <div class="shop-detail">
+                <div class="flex-row-between flex-center">
+                    <div class="-col-left">
+                        <img src="" alt="">
+                    </div>
+                    <div class="-col-content">
+                        <div class="shop-detail-title">离您最近的门店</div>
+                        <div class="shop-detail-content">
+                            <span class="shop-detail-name">智慧门店</span>
+                            <span class="shop-detail-address">上海市徐汇区桂林路</span>
+                            <span class="shop-detail-range">距您500m</span>
+                        </div>
+                    </div>
+                    <div class="-col-right">
+                        <i class="iconfont iconfont-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-goods goods-list-horizontal">
+                <div class="goods-wrapper">
+                    <div class="goods-item">
+                        <div class="goods-item-img"><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""><span class="goods-item-label border-left-radius btn btn-primary-light">门店专享</span></div>
+                        <div class="goods-item-price"><span class="mprice">¥117.9</span><span class="sprice">¥237.9</span></div>
+                    </div>
+                    <div class="goods-item">
+                        <div class="goods-item-img"><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""><span class="goods-item-label border-left-radius btn btn-primary-light">门店专享</span></div>
+                        <div class="goods-item-price"><span class="mprice">¥117.9</span><span class="sprice">¥237.9</span></div>
+                    </div>
+                    <div class="goods-item">
+                        <div class="goods-item-img"><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""><span class="goods-item-label border-left-radius btn btn-primary-light">门店专享</span></div>
+                        <div class="goods-item-price"><span class="mprice">¥117.9</span><span class="sprice">¥237.9</span></div>
+                    </div>
+                    <div class="goods-item">
+                        <div class="goods-item-img"><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""><span class="goods-item-label border-left-radius btn btn-primary-light">门店专享</span></div>
+                        <div class="goods-item-price"><span class="mprice">¥117.9</span><span class="sprice">¥237.9</span></div>
+                    </div>
+                    <div class="goods-item">
+                        <div class="goods-item-img"><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""><span class="goods-item-label border-left-radius btn btn-primary-light">门店专享</span></div>
+                        <div class="goods-item-price"><span class="mprice">¥117.9</span><span class="sprice">¥237.9</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 广告模块 -->
+        <div class="well widget-shop-adware"><img src="../../images/source/homepage/small-banner/small-banner.png" alt=""></div>
+        <!-- 精选商品 -->
+        <div class="well widget-entry widget-theme-blue">
+            <div class="widget-header">
+                <div class="flex-row-between flex-center">
+                    <div class="-col-left">精选商品</div>
+                    <div class="-col-right">更多<i class="iconfont iconfont-angle-right"></i></div>
+                </div>
+            </div>
+            <div class="widget-main">
+                <ul class="img-entry-list">
+                    <li class="img-entry-item item-size-4">
+                    <a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-2"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-1"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-1"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 优惠特享 -->
+        <div class="well widget-entry widget-theme-orange">
+            <div class="widget-header">
+                <div class="flex-row-between flex-center">
+                    <div class="-col-left">优惠特享</div>
+                    <div class="-col-right">更多<i class="iconfont iconfont-angle-right"></i></div>
+                </div>
+            </div>
+            <div class="widget-main">
+                <ul class="img-entry-list">
+                    <li class="img-entry-item item-size-4">
+                    <a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-2"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-1"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-1"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-3"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-3"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                    <li class="img-entry-item item-size-3"><a href=""><img src="http://p1.ifengimg.com/haina/2016_25/8ab194c447a09c2_w600_h338.jpg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 为您精选内容 -->
+        <div class="widget-recommend">
+            <div class="goods-brief-wrapper">
+                <p class="line-text"><span>为您精选</span></p>
+                <!--  默认2列布局，3列请加column-3类-->
+                <ul class="goods-brief-list clearfix">
+                    <li class="goods-brief-item">
+                        <a href="">
+                            <div class="item-img"><img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt=""></div>
+                            <p class="item-title">费列罗榛果威化巧克力</p>
+                            <p><span class="item-price">￥179</span><span class="item-note">已有<span class="item-count">3789</span>人选购</span></p>
+                        </a>
+                    </li>
+                    <li class="goods-brief-item">
+                        <a href="">
+                            <div class="item-img"><img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt=""></div>
+                            <p class="item-title">费列罗榛果威化巧克力</p>
+                            <p><span class="item-price">￥179</span><span class="item-note">已有<span class="item-count">3789</span>人选购</span></p>
+                        </a>
+                    </li>
+                    <li class="goods-brief-item">
+                        <a href="">
+                            <div class="item-img"><img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt=""></div>
+                            <p class="item-title">费列罗榛果威化巧克力</p>
+                            <p><span class="item-price">￥179</span><span class="item-note">已有<span class="item-count">3789</span>人选购</span></p>
+                        </a>
+                    </li>
+                    <li class="goods-brief-item">
+                        <a href="">
+                            <div class="item-img"><img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt=""></div>
+                            <p class="item-title">费列罗榛果威化巧克力</p>
+                            <p><span class="item-price">￥179</span><span class="item-note">已有<span class="item-count">3789</span>人选购</span></p>
+                        </a>
+                    </li>
+                    <li class="goods-brief-item">
+                        <a href="">
+                            <div class="item-img"><img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt=""></div>
+                            <p class="item-title">费列罗榛果威化巧克力</p>
+                            <p><span class="item-price">￥179</span><span class="item-note">已有<span class="item-count">3789</span>人选购</span></p>
+                        </a>
+                    </li>
+                    <li class="goods-brief-item">
+                        <a href="">
+                            <div class="item-img"><img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt=""></div>
+                            <p class="item-title">费列罗榛果威化巧克力</p>
+                            <p><span class="item-price">￥179</span><span class="item-note">已有<span class="item-count">3789</span>人选购</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 首页底部导航栏 -->
+    <div class="bottom-nav text-center">
+        <ul class="bottom-nav-bar">
+            <li><a href="#"><i class="iconfont iconfont-home"></i><p>首页</p></a></li>
+            <li><a href="#"><i class="iconfont iconfont-category"></i><p>分类</p></a></li>
+            <li><a href="#"><i class="iconfont iconfont-shopcart"></i><p>购物车</p></a></li>
+            <li><a href="#"><i class="iconfont iconfont-user"></i><p>我的</p></a></li>
+        </ul>
+    </div>
+    <!-- 回到顶部 -->
+    <div class="back-top flex-center"><i class="iconfont iconfont-backtop"></i></div>
+</div>
+</body>
+</html>

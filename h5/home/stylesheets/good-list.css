@@ -1,0 +1,701 @@
+/* line 4, ../sass/good-list.scss */
+body {
+  background-color: whitesmoke;
+}
+
+/* line 7, ../sass/good-list.scss */
+.good-list {
+  height: 100%;
+}
+/* line 9, ../sass/good-list.scss */
+.good-list.layout-page {
+  padding-top: 2.21333rem;
+}
+/* line 13, ../sass/good-list.scss */
+.good-list .top-nav {
+  background-color: white;
+}
+/* line 17, ../sass/good-list.scss */
+.good-list .good-list-top-search {
+  height: 100%;
+  line-height: 1.2rem;
+  background-color: white;
+}
+/* line 21, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-addrselect {
+  padding-left: 0.4rem;
+}
+/* line 23, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-addrselect .good-list-addrselect-name {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  color: #999999;
+}
+/* line 26, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-addrselect .good-list-addrselect-name i {
+  font-size: 20px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-top-search .good-list-top-addrselect .good-list-addrselect-name i {
+  font-size: 40px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-top-search .good-list-top-addrselect .good-list-addrselect-name i {
+  font-size: 60px;
+}
+/* line 31, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-search-goods {
+  padding-left: 0.4rem;
+}
+/* line 33, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-search-goods .search-group {
+  height: 0.81333rem;
+  line-height: 0.81333rem;
+}
+/* line 36, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-search-goods .search-group .input-group-control {
+  font-size: 13px;
+  color: #333a49;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-top-search .good-list-top-search-goods .search-group .input-group-control {
+  font-size: 26px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-top-search .good-list-top-search-goods .search-group .input-group-control {
+  font-size: 39px;
+}
+/* line 42, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-toggle {
+  padding-left: 0.41333rem;
+  padding-right: 0.37333rem;
+  font-size: 20px;
+  color: #999999;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-top-search .good-list-top-toggle {
+  font-size: 40px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-top-search .good-list-top-toggle {
+  font-size: 60px;
+}
+/* line 47, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-toggle .iconfont-list-ul {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 50, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-toggle .iconfont-category {
+  display: none;
+}
+/* line 54, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-toggle.list-type .iconfont-list-ul {
+  display: none;
+}
+/* line 57, ../sass/good-list.scss */
+.good-list .good-list-top-search .good-list-top-toggle.list-type .iconfont-category {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 64, ../sass/good-list.scss */
+.good-list .good-list-filter {
+  position: fixed;
+  top: 1.2rem;
+  left: 0;
+  width: 100%;
+  height: 1.01333rem;
+  border-top-color: #e1e1e1;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-left-color: #e1e1e1;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-right-color: #e1e1e1;
+  border-right-width: 1px;
+  border-right-style: solid;
+  padding-top: 0.30667rem;
+  padding-bottom: 0.30667rem;
+  line-height: 0.4rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  background-color: white;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter {
+  border-top-width: 2px;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter {
+  border-left-width: 2px;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter {
+  border-right-width: 2px;
+}
+/* line 78, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  border-left-color: #e1e1e1;
+  border-left-width: 1px;
+  border-left-style: solid;
+  font-size: 13px;
+  color: #333333;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter .good-list-filter-item {
+  border-left-width: 2px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-filter .good-list-filter-item {
+  font-size: 26px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter .good-list-filter-item {
+  font-size: 39px;
+}
+/* line 84, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item:frist-child {
+  border-left-width: 0;
+}
+/* line 87, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item.active {
+  color: #fe4070;
+}
+/* line 90, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item.active .good-list-filter-item-images .good-list-filter-item-price-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: bottom;
+  border-left: 0.06928rem solid transparent;
+  border-right: 0.06928rem solid transparent;
+  border-top: 0 solid #bebebe;
+  border-bottom: 0.12rem solid #bebebe;
+}
+/* line 93, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item.active .good-list-filter-item-images .good-list-filter-item-price-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: bottom;
+  border-left: 0.06928rem solid transparent;
+  border-right: 0.06928rem solid transparent;
+  border-top: 0.12rem solid #fe4070;
+  border-bottom: 0 solid #fe4070;
+}
+/* line 96, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item.active .good-list-filter-item-images .good-list-filter-item-filter-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: bottom;
+  border-left: 0.06928rem solid transparent;
+  border-right: 0.06928rem solid transparent;
+  border-top: 0 solid #fe4070;
+  border-bottom: 0.12rem solid #fe4070;
+}
+/* line 101, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 107, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item .good-list-filter-item-images {
+  line-height: 0.12rem;
+  width: 0.13333rem;
+}
+/* line 110, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item .good-list-filter-item-images .good-list-filter-item-price-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: bottom;
+  border-left: 0.06928rem solid transparent;
+  border-right: 0.06928rem solid transparent;
+  border-top: 0 solid #333333;
+  border-bottom: 0.12rem solid #333333;
+}
+/* line 113, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item .good-list-filter-item-images .good-list-filter-item-price-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: bottom;
+  border-left: 0.06928rem solid transparent;
+  border-right: 0.06928rem solid transparent;
+  border-top: 0.12rem solid #333333;
+  border-bottom: 0 solid #333333;
+  margin-top: 0.08rem;
+}
+/* line 117, ../sass/good-list.scss */
+.good-list .good-list-filter .good-list-filter-item .good-list-filter-item-images .good-list-filter-item-filter-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: bottom;
+  border-left: 0.06928rem solid transparent;
+  border-right: 0.06928rem solid transparent;
+  border-top: 0.12rem solid #333333;
+  border-bottom: 0 solid #333333;
+}
+/* line 124, ../sass/good-list.scss */
+.good-list .good-list-br {
+  position: fixed;
+  top: 2.21333rem;
+  left: 0;
+  width: 100%;
+  border-bottom-color: #e1e1e1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  -moz-box-shadow: 0 0.02667rem 0.13333rem 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0.02667rem 0.13333rem 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.02667rem 0.13333rem 0 rgba(0, 0, 0, 0.15);
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-br {
+  border-bottom-width: 2px;
+}
+/* line 133, ../sass/good-list.scss */
+.good-list .good-list-filter-content {
+  position: fixed;
+  top: 2.21333rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 2.21333rem;
+  text-align: left;
+  background-color: white;
+}
+/* line 143, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-title {
+  border-color: #e1e1e1;
+  border-width: 1px;
+  border-style: solid;
+  padding-top: 0.4rem;
+  padding-bottom: 0.37333rem;
+  padding-left: 0.54667rem;
+  padding-right: 0.53333rem;
+  font-size: 12px;
+  color: #333333;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-title {
+  border-width: 2px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-filter-content .good-list-filter-content-title {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-title {
+  font-size: 36px;
+}
+/* line 151, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-title:first-child {
+  border-bottom-width: 0;
+}
+/* line 155, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list {
+  overflow-x: scroll;
+}
+/* line 157, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left {
+  overflow-x: scroll;
+}
+/* line 159, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left .good-list-filter-content-menu {
+  position: relative;
+  width: 2.66667rem;
+  height: 1.06667rem;
+  line-height: 1.06667rem;
+  background-color: whitesmoke;
+  border-bottom-color: #e1e1e1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  font-size: 12px;
+  color: #333333;
+  text-align: center;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left .good-list-filter-content-menu {
+  border-bottom-width: 2px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left .good-list-filter-content-menu {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left .good-list-filter-content-menu {
+  font-size: 36px;
+}
+/* line 170, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left .good-list-filter-content-menu.select:after {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.26667rem;
+  font-size: 10px;
+  font-family: "iconfont";
+  content: '\e61c';
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 0.26667rem;
+  height: 0.26667rem;
+  line-height: 0.26667rem;
+  color: #fe4070;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left .good-list-filter-content-menu.select:after {
+  font-size: 20px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left .good-list-filter-content-menu.select:after {
+  font-size: 30px;
+}
+/* line 184, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-list-left .good-list-filter-content-menu.active {
+  background-color: white;
+}
+/* line 189, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right {
+  overflow-x: scroll;
+  border-left-color: #e1e1e1;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right {
+  border-left-width: 2px;
+}
+/* line 192, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right .good-list-filter-content-menu-list {
+  display: none;
+}
+/* line 194, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right .good-list-filter-content-menu-list.active {
+  display: block;
+}
+/* line 197, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right .good-list-filter-content-menu-list .good-list-filter-content-menu-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 3.28rem;
+  height: 0.74667rem;
+  line-height: 0.74667rem;
+  margin: 0.13333rem;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #333333;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+/* line 208, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right .good-list-filter-content-menu-list .good-list-filter-content-menu-item.active {
+  border-color: #fe4070;
+  border-width: 1px;
+  border-style: solid;
+  background-color: white;
+  color: #fe4070;
+}
+/* line 339, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right .good-list-filter-content-menu-list .good-list-filter-content-menu-item.active {
+  border-width: 2px;
+}
+/* line 212, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right .good-list-filter-content-menu-list .good-list-filter-content-menu-item.active:after {
+  position: absolute;
+  top: 0.22667rem;
+  right: 0.22667rem;
+  font-size: 10px;
+  font-family: "iconfont";
+  content: '\e61c';
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 0.26667rem;
+  height: 0.26667rem;
+  line-height: 0.26667rem;
+  color: #fe4070;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right .good-list-filter-content-menu-list .good-list-filter-content-menu-item.active:after {
+  font-size: 20px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-list .good-list-filter-content-right .good-list-filter-content-menu-list .good-list-filter-content-menu-item.active:after {
+  font-size: 30px;
+}
+/* line 231, ../sass/good-list.scss */
+.good-list .good-list-filter-content .good-list-filter-content-btn-group > a {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  font-size: 18px;
+  padding: 0;
+  height: 1.28rem;
+  line-height: 1.25333rem;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-filter-content .good-list-filter-content-btn-group > a {
+  font-size: 36px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-filter-content .good-list-filter-content-btn-group > a {
+  font-size: 54px;
+}
+/* line 248, ../sass/good-list.scss */
+.good-list .good-list-wrap {
+  width: 100%;
+}
+/* line 250, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item {
+  height: 3.08rem;
+  margin: 0.13333rem;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: white;
+  -moz-box-shadow: 0 0.02667rem 0.13333rem 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0.02667rem 0.13333rem 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.02667rem 0.13333rem 0 rgba(0, 0, 0, 0.15);
+}
+/* line 256, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-img {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  padding-left: 0.41333rem;
+  padding-right: 0.54667rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+/* line 262, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-img img {
+  width: 2.66667rem;
+  height: 2.66667rem;
+}
+/* line 267, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-detail {
+  padding-top: 0.48rem;
+  padding-bottom: 0.25333rem;
+}
+/* line 270, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-detail > div {
+  width: 5.66667rem;
+}
+/* line 273, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-top {
+  font-size: 13px;
+  line-height: 0.48rem;
+  color: #333333;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-top {
+  font-size: 26px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-top {
+  font-size: 39px;
+}
+/* line 280, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-top {
+  font-size: 18px;
+  color: #fe4070;
+  margin-bottom: 0.34667rem;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-top {
+  font-size: 36px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-top {
+  font-size: 54px;
+}
+/* line 285, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-bottom {
+  font-size: 12px;
+  color: #999999;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-bottom {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-bottom {
+  font-size: 36px;
+}
+/* line 290, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right {
+  font-size: 12px;
+  color: #999999;
+  padding-top: 0.82667rem;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right {
+  font-size: 36px;
+}
+/* line 294, ../sass/good-list.scss */
+.good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right span {
+  font-size: 12px;
+  color: #333333;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right span {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right span {
+  font-size: 36px;
+}
+/* line 303, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 4.8rem;
+  height: 6.21333rem;
+  margin-bottom: 0;
+}
+/* line 308, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item > div {
+  display: block;
+}
+/* line 311, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-img {
+  padding-left: 0.41333rem;
+  padding-right: 0.41333rem;
+  padding-top: 0.41333rem;
+  padding-bottom: 0.58667rem;
+}
+/* line 316, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-img img {
+  width: 4rem;
+  height: 4rem;
+}
+/* line 321, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail {
+  padding: 0;
+}
+/* line 323, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail > div {
+  width: 3.96rem;
+  margin-left: 0.41333rem;
+  margin-right: 0.41333rem;
+}
+/* line 328, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-top {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 0.32rem;
+  color: #333333;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-top {
+  font-size: 24px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-top {
+  font-size: 36px;
+}
+/* line 334, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom {
+  margin-top: 0.26667rem;
+}
+/* line 337, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-top {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-top {
+  font-size: 30px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-top {
+  font-size: 45px;
+}
+/* line 342, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-left .good-list-item-detail-bottom-left-bottom {
+  display: none;
+}
+/* line 346, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right {
+  padding-top: 0.13333rem;
+  font-size: 10px;
+  line-height: 0.26667rem;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right {
+  font-size: 20px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right {
+  font-size: 30px;
+}
+/* line 350, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right span {
+  font-size: 10px;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right span {
+  font-size: 20px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .good-list .good-list-wrap.goog-type .good-list-item .good-list-item-detail .good-list-item-detail-bottom .good-list-item-detail-bottom-right span {
+  font-size: 30px;
+}
+/* line 357, ../sass/good-list.scss */
+.good-list .good-list-wrap.goog-type .good-list-item:nth-child(2n) {
+  margin-left: 0;
+}

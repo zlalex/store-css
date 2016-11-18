@@ -1,0 +1,107 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+@mixin button-base(){
+    display: inline-block;
+    font-weight: inherit;
+    text-align: center;
+    vertical-align: middle;
+    background-image: none; 
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+@mixin button-variant($color, $background, $border:null) {
+    color: $color;
+    background-color: $background;
+    @if $border == null {
+    }@else{
+        border-color: $border;
+    }
+    // &:focus,
+    // &.focus {
+    //     color: $color;
+    //     background-color: darken($background, 10%);
+    //     border-color: darken($border, 25%);
+    // }
+    // &:hover {
+    //     color: $color;
+    //     background-color: darken($background, 10%);
+    //     border-color: darken($border, 12%);
+    // }
+    // &:active,
+    // &.active{
+    //     color: $color;
+    //     background-color: darken($background, 10%);
+    //     border-color: darken($border, 12%);
+    // }
+    // .badge {
+    //     color: $background;
+    //     background-color: $color;
+    // }
+}
+
+// Button sizes
+//
+//  $line-height         : 按钮的高度,
+//  $padding-vertical    : 垂直padding
+//  $padding-horizontal  : 水平padding
+//  $border-radius       : 圆角
+//  $font-size           : 默认inherit
+//  注：如果$line-height有单位如30px, 1rem, 2em, 20%等, 则垂直的padding为0，也就是$padding-vertical = 0，便于文字居中
+//
+@mixin button-size($line-height, $padding-vertical:null, $padding-horizontal:null, $border-radius:null, $font-size:inherit ) {
+    @if unitless($line-height) == false{
+        height:$line-height;
+        line-height: $line-height;
+        $padding-vertical : 0;
+    }@else{
+        line-height: $line-height;
+    }
+    @if $padding-vertical == null {
+    }@else{
+        padding-top: $padding-vertical;
+        padding-bottom: $padding-vertical;
+    }
+    @if $padding-horizontal == null {
+    }@else{
+        padding-left: $padding-horizontal;
+        padding-right: $padding-horizontal;
+    }
+    font-size: $font-size;
+    @if $border-radius == null {
+    }@else{
+        border-radius: $border-radius;
+    }
+}
+// 按钮的多圆角
+@mixin btn-radius($radius:2em, $radius-direction:round, $height:auto){
+    @if type-of($height) == number {
+        $radius : $height;
+    }
+    .btn{
+        @if $radius-direction == round{
+            border-radius:$radius;
+        }
+        @if $radius-direction == left{
+            @include border-left-radius($radius);
+        }
+        @if $radius-direction == right{
+            @include border-right-radius($radius);
+        }
+        @if $radius-direction == bottom{
+            @include border-bottom-radius($radius);
+        }
+        @if $radius-direction == top{
+            @include border-top-radius($radius);
+        }
+    }
+}
+// 设置链接样式的按钮组分割线颜色
+@mixin btn-link-border-color($color){
+    .btn-group-justified{
+        > .btn-link:not(:last-child){
+            border-color:$color;
+        }
+    }
+}

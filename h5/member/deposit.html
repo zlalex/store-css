@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <script src="../lib/flexible.js"></script>
+</head>
+<body>
+<div class="layout-page top-layout-page">
+    <div class="top-nav text-center">
+        <div class="layout-title">
+            <div class="title-left">
+                <a href="#" class="title-back">
+                    <i class="iconfont iconfont-angle-left"></i>
+                </a>
+            </div>
+            <div class="title-content">充值</div>
+        </div>
+    </div>    
+    <div class="layout-page layout-content">
+        <div class="well deposit-wrapper">
+            <div class="form-group-wrapper">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" placeholder="请填写收货人姓名" class="input-group-control">
+                    </div>
+                    <div class="form-group-domain">
+                        <i class="iconfont iconfont-close"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="deposit-way">
+                <div class="deposit-header flex-row-between flex-center">
+                    <span>选择支付方式</span>
+                </div>
+                <ul class="deposit-main">
+                    <li class="deposit-way-item flex-row-between flex-center">
+                        <div class="deposit-way-img -col-left">
+                            <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                        </div>
+                        <div class="-col-content">
+                            <div class="deposit-way-info">
+                                <p class="deposit-way-title">微信支付</p>
+                                <p class="deposit-way-tip">推荐已安装微信客户端的用户使用</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="hehe"><label for="hehe"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="deposit-way-item flex-row-between flex-center">
+                        <div class="deposit-way-img -col-left">
+                            <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                        </div>
+                        <div class="-col-content">
+                            <div class="deposit-way-info">
+                                <p class="deposit-way-title">支付宝支付</p>
+                                <p class="deposit-way-tip">推荐已安装支付宝客户端的用户使用</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="hehe"><label for="hehe"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="deposit-way-item flex-row-between flex-center">
+                        <div class="deposit-way-img -col-left">
+                            <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                        </div>
+                        <div class="-col-content">
+                            <div class="deposit-way-info">
+                                <p class="deposit-way-title">银行卡</p>
+                                <p class="deposit-way-tip">支持储蓄卡和信用卡支付</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" id="hehe"><label for="hehe"></label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="deposit-submit">
+                <a href="" class="btn btn-block btn-primary-light">确认充值</a>
+            </div>
+            <div class="deposit-submit">
+                <a href="" class="btn btn-block disabled btn-primary-light">确认充值</a>
+            </div>
+            <!-- dialog start -->
+            <div class="deposit-dialog show"><!-- 弹出时添加 show 类名 -->
+                <div class="mask"></div>
+                <!-- 成功显示 success 类 or 失败显示 lose 类 -->
+                <div class="dialog dialog-center success">
+                    <div class="close"><i class="iconfont iconfont-error"></i></div>
+                    <div class="dialog-info">
+                        <div class="dialog-head">
+                            <div class="dialog-mark">
+                                <i class="iconfont iconfont-circle-check"></i><!-- 成功 -->
+                                <i class="iconfont iconfont-circle-alarm"></i><!-- 失败 -->
+                            </div>
+                            <p class="mark-title success-title">充值成功</p><!-- 成功 -->
+                            <p class="mark-title lost-title">充值失败</p><!-- 失败 -->
+                        </div>
+
+                        <div class="dialog-content">
+                            <p class="error-title title-success"><em class="oec-primary-light">100元</em>已经存入您的余额</p><!-- 成功 -->
+                            <p class="error-title title-error oec-primary-light">操作失败请重新充值</p><!-- 失败 -->
+                            <div class="depositinfo info-success"><!-- 成功 -->
+                                <p>原可用余额<em class="deposit-money">¥12.50</em></p>
+                                <p>现可用余额<em class="deposit-money">¥112.50</em></p>
+                            </div>
+                            <div class="depositinfo info-error"><!-- 失败 -->
+                                <p>我的预存款余额<em class="deposit-money">¥12.50</em></p>
+                            </div>
+                        </div>
+                        <div class="dialog-bottom">
+                            <a class="btn btn-block btn-success">查看交易记录</a><!-- 成功 -->
+                            <a class="btn btn-block btn-primary-light">立即充值</a><!-- 失败 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

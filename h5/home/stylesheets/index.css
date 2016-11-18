@@ -1,0 +1,244 @@
+/* line 7, ../sass/index.scss */
+.home .home-top-search {
+  height: 100%;
+  padding: 0 0.26667rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+/* line 11, ../sass/index.scss */
+.home .home-top-search .home-top-addrselect {
+  padding: 0px 0.26667rem;
+  font-size: 1.25em;
+}
+/* line 14, ../sass/index.scss */
+.home .home-top-search .home-top-addrselect .home-addrselect-name {
+  color: #999;
+}
+/* line 17, ../sass/index.scss */
+.home .home-top-search .home-top-addrselect .iconfont {
+  font-size: .67em;
+  margin-left: 0.13333rem;
+}
+/* line 22, ../sass/index.scss */
+.home .home-top-search .home-top-search-goods {
+  font-size: 1.084em;
+  padding: 0 0.26667rem;
+  text-align: left;
+}
+
+/* line 31, ../sass/index.scss */
+.back-top {
+  position: fixed;
+  right: 0.4rem;
+  bottom: 2.53333rem;
+  width: 1.06667rem;
+  height: 1.06667rem;
+  line-height: 1.06667rem;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 41, ../sass/index.scss */
+.back-top .iconfont {
+  font-size: 1.667em;
+}
+
+/* line 50, ../sass/index.scss */
+.widget-header {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0.26667rem;
+  line-height: 0.4rem;
+}
+/* line 54, ../sass/index.scss */
+.widget-header::before {
+  content: '';
+  float: left;
+  display: inline-block;
+  width: .25em;
+  height: 1.25em;
+  border-radius: .5em;
+  background-color: transparent;
+}
+/* line 63, ../sass/index.scss */
+.widget-header .-col-left {
+  padding-left: 0.13333rem;
+  font-size: 1.25em;
+  color: #333333;
+}
+/* line 68, ../sass/index.scss */
+.widget-header .-col-right {
+  color: #666666;
+}
+/* line 70, ../sass/index.scss */
+.widget-header .-col-right .iconfont {
+  top: -1px;
+  font-size: .833em;
+  margin-left: 0.13333rem;
+}
+
+/* line 79, ../sass/index.scss */
+.widget-theme-blue .widget-header::before {
+  background-color: #64e1ea;
+}
+
+/* line 86, ../sass/index.scss */
+.widget-theme-orange .widget-header::before {
+  background-color: #fe9613;
+}
+
+/* line 92, ../sass/index.scss */
+.widget-silder {
+  background-color: white;
+}
+
+/* line 97, ../sass/index.scss */
+.widget-nav {
+  height: 2.4rem;
+  background-color: white;
+  margin-bottom: 0.13333rem;
+  border-bottom: 1px solid #e1e1e1;
+  text-align: center;
+}
+/* line 103, ../sass/index.scss */
+.widget-nav .nav-list {
+  width: 100%;
+  height: 100%;
+  padding-top: 0.46667rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+/* line 108, ../sass/index.scss */
+.widget-nav .nav-list .nav-item {
+  height: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  color: #666;
+}
+/* line 112, ../sass/index.scss */
+.widget-nav .nav-list .nav-item img {
+  height: 1.06667rem;
+  width: 1.06667rem;
+  margin-bottom: 0.16rem;
+}
+
+/* line 122, ../sass/index.scss */
+.widget-shop {
+  padding: 0px 0.26667rem;
+}
+/* line 124, ../sass/index.scss */
+.widget-shop .shop-detail {
+  padding-top: 0.36rem;
+  padding-bottom: 0.36rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+/* line 128, ../sass/index.scss */
+.widget-shop .shop-detail .-col-left {
+  margin-right: 0.26667rem;
+  width: 1.06667rem;
+  height: 1.06667rem;
+}
+/* line 132, ../sass/index.scss */
+.widget-shop .shop-detail .-col-left img {
+  width: 100%;
+  height: 100%;
+}
+/* line 137, ../sass/index.scss */
+.widget-shop .shop-detail .-col-content {
+  margin-right: 0.13333rem;
+}
+/* line 140, ../sass/index.scss */
+.widget-shop .shop-detail .-col-right {
+  font-size: 1.084em;
+}
+/* line 142, ../sass/index.scss */
+.widget-shop .shop-detail .-col-right .iconfont {
+  color: #999999;
+}
+/* line 147, ../sass/index.scss */
+.widget-shop .shop-detail-title {
+  margin-bottom: 0.22667rem;
+  color: #999999;
+}
+/* line 151, ../sass/index.scss */
+.widget-shop .shop-detail-content {
+  font-size: 1.084em;
+}
+/* line 153, ../sass/index.scss */
+.widget-shop .shop-detail-content .shop-detail-name {
+  color: #333333;
+}
+/* line 156, ../sass/index.scss */
+.widget-shop .shop-detail-content .shop-detail-address {
+  color: #666666;
+}
+/* line 159, ../sass/index.scss */
+.widget-shop .shop-detail-content .shop-detail-range {
+  color: #2db8a8;
+}
+
+/* line 166, ../sass/index.scss */
+.widget-shop-adware {
+  overflow: hidden;
+}
+/* line 168, ../sass/index.scss */
+.widget-shop-adware img {
+  width: 100%;
+  min-height: 2rem;
+}
+
+/* line 173, ../sass/index.scss */
+.widget-entry {
+  overflow: hidden;
+}
+/* line 175, ../sass/index.scss */
+.widget-entry .widget-main {
+  overflow: hidden;
+}
+/* line 178, ../sass/index.scss */
+.widget-entry .img-entry-list {
+  overflow: hidden;
+  margin: -1px;
+}
+/* line 181, ../sass/index.scss */
+.widget-entry .img-entry-list .img-entry-item {
+  float: left;
+  border: 1px solid #e1e1e1;
+}
+/* line 185, ../sass/index.scss */
+.widget-entry .img-entry-list .item-size-4 {
+  width: 50%;
+  height: 5.05333rem;
+}
+/* line 189, ../sass/index.scss */
+.widget-entry .img-entry-list .item-size-3 {
+  width: 33.33%;
+  height: 3.06667rem;
+}
+/* line 193, ../sass/index.scss */
+.widget-entry .img-entry-list .item-size-2 {
+  width: 50%;
+  height: 2rem;
+}
+/* line 197, ../sass/index.scss */
+.widget-entry .img-entry-list .item-size-1 {
+  width: 25%;
+  height: 3.06667rem;
+}
+/* line 201, ../sass/index.scss */
+.widget-entry .img-entry-list img {
+  height: 100%;
+  vertical-align: top;
+}
+
+/* line 207, ../sass/index.scss */
+.widget-recommend {
+  overflow: hidden;
+  margin-top: 0.26667rem;
+}

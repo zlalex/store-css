@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <script src="../lib/flexible.js"></script>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/passport.css">
+</head>
+<body>
+<div class="layout-page top-layout-page">
+    <div class="top-nav text-center">
+        <div class="layout-title">
+            <div class="title-left">
+                <div class="title-left">
+                    <a href="#" class="title-back">
+                        <i class="iconfont iconfont-angle-left"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="title-content">实名认证</div>
+        </div>
+    </div>
+
+    <div class="layout-content passport-wrapper realname-auth-wrapper">
+        <div class="passport-feedback">您输入的用户名不存在</div>
+        <form action="" class="form-wrapper">
+            <p class="form-group-title">请填写你身份证上的真实信息，以便于报关审核</p>
+            <div class="form-group-wrapper">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" placeholder="请输入您的真实姓名" class="input-group-control ipt-usrname">
+                    </div>
+                    <div class="form-group-domain">
+                        <i class="iconfont iconfont-close"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" placeholder="请输入您的身份证号码" class="input-group-control ipt-usrid">
+                    </div>
+                    <div class="form-group-domain">
+                        <i class="iconfont iconfont-close"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="form-group-title">上传身份证照片，仅用于海关审核</p>
+            <div class="well upload-imgs-list clearfix">
+                <!-- full-width和full-height用于适配上传的图片，full-width表示图片100%宽度，full-height表示100%高度，通过js判断上传图片的比例去判断用full-width还是full-height-->
+                <div class="upload-imgs-item idcard-frontage full-width">
+                    <input type="file" id="upload-imgs-001">
+                    <label for="upload-imgs-001">
+                        <p class="upload-desc">正面照片</p>
+                        <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                    </label>
+                </div>
+                <div class="upload-imgs-item idcard-backface">
+                    <input type="file" id="upload-imgs-002">
+                    <label for="upload-imgs-002">
+                        <p class="upload-desc">背面照片</p>
+                    </label>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-block btn-primary-light" value="提交">
+        </form>
+    </div>
+</div>
+</body>
+</html>

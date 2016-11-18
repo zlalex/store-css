@@ -1,0 +1,56 @@
+// 弹框基本样式
+// $z-index: 弹框的层叠
+// $background-color: 弹框背景颜色
+// $transition: 是否开启过渡动画 默认不开启
+// 注: 如果开启过渡，则通过增加移除.on类实现弹框展示隐藏的动画效果
+@mixin dialogBase($background-color:#fff,$z-index:$mask-content-z-index,$transition:false){
+    position:fixed;
+    z-index: $z-index;
+    background-color: $background-color;
+    @if $transition == true {
+        opacity:0;
+        visibility:hidden;
+        @include transition(transform .3s ease-in-out,opacity .3s ease-in-out,-webkit-transform .3s ease-in-out);
+    }
+}
+// 弹框布局
+// $width: 弹框宽度
+// $height: 弹框高度 默认自适应
+// $direction: 弹框位置，center居中, bottom置底, 默认center
+// $transition: 是否开启过渡动画 默认不开启
+@mixin dialogLayout($width:null,$height:auto,$direction: center,$transition:false){
+    height:$height;
+    @if $direction == center {
+        @if type-of($width) == number{
+            width:$width;
+        }
+        top:50%;
+        left:50%;
+        @if $transition == true {
+            @include translate(-50%,-40%);
+            &.on,
+            .on &{
+                @include translate(-50%,-50%);
+                opacity:1;
+                visibility: visible;
+            }
+        }@else{
+            @include translate(-50%,-50%);
+        }
+    }
+    @if $direction == bottom {
+        width:100%;
+        @if $transition == true {
+            bottom:-$height;
+            visibility:hidden;
+            &.on,
+            .on &{
+                bottom:0;
+                opacity:1;
+                visibility: visible;
+            }
+        }@else{
+            bottom:0;
+        }
+    }
+}

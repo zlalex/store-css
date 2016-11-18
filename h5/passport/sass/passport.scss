@@ -1,0 +1,112 @@
+@import "../../../sass/oecstore/init.scss";
+.passport-wrapper{
+    position:relative;
+    padding:0 $body-padding-horizon;
+    @include font-dpr(13px);
+    .well{
+        margin-left:0;
+        margin-right:0;
+    }
+    .form-group-title{
+        margin:px2rem($margin-large) 0;
+        padding-left:px2rem($padding-large);
+        + .form-group-wrapper{
+            margin-top:px2rem($margin-large);
+        }
+    }
+    .form-tab{
+        margin-top:$form-margin-vertical;
+        + .form-group-wrapper{
+            margin-top:0;
+        }
+    }
+    .form-wrapper{
+        border-top:1px solid transparent;
+    }
+    .form-group-wrapper{
+        @include font-dpr(15px);
+        .btn-image{
+            width:6.5em;
+        }
+        .input-like{
+            padding-left:px2rem($padding-small);
+        }
+        .iconfont-eye,
+        .iconfont-eye-slash{
+            font-size:1.4em;
+        }
+        + .form-group-title{
+            margin-top:px2rem(-$margin-small);
+        }
+    }
+}
+.form-tab{
+    padding-left:px2rem($margin-base);
+    font-weight: bold;
+    .btn{
+        width:px2rem(200px);
+        @include button-size(px2rem(60px),$border-radius:px2rem(5px));
+        @include border-bottom-radius(0);
+        margin-left:px2rem($margin-small);
+        @include box-shadow($form-box-shadow-bottom);
+    }
+    .btn-default{
+        @include button-variant($gray-light,#ddd,transparent);
+        &.on{
+            @include button-variant($oec-primary-dark,#fff);
+            @include box-shadow($form-box-shadow);
+        }
+    }
+}
+.passport-register{
+    .checkbox{
+        color:$gray;
+        a{
+            color:$gray-dark;
+        }
+    }
+}
+.passport-feedback{
+    $height:80px;
+
+    position:fixed;
+    margin-top:px2rem($height+2px)*-1;
+    @include height(px2rem($height));
+    left:$passport-padding-horizontal;
+    right:$passport-padding-horizontal;
+    background-color:rgba(0,0,0,.7);
+    text-align:center;
+    color:#fff;
+    @include border-bottom-radius(px2rem($border-radius-large));
+    z-index:1;
+    @include transition(margin-top,.5s,ease-in);
+    opacity:0;
+    &.show{
+        margin-top:0;
+        opacity:1;
+    }
+}
+.passport-links{
+    margin-top:px2rem(50px);
+    margin-bottom:px2rem(330px);
+    div:only-child{
+        @include font-dpr(12px);
+    }
+    @include font-dpr(15px);
+    .btn-link{
+        padding-top:px2rem(10px);
+        padding-bottom:px2rem(10px);
+    }
+}
+.realname-auth-wrapper{
+    .upload-imgs-list{
+        margin:px2rem($margin-large) 0;
+    }
+    .upload-imgs-item{
+        width:px2rem(332px);
+        height:px2rem(218px);
+        background-color:$body-bg;
+        border:2px dashed #d8d8d8;
+        @include attr-dpr(border-width,1px);
+    }
+}

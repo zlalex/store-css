@@ -1,0 +1,104 @@
+@import "../../../sass/oecstore/init.scss";
+
+// 标题和内容样式
+.city-select-glob{
+    font-size:px2em(14px);
+    .city-select-glob-header{
+        padding-left: px2rem(30px);
+        @include height(px2rem(70px));
+        background-color: #ebebeb;
+    }
+    .city-select-glob-main{
+        padding:px2rem(3 * $gap);
+        background-color: rgb(245,245,245);
+    }
+}
+.city-select{
+    .title-label{
+        color:$oec-primary-light;
+        &:not(:empty)::before{
+            content:'-';
+        }
+    }
+    // 当前城市搜索
+    .city-select-search{
+        background-color: $oec-primary-dark;
+        padding: px2rem(20px);
+        font-size:px2em(13px);
+        .search-group{
+            @include height(px2rem(60px));
+        }
+    }
+
+    // 当前城市位置
+    .city-select-current{
+        .city-select-glob-main{
+            padding-right:px2rem(6 * $gap);
+        }
+        .current-address{
+            .-col-key{
+                width:1em;
+            }
+            .-col-value{
+                margin-left:1em + px2em(20px,28px);
+            }
+        }
+    }
+    .city-select-current-info{
+        padding:px2rem(2 * $gap) px2rem(4 * $gap);
+        background-color: #fff;
+        color: $gray;
+        border:1px solid $border-color;
+        .iconfont{
+            margin-right: px2rem(20px);
+        }
+        &.act{
+            .iconfont{
+                color: $oec-primary-light;
+            }
+            .-col-value{
+                color: $text-color;
+            }
+        }
+    }
+    // 最近访问城市
+    .city-select-history{
+        .city-select-glob-main{
+            padding: px2rem(15px);
+        }    
+        .history-list{
+            overflow: hidden;
+        }
+        .history-item{
+            float: left;
+            @include inline-block;
+            width: px2rem(200px);
+            @include height(px2rem(70px));
+            margin: px2rem(15px);
+            border-radius:px2rem(4px);
+            background-color: rgb(255,255,255);
+            border:1px solid $border-color;
+            text-align:center;
+            &.act{
+                color: $text-pink;
+                border-color:currentColor;
+            }
+        }
+    }
+
+    // 城市列表
+    .city-select-list{
+        .city-select-glob-main{
+            padding-top:0;
+            padding-bottom:0;
+        }
+        .city-select-unit{
+            padding-bottom: px2rem(30px);
+            padding-top: px2rem(30px);
+            border-bottom:1px solid $border-color;
+            &:last-child{
+                border-bottom-width:0;
+            }
+        }
+    }
+}

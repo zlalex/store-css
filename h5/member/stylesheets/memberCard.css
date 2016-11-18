@@ -1,0 +1,247 @@
+/* line 30, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard {
+  margin: 0.26667rem 0.26667rem 0.93333rem;
+}
+/* line 33, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-header {
+  position: relative;
+  padding: 0.53333rem;
+  border-top-right-radius: 0.13333rem;
+  border-top-left-radius: 0.13333rem;
+  background-color: #fafafa;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI2NiUiIHN0b3AtY29sb3I9IiNlMWUxZTEiLz48c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(0deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(90deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: repeat-x;
+  background-size: 1em 2px;
+  background-position: bottom;
+  font-weight: bold;
+  color: #333a49;
+}
+/* line 42, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-header-main {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+/* line 47, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-avator, .memberCard-wrapper .memberCard-info {
+  float: left;
+  height: 1.34667rem;
+}
+/* line 51, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-avator {
+  width: 1.34667rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+/* line 55, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-avator img {
+  width: 100%;
+  height: 100%;
+}
+/* line 60, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-info {
+  position: relative;
+  left: 0.26667rem;
+  width: 4rem;
+}
+/* line 67, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-info .usrname {
+  height: 0.32rem;
+  line-height: 0.32rem;
+  margin-top: 0.4rem;
+}
+/* line 72, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-info .rank {
+  margin-top: 0.13333rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+/* line 76, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-info .rank .iconfont {
+  margin-right: 0.06667rem;
+  font-size: 0.4rem;
+}
+/* line 82, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-domain {
+  position: absolute;
+  bottom: 0.53333rem;
+  right: 0.53333rem;
+}
+/* line 86, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-domain .btn-favorite {
+  border-color: #333a49;
+  font-size: 0.32rem;
+  font-weight: normal;
+}
+/* line 92, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-main {
+  position: relative;
+  margin-top: -1px;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 0.73333rem;
+  border-radius: 0 0 0.13333rem 0.13333rem;
+}
+/* line 99, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-main img {
+  width: 100%;
+}
+/* line 102, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-main::before, .memberCard-wrapper .memberCard-main::after {
+  content: '';
+  position: absolute;
+  width: 0.26667rem;
+  height: 0.26667rem;
+  top: -0.13333rem;
+  border-radius: 50%;
+  background-color: #333a49;
+}
+/* line 111, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-main::before {
+  left: -0.13333rem;
+}
+/* line 114, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-main::after {
+  right: -0.13333rem;
+}
+/* line 120, ../sass/memberCard.scss */
+.memberCard-wrapper .split-line {
+  color: #999;
+  position: relative;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  font-size: .92em;
+}
+/* line 49, ../../../sass/oecstore/mixins/_tools.scss */
+.memberCard-wrapper .split-line span {
+  display: inline-block;
+  position: relative;
+  width: 2.13333rem;
+  bottom: .5em;
+  background: #fff;
+}
+/* line 61, ../../../sass/oecstore/mixins/_tools.scss */
+.memberCard-wrapper .split-line::before {
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI2NiUiIHN0b3AtY29sb3I9IiNlMWUxZTEiLz48c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(0deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(90deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: repeat-x;
+  background-size: 1em 1px;
+  background-position: bottom;
+}
+/* line 349, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .memberCard-wrapper .split-line::before {
+  height: 2px;
+}
+/* line 71, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .memberCard-wrapper .split-line::before {
+  background-size: 1em 2px;
+}
+/* line 125, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-barcode {
+  margin-bottom: 0.73333rem;
+}
+/* line 128, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-qrcode {
+  margin-bottom: 0.62667rem;
+}
+/* line 132, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-barcode img {
+  width: 7.2rem;
+}
+/* line 137, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-qrcode img {
+  width: 4.4rem;
+}
+/* line 141, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-code-domain {
+  padding-bottom: 0.53333rem;
+  font-size: 1.09em;
+  color: #666;
+}
+/* line 145, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-code-domain .iconfont {
+  font-size: .85em;
+  margin-left: .3em;
+}
+/* line 150, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-code-refresh {
+  padding: 0.33333rem 0;
+  background-color: #fafafa;
+  border-radius: 0 0 0.13333rem 0.13333rem;
+}
+/* line 155, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-footer {
+  margin-top: -1px;
+  padding: 0.46667rem 0.4rem 0.6rem;
+  border-bottom-right-radius: 0.13333rem;
+  border-bottom-left-radius: 0.13333rem;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI2NiUiIHN0b3AtY29sb3I9IiNlMWUxZTEiLz48c3RvcCBvZmZzZXQ9IjY2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(0deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(0deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(90deg, #e1e1e1 66%, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: repeat-x;
+  background-size: 1em 2px;
+  background-position: top;
+  border-radius: 0.13333rem;
+  background-color: #fff;
+}
+/* line 163, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-row {
+  display: -webkit-box;
+  display: box;
+}
+/* line 166, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-row .memberCard-col {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  text-align: center;
+}
+/* line 170, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-row .memberCard-col img {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+/* line 19, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-normal .btn-use {
+  background-color: #ff317a;
+}
+/* line 22, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-normal .memberCard-title {
+  color: #ff317a;
+}
+/* line 19, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-mall .btn-use {
+  background-color: #14b2f6;
+}
+/* line 22, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-mall .memberCard-title {
+  color: #14b2f6;
+}
+/* line 181, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-mall .memberCard-code-wrapper {
+  display: none;
+}
+/* line 19, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-branch .btn-use {
+  background-color: #00ceb8;
+}
+/* line 22, ../sass/memberCard.scss */
+.memberCard-wrapper .memberCard-branch .memberCard-title {
+  color: #00ceb8;
+}

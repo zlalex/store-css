@@ -1,0 +1,363 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+
+.comment-good{
+    &.layout-page.top-layout-page{
+        padding-top: $top-nav-height + px2rem(100px);
+    }
+    .layout-nav{
+        height:px2rem(100px);
+    }
+    // 评论分类
+    .comment-good-category-list{
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: px2rem(90px);
+        width: 10rem;
+        @include flex-row-around();
+        background-color: rgb(255,255,255);
+        @include setBorder(border, rgb(225,225,225), 1px);
+        .comment-good-category-item{
+            @include box-flex(1);
+            @include flex(1);
+            margin-top: px2rem(23px);
+            margin-bottom: px2rem(17px);
+            text-align: center;
+            &.active{
+                @include setBorder(border-bottom, rgb(255,49,122), 2.5px);
+                margin-bottom: px2rem(1px);
+            }
+            @include inline-block;
+            margin-left: px2rem(17px);
+            margin-right: px2rem(17px);
+            @include font-dpr(15px);
+            color: rgb(51,51,51);
+
+            .comment-good-category-group{
+
+                .comment-good-category-item-label{
+
+                }
+                .comment-good-category-item-num{
+                    margin-top: px2rem(10px);
+                    @include font-dpr(12px);
+                }
+            }
+        }
+    }
+    // 评论关键词
+    .comment-good-tips{
+        padding: px2rem(15px) px2rem(25px);
+        .comment-good-tips-item{
+            @include inline-block;
+            padding: px2rem(9px) px2rem(20px);
+            margin: px2rem(5px);
+            @include setBorder(border, rgb(225,225,225), 1px);
+            @include border-radius(5px);
+            @include font-dpr(12px);
+            line-height: px2rem(24px);
+            color: rgb(102,102,102);
+            &.active{
+                border-color: rgb(250,189,61);
+                color: rgb(250,189,61);
+            }
+        }
+    }
+    // 评论列表
+    .comment-good-comment-list{
+        .comment-good-comment-item{
+            // 评论内容
+            .comment-good-comment-title{
+                margin-left: px2rem(30px);
+                margin-right: px2rem(30px);
+                padding-top: px2rem(30px);
+                .flex-row-between>div{
+                    @include inline-block;
+                }
+                .comment-good-comment-title-img{
+                    width: px2rem(65px);
+                    height: px2rem(65px);
+                    @include border-radius(50%);
+                    overflow: hidden;
+                    img{
+                        width: px2rem(65px);
+                        height: px2rem(65px);
+                    }
+                }
+                .-col-content{
+                    padding-left: px2rem(30px);
+                    @include font-dpr(12px);
+                    color: rgb(51,51,51);
+                }
+            }
+                .comment-good-comment-content{
+                    @include font-dpr(12px);
+                    color: rgb(51,51,51);
+                    padding: px2rem(40px) px2rem(10px);
+                }
+                .comment-good-comment-images{
+                    img{
+                        width: px2rem(111px);
+                        height: px2rem(111px);
+                        @include border-radius(3px);
+                        margin-right: px2rem(9px);
+                    }
+                }
+            // 评论时间
+            .comment-good-comment-bottom{
+                // height: px2rem(42px);
+                line-height: px2rem(42px);
+                margin-left: px2rem(30px);
+                margin-right: px2rem(30px);
+                padding-bottom: px2rem(36px);
+                >div{
+                    @include inline-block;
+                }
+                .comment-good-comment-bottom-left{
+                    line-height: px2rem(24px);
+                    height: px2rem(42px);
+                    @include font-dpr(10px);
+                    color: rgb(153,153,153);
+                    padding-top: px2rem(18px);
+                }
+                .comment-good-comment-bottom-right{
+                    float: right;
+                    margin-right: px2rem(10px);
+                    >div{
+                        position: relative;
+                        @include inline-block;
+                        @include font-dpr(21px);
+                        color: rgb(153,153,153);
+                        >div{
+                            @include inline-block;
+                            position: absolute;
+                            left: px2rem(42px);
+                            top: px2rem(42px - 5px);
+                        }
+                    }
+                    .comment-good-comment-bottom-msg{
+                        position: relative;
+                        margin-right: px2rem(60px);
+                        .iconfont-comment{
+                            @include inline-block;
+                        }
+                        .iconfont-comment-solid{
+                            display: none;
+                        }
+                        &.active{
+                            color: rgb(255,49,122);
+                            .iconfont-comment-solid{
+                                @include inline-block;
+                            }
+                            .iconfont-comment{
+                                display: none;
+                            }
+                        }
+                        .comment-good-comment-bottom-msg-triangle{
+                            position: absolute;
+                            top: px2rem(69px);
+                            left: px2rem(5px);
+                            width: px2rem(20px);
+                            height: px2rem(20px);
+                            @include inline-block;
+                            @include setBorder(border-left, rgb(225,225,225), 1px);
+                            @include setBorder(border-top, rgb(225,225,225), 1px);
+                            @include transform(rotate(45deg));
+                            background-color: rgb(245,245,245);
+                        }
+                        .comment-good-comment-bottom-msg-num{
+                            @include font-dpr(9px);
+                            line-height: px2rem(18px);
+                        }
+                    }
+                    .comment-good-comment-bottom-storeUp{
+                        .iconfont-heart{
+                            @include inline-block;
+                        }
+                        .iconfont-heart-solid{
+                            display: none;
+                        }
+                        .iconfont-heart{
+                            @include inline-block;
+                        }
+                        .iconfont-heart-solid{
+                            display: none;
+                        }
+                        .iconfont-heartbreak{
+                            display: none;
+                        }
+                        &.active{
+                            color: rgb(255,49,122);
+                            .iconfont-heart-solid{
+                                @include inline-block;
+                            }
+                            .iconfont-heart{
+                                display: none;
+                            }
+                        }
+                        &.break{
+                            color: rgb(255,49,122);
+                            .iconfont-heartbreak{
+                                @include inline-block;
+                            }
+                            .iconfont-heart{
+                                display: none;
+                            }
+                        }
+                        .comment-good-comment-bottom-storeUp-num{
+                            @include font-dpr(9px);
+                            line-height: px2rem(18px);
+                        }
+                    }
+                }
+            }
+            // 评论回复
+
+            .comment-good-comment-reply-btn-group{
+                width: px2rem(730px);
+                padding-top: px2rem(19px);
+                padding-bottom: px2rem(19px);
+                padding-left: px2rem(31px);
+                position: relative;
+                background-color: rgb(245,245,245);
+                >div{
+                    @include inline-block;
+                    overflow: hidden;
+                }
+                .comment-good-comment-reply-reply-input{
+                    @include setBorder(border, rgb(225,225,225), 1px);
+                    width: px2rem(559px);
+                    height: px2rem(53px);
+                    @include border-radius(5px);
+                    padding: px2rem(16px) px2rem(20px);
+                    color: rgb(153,153,153);
+                    background-color: rgb(255,255,255);
+                }
+                .comment-good-comment-reply-reply-btn{
+                    width: px2rem(101px);
+                    height: px2rem(53px);
+                    @include setBorder(border, rgb(225,225,225), 1px);
+                    @include border-radius(5px);
+                    padding: px2rem(15px) 0;
+                    text-align: center;
+                    background-color: rgb(255,49,122);
+                    @include font-dpr(12px);
+                    color: rgb(255,255,255);
+                    margin-left: px2rem(9px)
+                }
+            }
+            // 评论回复列表
+            .comment-good-comment-reply-list{
+                background-color: rgb(245,245,245);
+                // 评论回复
+                .comment-good-comment-reply{
+
+                    @include font-dpr(11px);
+                    color: rgb(51,51,51);
+                    overflow-x:hidden;
+                    .comment-good-comment-reply-comment{
+                        width: px2rem(732px * 2);
+                        @include setBorder(border-top, rgb(225,225,225), 1px);
+                        @include transition(margin-left 1s ease-in .1s);
+                        &.comment-good-comment-reply-comment-reply-active{
+                            margin-left: px2rem(-728px);
+                        }
+                        >div{
+                            @include inline-block;
+                            overflow: hidden;
+                        }
+                        .comment-good-comment-reply-comment-text-group{
+                            width: px2rem(730px);
+                            >div{
+                                @include inline-block;
+                            }
+                            .comment-good-comment-reply-comment-content{
+                                padding-top: px2rem(35px);
+                                padding-bottom: px2rem(30px);
+                                padding-left: px2rem(46px);
+                                padding-right: px2rem(46px);
+                                width: px2rem(538px);
+                                vertical-align: top;
+                                >span{
+                                    @include inline-block;
+                                    vertical-align: top;
+                                }
+                                .comment-good-comment-reply-comment-content-label{
+                                    // width: px2rem(90px);
+                                }
+                                .comment-good-comment-reply-comment-content-value{
+                                    width: px2rem(538px - 90px - 46px - 46px);
+                                }
+                            }
+                            .comment-good-comment-reply-comment-btn{
+                                width: px2rem(70px);
+                                padding-top: px2rem(5px);
+                                padding-bottom: px2rem(4px);
+                                @include border-radius(25%);
+                                @include setBorder(border, rgb(225,225,225), 1px);
+                                margin-top: px2rem(29px);
+                                margin-bottom: px2rem(31px);
+                                margin-left: px2rem(55px);
+                                margin-right: px2rem(21px);
+                                text-align: center;
+                                background-color: rgb(245,245,245);
+                            }
+                        }
+                        .comment-good-comment-reply-comment-btn-group{
+                            width: px2rem(730px);
+                            padding-top: px2rem(19px);
+                            padding-bottom: px2rem(19px);
+                            padding-left: px2rem(31px);
+
+                            >div{
+                                @include inline-block;
+                                overflow: hidden;
+                            }
+                            .comment-good-comment-reply-comment-reply-input{
+                                @include setBorder(border, rgb(225,225,225), 1px);
+                                width: px2rem(559px);
+                                height: px2rem(53px);
+                                @include border-radius(5px);
+                                padding: px2rem(16px) px2rem(20px);
+                                color: rgb(153,153,153);
+                                background-color: rgb(255,255,255);
+                            }
+                            .comment-good-comment-reply-comment-reply-btn{
+                                width: px2rem(101px);
+                                height: px2rem(53px);
+                                @include setBorder(border, rgb(225,225,225), 1px);
+                                @include border-radius(5px);
+                                padding: px2rem(15px) 0;
+                                text-align: center;
+                                background-color: rgb(255,49,122);
+                                @include font-dpr(12px);
+                                color: rgb(255,255,255);
+                                margin-left: px2rem(9px)
+                            }
+                        }
+                        // 评论回复回复
+                        .comment-good-comment-reply-item{
+                            padding-top: px2rem(29px);
+                            padding-bottom: px2rem(37px);
+                            margin-left: px2rem(46px);
+                            padding-right: px2rem(46px);
+                            width: px2rem(730px - 46px);
+                            @include setBorder(border-top, rgb(225,225,225), 1px);
+                            >div{
+                                @include inline-block;
+                            }
+                            .comment-good-comment-reply-item-label{
+                                color: rgb(255,49,122);
+                            }
+                            .comment-good-comment-reply-item-content{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

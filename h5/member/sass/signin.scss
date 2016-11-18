@@ -1,0 +1,115 @@
+@import "../../../sass/oecstore/init.scss";
+/* ----------------------------- 签到 -------------------------------*/
+.signin-wrapper{
+    $btn-color:#fabf48;
+    .signin-header{
+        padding-top:px2rem(20px);
+        padding-bottom:px2rem(20px);
+        background-color:#fff;
+        border-bottom:1px solid $border-color;
+    }
+    .signin-header-info{
+        height:px2rem(180px);
+        padding-left:px2rem(265px);
+        background:url($member-path+'signin-head.png') no-repeat;
+        background-size:contain;
+        background-position:px2rem(25px) center;
+        text-align:center;
+        font-size:1.25em;
+        overflow: hidden;
+        font-weight:bold;
+        .signin-header-action{
+            margin-top:px2rem(30px);
+            margin-bottom:px2rem(24px);
+        }
+        .signin-header-points{
+            font-size:.933em;
+        }
+        .btn-signin{
+            width:px2rem(295px);
+            padding-top:.6em;
+            padding-bottom:.6em;
+            border-radius: px2rem(10px);
+            @include button-variant(#fff,$btn-color,$btn-color);
+            > .num {
+                margin-left:.3em;
+                vertical-align:baseline;
+            }
+        }
+    }
+}
+.dialog.dialog-signin{
+    width:px2rem(475px);
+    height:px2rem(470px);
+    font-size:1.09em; //13px
+    text-align:center;
+    background:url($member-path+'signin-dialog.png') no-repeat;
+    background-size:contain;
+    @include box-shadow(none);
+    .close,.dialog-signin-title,.dialog-signin-info{
+        position:absolute;
+    }
+    .dialog-signin-title,.dialog-signin-info{
+        left:0;
+        right:0;
+    }
+    .close{
+        top:-.1em;
+        right:0;
+        width:.9rem;
+        height:.9rem;
+        margin-right:px2rem(26px);
+    }
+    .dialog-signin-title{
+        bottom: px2rem(150px);
+        font-size:1.31em; //17px 17/13 ~= 1.31
+        color: $brand-success;        
+        > .num{margin-left:.2em;}
+    }
+    .dialog-signin-info{
+        bottom:px2rem(33px);
+        @include height(px2rem(84px));
+        color:rgba(255,255,255,.6);
+    }
+}
+.point-exchange{
+    .btn-group-justified{
+        padding:px2rem($padding-base) 0 px2rem($padding-base - 5px);
+    }
+
+    .btn{
+        height:px2rem(125px);
+        &::before{
+            content:'';
+            display:inline-block;
+            margin-right:px2rem(20px);
+            width:px2rem(70px);
+            height:px2rem(70px);
+            border-radius:50%;
+            vertical-align:middle;
+        }
+    }
+    .point-exchange-coupon{
+        &::before{
+            background:url($member-path+'icon-coupon-2.png') no-repeat;
+            background-size:contain;
+        }
+    }
+    .point-exchange-goods{
+        &::before{
+            background:url($member-path+'icon-gift.png') no-repeat;
+            background-size:contain;
+        }
+    }
+    .btn-inner{
+        display:inline-block;
+        text-align:left;
+        .title{
+            font-size:1.167em;
+            line-height:1.5;
+        }
+        .note{
+            color:$gray-light;
+        }
+    }
+}

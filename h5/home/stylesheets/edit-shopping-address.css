@@ -1,0 +1,65 @@
+/* line 4, ../sass/edit-shopping-address.scss */
+body {
+  background-color: whitesmoke;
+}
+
+/* line 8, ../sass/edit-shopping-address.scss */
+.edit-shopping-address {
+  background-color: whitesmoke;
+}
+/* line 10, ../sass/edit-shopping-address.scss */
+.edit-shopping-address.layout-page.both-layout-page {
+  padding-bottom: 0px;
+  padding-top: 1.2rem;
+}
+/* line 15, ../sass/edit-shopping-address.scss */
+.edit-shopping-address .edit-shopping-address-info {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+/* line 18, ../sass/edit-shopping-address.scss */
+.edit-shopping-address .edit-shopping-address-info .form-group {
+  font-size: 13px;
+  color: #333333;
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .edit-shopping-address .edit-shopping-address-info .form-group {
+  font-size: 26px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .edit-shopping-address .edit-shopping-address-info .form-group {
+  font-size: 39px;
+}
+/* line 22, ../sass/edit-shopping-address.scss */
+.edit-shopping-address .edit-shopping-address-info .form-group .input-group-title {
+  width: 2.13333rem;
+}
+/* line 27, ../sass/edit-shopping-address.scss */
+.edit-shopping-address .edit-shopping-address-info .form-group::before, .edit-shopping-address .edit-shopping-address-info .form-group::after {
+  width: 0;
+  height: 0;
+}
+/* line 34, ../sass/edit-shopping-address.scss */
+.edit-shopping-address .edit-shopping-address-sure {
+  width: initial;
+  height: 1.33333rem;
+  line-height: 1.33333rem;
+  margin-top: 0.4rem;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* line 103, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="2"] .edit-shopping-address .edit-shopping-address-sure {
+  font-size: 40px;
+}
+/* line 106, ../../../sass/oecstore/mixins/_tools.scss */
+[data-dpr="3"] .edit-shopping-address .edit-shopping-address-sure {
+  font-size: 60px;
+}
+/* line 42, ../sass/edit-shopping-address.scss */
+.edit-shopping-address .edit-shopping-address-sure.active {
+  background-color: #ff317a;
+}

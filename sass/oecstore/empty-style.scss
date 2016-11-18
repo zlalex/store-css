@@ -1,0 +1,21 @@
+@import "oecstore/scaffold.scss";
+// 数据空时基础样式，具体去_empty-style.scss配置
+.empty-style{
+    display:none;
+    margin:$empty-margin-top px2rem($padding-small) px2rem($padding-base);
+    font-size:1.083em;
+    color:$gray-light;
+    text-align:center;
+    .empty-info{
+        &::before{
+            content:'';
+            display:block;
+            width:100%;
+            height:100%;
+            margin-bottom:$empty-margin-bottom;
+        }
+    }
+    &.show{
+        display:block;
+    }
+}

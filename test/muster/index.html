@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI规范</title>
+    <link rel="stylesheet" href="../../stylesheets/oecstore/muster.css">
+    <link rel="stylesheet" href="../../stylesheets/oecstore/layout.css">
+</head>
+<body>
+    <div class="muster-wrap">
+        <aside class="sidebar">
+            <header>Navigation</header>
+            <ul class="sidebar-list">
+                <li class="sidebar-item">Area</li>
+                <li class="sidebar-item">Buttons</li>
+                <li class="sidebar-item">Date</li>
+                <li class="sidebar-item">Dialog</li>
+                <li class="sidebar-item">Form</li>
+                <li class="sidebar-item">GroundGlass</li>
+                <li class="sidebar-item">Iconfont</li>
+                <li class="sidebar-item">Layout</li>
+                <li class="sidebar-item">Select</li>
+                <li class="sidebar-item">Slider</li>
+            </ul>
+        </aside>
+        <section class="main">
+            <h1 class="title">UI规范</h1>
+            <!--Area⬇️-->
+            <div class="module">
+                <h2>Area</h2>
+                <iframe src="../area/index.html" frameborder="0" class="iframes"></iframe>
+                <iframe src="../area/index_2.html" frameborder="0" class="iframes"></iframe>
+                <iframe src="../area/index_3.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--Buttons⬇️-->
+            <div class="module">
+                <h2>Buttons</h2>
+                <iframe src="../buttons/index.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--Date⬇️-->
+            <div class="module">
+                <h2>Date</h2>
+                <iframe src="../date/date.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--Dialog⬇️-->
+            <div class="module">
+                <h2>Dialog</h2>
+                <iframe src="../dialog/index.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--Form⬇️-->
+            <div class="module">
+                <h2>Form</h2>
+                <iframe src="../form/index.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--GroundGlass⬇️-->
+            <div class="module">
+                <h2>GroundGlass</h2>
+                <iframe src="../groundGlass/index.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--Iconfont⬇️-->
+            <div class="module">
+                <h2>Iconfont</h2>
+                <iframe src="../iconfont/index.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--Layout⬇️-->
+            <div class="module">
+                <h2>Layout</h2>
+                <iframe src="../layout/index.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--Select⬇️-->
+            <div class="module">
+                <h2>Select</h2>
+                <iframe src="../select/index.html" frameborder="0" class="iframes"></iframe>
+            </div>
+            <!--Slider⬇️-->
+            <div class="module">
+                <h2>Slider</h2>
+                <iframe src="../slider/index.html" frameborder="0" class="iframes"></iframe>
+            </div>
+        </section>
+    </div>
+    <script src="../lib/flexible.js"></script>
+    <script src="../lib/jquery.js"></script>
+    <script>
+    $(function(){
+        var sidebarItem = $(".sidebar-item");
+        var module = $(".module");
+
+        sidebarItem.on("click",function(){
+            var $this = $(this);
+            var index = $this.index();
+            var oModule = module.eq(index);
+            var Coords = oModule.offset().top;
+            var width = $(window).width();
+            $this.addClass('current').siblings().removeClass('current');
+            if(width < 1280){
+                Coords = Coords - 100 ;
+                $("html,body").animate({scrollTop: Coords}, 500);
+            }else if(width >= 1280){
+                $("html,body").animate({scrollTop: Coords}, 500);
+            };
+        });
+
+        var fnScrollTop = function(){
+            var that = this;
+            this.wrap = $('<div></div>',{class:'scroll-top'}).appendTo($(document.body)).on("click",function(){
+                $("html,body").animate({scrollTop : '0px'}, 500);
+            });
+        };
+
+        fnScrollTop();
+
+        var scrollObj = {
+            scrollPos : undefined ,
+            fnGetScrollTop : function(){
+                var that = this;
+                scrollPos = that.scrollPos;
+                if (window.pageYOffset) {
+                    scrollPos = window.pageYOffset;
+                } else if (document.compatMode && document.compatMode != 'BackCompat') { 
+                    scrollPos = document.documentElement.scrollTop; 
+                } else if (document.body) { 
+                    scrollPos = document.body.scrollTop; 
+                };
+                that.scrollPos = scrollPos;
+            }
+        };
+
+        $(window).scroll(function(){
+            scrollObj.fnGetScrollTop();
+            var scrolltops = scrollObj.scrollPos;
+            var arrScrlltop = []
+            for(var i = 0 ; i < module.length ; i++){
+                arrScrlltop.push(parseInt(module.eq(i).offset().top))
+            };
+        });
+        
+    })
+    </script>
+</body>
+</html>

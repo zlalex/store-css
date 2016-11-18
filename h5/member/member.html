@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <script src="../lib/flexible.js"></script>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+</head>
+<body>
+<div class="layout-page top-layout-page member">
+    <div class="top-nav text-center">
+        <div class="layout-title">
+            <div class="title-left">
+                <a href="#" class="title-back">
+                    <i class="iconfont iconfont-angle-left"></i>
+                </a>
+            </div>
+            <div class="title-content">我的</div>
+            <div class="title-right">
+                <div class="title-cog">
+                    <i class="iconfont iconfont-cog"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-content member-wrapper">
+        <section class="member-header flex-row-between flex-center">
+            <div class="member-header-main">
+                <div class="member-avator">
+                    <img src="../../images/member/avatar-default.png" alt="">
+                </div>
+                <div class="member-info">
+                    <!-- <div class="btn btn-login">登陆</div>
+                    <div class="btn btn-register">注册</div> -->
+                    <div class="btn btn-link btn-rank">
+                        <i class="iconfont iconfont-vip"></i><span class="member-rank">普通会员</span>
+                    </div>
+                    <div class="btn btn-usr">
+                        <i class="iconfont iconfont-male"></i><span class="member-usrname">158***745</span>
+                    </div>
+                </div>
+            </div>
+            <div class="member-domain">
+                <div class="btn btn-signin">
+                    <i class="iconfont iconfont-database"></i><span class="member-signin">未签到</span>
+                </div>
+            </div>
+        </section>
+        <section class="well member-overview">
+            <ul class="flex-row-between flex-center">
+                <li class="-col-grow-1 member-overview-deposit">
+                    <div class="member-overview-offset">
+                        <p class="member-overview-value">0.00<span class="member-overview-unit">元</span></p>
+                        <p class="member-overview-key">预存款</p>
+                    </div>
+                </li>
+                <li class="-col-grow-1 member-overview-vantages">
+                    <div class="member-overview-offset">
+                        <p class="member-overview-value">720<span class="member-overview-unit">分</span></p>
+                        <p class="member-overview-key">积分</p>
+                    </div>
+                </li>
+                <li class="-col-grow-1 member-overview-coupons">
+                    <div class="member-overview-offset">
+                        <p class="member-overview-value">8<span class="member-overview-unit">张</span></p>
+                        <p class="member-overview-key">优惠券</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="well member-orders">
+            <ul class="member-list">
+                <a href="#">
+                <li class="member-line">
+                    <div class="member-line-info">
+                        <i class="iconfont iconfont-note"></i>我的订单
+                    </div>
+                    <div class="member-line-right">
+                        <i class="iconfont iconfont-angle-right"></i>
+                    </div>
+                </li>
+                </a>
+                <li class="member-stretch">
+                    <div class="btn-group-justified">
+                        <a href="" class="btn btn-link">配送订单<span class="value">(04)</span></a>
+                        <a href="" class="btn btn-link">自提订单<span class="value">(01)</span></a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="well member-o2o">
+            <ul class="member-list">
+                <a href="#" class="member-card">
+                    <li class="member-line">
+                        <div class="member-line-info">
+                            <i class="iconfont iconfont-vip-card"></i>我的电子卡
+                        </div>
+                        <div class="member-line-right">
+                            <i class="iconfont iconfont-angle-right"></i>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="member-branch">
+                    <li class="member-line">
+                        <div class="member-line-info">
+                            <i class="iconfont iconfont-branch"></i>附近门店
+                        </div>
+                        <div class="member-line-right">
+                            <i class="iconfont iconfont-angle-right"></i>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </section>
+        <section class="well member-assistant">
+            <ul class="member-list">
+                <a href="#" class="member-favorite">
+                    <li class="member-line">
+                        <div class="member-line-info">
+                            <i class="iconfont iconfont-star-o"></i>我的收藏
+                        </div>
+                        <div class="member-line-right">
+                            <span class="member-line-brief">231个商品</span>
+                            <i class="iconfont iconfont-angle-right"></i>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="member-paw">
+                    <li class="member-line">
+                        <div class="member-line-info">
+                            <i class="iconfont iconfont-paw"></i>我的足迹
+                        </div>
+                        <div class="member-line-right">
+                            <i class="iconfont iconfont-angle-right"></i>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="member-address">
+                    <li class="member-line">
+                        <div class="member-line-info">
+                            <i class="iconfont iconfont-map-marker"></i>我的收货地址
+                        </div>
+                        <div class="member-line-right">
+                            <i class="iconfont iconfont-angle-right"></i>
+                        </div>
+                    </li>
+                </a>
+                <a href="#" class="member-aftersale">
+                    <li class="member-line">
+                        <div class="member-line-info">
+                            <i class="iconfont iconfont-tool"></i>售后服务
+                        </div>
+                        <div class="member-line-right">
+                            <span class="member-line-brief">2个商品正在售后中</span>
+                            <i class="iconfont iconfont-angle-right"></i>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </section>
+    </div>
+</div>
+
+</body>
+</html>

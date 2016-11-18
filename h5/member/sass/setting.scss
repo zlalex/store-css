@@ -1,0 +1,9 @@
+@import "../../../sass/oecstore/init.scss";
+/* ----------------------------- 设置 -------------------------------*/
+.settings-list{
+    .disabled{
+        .-col-right{
+            visibility: hidden;
+        }
+    }
+}

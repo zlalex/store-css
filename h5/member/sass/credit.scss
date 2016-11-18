@@ -1,0 +1,112 @@
+@import "../../../sass/oecstore/init.scss";
+/* ----------------------------- 积分 -------------------------------*/
+
+.credit-header{
+    padding:px2rem($padding-large) px2rem($padding-base);
+    height:px2rem(330px);
+}
+.credit-header-inner{
+    height:100%;
+    padding:px2rem(40px) px2rem(40px) px2rem(70px) px2rem(40px);
+    background-color: #fff;
+    border-radius:$border-radius-large;
+}
+.credit-header-brief{
+    position:relative;
+    font-size:1.25em; //15px 15/12=1.25
+    margin-right:px2rem($padding-base);
+    overflow:hidden;
+    .credit-value{
+        position:absolute;
+        bottom: -.1em;
+        font-size:3.33em; //50px 50/15 ~= 3.33
+        font-weight:bold;
+        color:$brand-info;
+    }
+    .small{
+        font-size:2.7em;
+    }
+    .unit{
+        margin-left:.5em;
+        font-size:.33em; //15px 15/50 ~= 0.33
+    }
+}
+.credit-header-side{
+    position:relative;
+    text-align:right;
+    width:px2rem(186px);
+    .credit-header-desc{
+        .iconfont{
+            top:2px;
+            margin-right:.2em;
+            font-size:1.2em;
+        }
+    }
+    .credit-header-bottom{
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+    }
+    .btn{
+        // margin-top:px2rem(72px);
+        @include button-size(px2rem(60px));
+        width:100%;
+        .iconfont{
+            top:-1px;
+            font-size:1.6em;
+        }
+    }
+}
+.credit-detail-wrapper{
+    padding-left:px2rem($padding-large);
+    padding-right:px2rem($padding-large);
+    font-size:1.17em;
+}
+.credit-detail-list{
+    .credit-detail-title{
+        margin-bottom:px2rem($padding-small);
+    }
+    .credit-detail-date{
+        font-size:.86em;
+        color:$gray-light;
+    }
+    .flex-row-between{
+        padding:px2rem($padding-large) 0;
+        line-height:1.1;
+        &:not(:last-child){
+            border-bottom:1px solid $border-color;
+        }
+    }
+    .credit-detail-add{
+        .-col-right{
+            color:$brand-info;
+        }
+    }
+    .-col-right{
+        width:4em;
+        font-size:1.07em;
+        text-align:right;
+    }
+}
+.credit-empty{
+    @include empty-style($member-path+'credit-empty.png', px2rem(350px));
+}
+.credit-note-wrapper{
+    .credit-note-item{
+        padding:0 px2rem($padding-large);
+    }
+    .credit-note-header{
+        @include height(px2rem(90px));
+        @include nowrap();
+        border-bottom:1px solid $border-color;
+        font-size:1.17em;
+        font-weight:bold;
+    }
+    .credit-note-main{
+        padding-top: px2rem($padding-large);
+        padding-bottom: px2rem($padding-large);
+        text-indent:1em;
+        line-height:1.4;
+    }
+}

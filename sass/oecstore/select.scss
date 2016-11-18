@@ -1,0 +1,48 @@
+@import "oecstore/scaffold.scss";
+
+.checkbox{
+    @include select-base($oec-primary-light,$solid:false);
+}
+.checkbox-success{
+    @include select-variant($brand-success,$solid:true);
+}
+.checkbox-form{
+    @include select-variant($oec-primary-light,$solid:true);
+    input[type='checkbox'],
+    input[type='radio']{
+        + label{
+            &::before{
+                width:.7em;
+                height:.8em;
+                line-height:.8em;
+                background-color:$gray-lighter;
+                border-radius:0 0 .4em .4em;
+            }
+        }
+        &:checked + label{
+            &::after{
+                content:'';
+                font-size:1em;
+                left:.28em;
+                top:.46em;
+                width:.6em;
+                height: .6em;
+                background:inline-image('half-check.svg') no-repeat;
+                background-size:contain;
+            }
+        }
+    }
+}
+.switch{
+    @include switch($brand-success,2em);
+}
+.select-list{
+    @include select-list($size:90px,$position:fixed,$z-index:$layout-z-index);
+    bottom: px2rem(5 * $padding-base);
+    right:px2rem(2 * $padding-base);
+    z-index:$layout-z-index;
+}
+.number-ipts{
+    font-size:1.15em;
+    @include select-number();
+}

@@ -1,0 +1,145 @@
+@import "../../../sass/oecstore/init.scss";
+.order-detail-wrapper{
+    .well{
+        padding-left:px2rem($padding-large);
+        padding-right:px2rem($padding-large);
+        font-size:1.084em;//26px;
+        .header{
+            @include height(px2rem(90px));
+            border-bottom:1px solid $border-color;
+            font-size:1.154em;//30px;
+        }
+        .main{
+            // padding:px2rem(25px) 0;
+            line-height:1.4;
+        }
+    }
+    .order-detail-list{
+        padding-top:px2rem(1.15 * $padding-base);
+        padding-bottom:px2rem(1.15 * $padding-base);
+        > li:not(:last-child) {
+            margin-bottom:px2rem($margin-base / 2);
+        }
+        &:not(:last-child){
+            border-bottom:1px solid $border-color;
+        }
+    }
+    .order-detail-status{
+        .btn{
+            @include button-size(1,.23em);
+        }
+        .iconfont{
+            width:1.2em;
+            height:1.2em;
+            line-height:1.3em;
+            margin-right:px2rem($padding-small);
+            border-radius:50%;
+            color:#fff;
+        }
+        &.been{
+            .iconfont{
+                background-color:$oec-primary-light;
+                @include transform(rotate(90deg));
+                &::before{
+                    @include icon-more();
+                }
+            }
+        }
+        &.done{
+            .iconfont{
+                background-color:$brand-success;
+                &::before{
+                    @include icon-check-bold();
+                }
+            }
+        }
+        .header{
+            height:px2rem(70px);
+            line-height:1;
+            padding-top:px2rem(1.25 * $padding-base);
+            border:0;
+            font-size:1em;
+        }
+        .main{
+            > * {
+                vertical-align:middle;
+            }
+            font-size:1.54em;//40px
+            padding-bottom:px2rem(70px);
+            color:$oec-primary-dark;
+            text-align:center;
+        }
+        
+    }
+    .order-detail-address{
+        .main{
+            padding:px2rem($padding-base) 0;
+            > p:not(:last-child) {
+                margin-bottom: px2rem($margin-base);
+            }
+        }
+        .address-name,.address-phone{
+            display:inline-block;
+            max-width:15em;
+            @include nowrap();
+        }
+    }
+    .order-detail-goods{
+        .goods-item{
+            padding:px2rem(1.5 * $padding-base) 0;
+            border-bottom:1px solid $border-color;
+        }
+        .goods-item-main{
+            padding:0;
+            height:px2rem(160px);
+        }
+        .goods-item-img{
+            width:px2rem(160px);
+        }
+        .goods-item-bottom{
+            height:px2rem(60px);
+        }
+        .goods-item-price{
+            margin-top:0;
+            font-weight:normal;
+            .count{
+                margin-left:2em;
+                &::before{
+                    content:'x';
+                }
+            }
+        }
+        .order-price-detail{
+            .-col-value{
+                text-align:right;
+            }
+        }
+        .order-price-total{
+            font-weight:bold;
+        }
+    }
+    .order-detail-shop{
+        .order-shop-address{
+            padding-top:px2rem(1.15 * $padding-base);
+            padding-bottom:px2rem(1.15 * $padding-base);
+            .-col-value{
+                font-size:.923em;
+            }
+            .-col-content{
+                margin-right: px2rem(40px);
+            }
+            .-col-right{
+                font-size:1.25em;//30px
+                color: $oec-primary-light;
+                width:px2rem(70px);
+                @include height(1.2em);
+                padding-left:px2rem($padding-large);
+                border-left:1px solid $border-color;
+                .iconfont{
+                    @include transform(rotate(45deg));
+                }
+            }
+        }
+    }
+}
+

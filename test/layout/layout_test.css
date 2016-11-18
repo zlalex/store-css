@@ -1,0 +1,46 @@
+
+.layout-page {
+
+}
+.top-nav {
+    background-color: rgb(172, 172, 172);
+}
+.layout-content {
+    background-color: rgb(229, 229, 229);
+}
+.bottom-nav {
+    line-height: 1rem;
+    background-color: rgb(172, 172, 172);
+}
+.bottom-nav ul {
+    width: 100%;
+    height: 100%;
+    display:-webkit-box;display:-moz-box;display:-ms-box;
+}
+.bottom-nav ul li {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    line-height: 0.5rem;
+}
+.layout-title .title-left {
+    height: 1rem;
+    line-height: 1rem;
+    background-color: rgb(172, 172, 172);
+}
+.layout-title .title-content {
+    line-height: 1rem;
+    background-color: rgb(200, 200, 200);
+}
+.layout-title .title-right {
+    height: 1rem;
+    line-height: 1rem;
+    background-color: rgb(172, 172, 172);
+}
+[class*='-col-'] {
+    min-height: 40px;
+}
+.flex-cloumn-between {
+    height: 300px;
+}

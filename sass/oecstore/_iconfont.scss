@@ -1,0 +1,99 @@
+
+@font-face {
+    font-family: $iconfont-name;
+    src: url('#{$font-path}#{$iconfont-name}.eot');/* IE9*/
+    src: url('#{$font-path}#{$iconfont-name}.eot#iefix') format('embedded-opentype'),/* IE6-IE8 */
+    url('#{$font-path}#{$iconfont-name}.woff') format('woff'),/* chrome, firefox */
+    url('#{$font-path}#{$iconfont-name}.ttf') format('truetype'),/* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('#{$font-path}#{$iconfont-name}.svg##{$iconfont-svg-id}') format('svg');/* iOS 4.1- */
+}
+@font-face{
+    font-family:'HiraginoSans';
+    src:url('#{$font-path}#{$font-name}');
+}
+
+// Catchall baseclass
+.iconfont {
+    position: relative;
+    display: inline-block;
+    font-family: $iconfont-name;
+    font-style: normal;
+    font-weight: normal;
+    line-height: inherit;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfont-refresh              { &::before{ content: "\e62c"; } } // 刷新
+.iconfont-date                 { &::before{ content: "\e646"; } } // 取货日期
+.iconfont-error                { &::before{ content: "\e62a"; } } // 错误
+.iconfont-backtop              { &::before{ content: "\e642"; } } // 返回顶部
+.iconfont-footprint            { &::before{ content: "\e62d"; } } // 足迹
+.iconfont-female               { &::before{ content: "\e627"; } } // 女
+.iconfont-male                 { &::before{ content: "\e628"; } } // 男
+.iconfont-search               { &::before{ content: "\e629"; } } // 搜索
+.iconfont-clock                { &::before{ content: "\e62b"; } } // 时间
+.iconfont-shopcart-empty       { &::before{ content: "\e600"; } } // 购物车-空
+.iconfont-shopcart-empty-solid { &::before{ content: "\e601"; } } // 购物车-空-实心
+.iconfont-home                 { &::before{ content: "\e602"; } } // 主页
+.iconfont-home-solid           { &::before{ content: "\e603"; } } // 主页-实心
+.iconfont-user                 { &::before{ content: "\e604"; } } // 个人中心
+.iconfont-user-solid           { &::before{ content: "\e605"; } } // 个人中心-实心
+.iconfont-category             { &::before{ content: "\e606"; } } // 分类
+.iconfont-category-solid       { &::before{ content: "\e607"; } } // 分类-实心
+.iconfont-shopcart             { &::before{ content: "\e608"; } } // 购物车
+.iconfont-shopcart-solid       { &::before{ content: "\e609"; } } // 购物车-实心
+.iconfont-angle-down           { &::before{ content: "\e60a"; } } // 方向键-下
+.iconfont-ellipsis-v           { &::before{ content: "\e60b"; } } // 更多
+.iconfont-list-grid            { &::before{ content: "\e60c"; } } // 分类-宫格
+.iconfont-list-ul              { &::before{ content: "\e60d"; } } // 分类-列表
+.iconfont-branch               { &::before{ content: "\e60e"; } } // 门店
+.iconfont-note                 { &::before{ content: "\e60f"; } } // 订单
+.iconfont-cog                  { &::before{ content: "\e610"; } } // 设置
+.iconfont-map-marker           { &::before{ content: "\e611"; } } // 收货地址
+.iconfont-tool                 { &::before{ content: "\e612"; } } // 售后
+.iconfont-vip                  { &::before{ content: "\e613"; } } // 会员
+.iconfont-vip-card             { &::before{ content: "\e615"; } } // 会员卡
+.iconfont-paw                  { &::before{ content: "\e616"; } } // 足迹
+.iconfont-heart                { &::before{ content: "\e617"; } } // 收藏-爱心
+.iconfont-share                { &::before{ content: "\e618"; } } // 分享
+.iconfont-comment              { &::before{ content: "\e619"; } } // 评论
+.iconfont-star                 { &::before{ content: "\e61a"; } } // 收藏-星星-实心
+.iconfont-star-o               { &::before{ content: "\e614"; } } // 收藏-星星
+.iconfont-location-arrow       { &::before{ content: "\e61b"; } } // 导航
+.iconfont-check                { &::before{ content: "\e61c"; } } // 选中-对
+.iconfont-eye                  { &::before{ content: "\e61d"; } } // 看见
+.iconfont-eye-slash            { &::before{ content: "\e61f"; } } // 看不见
+.iconfont-close                { &::before{ content: "\e61e"; } } // 删除-关闭
+.iconfont-database             { &::before{ content: "\e620"; } } // 积分
+.iconfont-map-position         { &::before{ content: "\e621"; } } // 定位
+.iconfont-money                { &::before{ content: "\e622"; } } // 预存款
+.iconfont-trash                { &::before{ content: "\e623"; } } // 删除
+.iconfont-question             { &::before{ content: "\e624"; } } // 说明
+.iconfont-phone                { &::before{ content: "\e625"; } } // 电话
+.iconfont-angle-up             { &::before{ content: "\e631"; } } // 方向键-上
+.iconfont-angle-left           { &::before{ content: "\e632"; } } // 方向键-左
+.iconfont-angle-right          { &::before{ content: "\e633"; } } // 方向键-右
+.iconfont-overdue              { &::before{ content: "\e62e"; } } // 已过期
+.iconfont-used                 { &::before{ content: "\e62f"; } } // 已使用
+.iconfont-stealed              { &::before{ content: "\e626"; } } // 已抢光
+.iconfont-ticket               { &::before{ content: "\e630"; } } // 券
+.iconfont-circle-alarm         { &::before{ content: "\e635"; } } // 失败
+.iconfont-circle-clock         { &::before{ content: "\e636"; } } // 等待
+.iconfont-circle-check         { &::before{ content: "\e637"; } } // 成功
+.iconfont-swipe-to-switch      { &::before{ content: "\e638"; } } // 左右滑动
+.iconfont-heart-solid          { &::before{ content: "\e639"; } } // 收藏-爱心-实心
+.iconfont-heartbreak           { &::before{ content: "\e63a"; } } // 取消收藏
+.iconfont-comment-solid        { &::before{ content: "\e63b"; } } // 评论-实心
+.iconfont-double-arrow-up      { &::before{ content: "\e63c"; } } // 双箭头上
+.iconfont-double-arrow-down    { &::before{ content: "\e63d"; } } // 双箭头下
+.iconfont-favorite-remove      { &::before{ content: "\e63e"; } } // 取消收藏
+.iconfont-favorite             { &::before{ content: "\e63f"; } } // 收藏成功
+.iconfont-favorites-add        { &::before{ content: "\e640"; } } // 加入收藏
+.iconfont-check-bold           { &::before{ content: "\e641"; } } // 选中-对-圆角
+.iconfont-wangwang             { &::before{ content: "\e643"; } } // 旺旺
+.iconfont-qq                   { &::before{ content: "\e644"; } } // qq
+.iconfont-wechat               { &::before{ content: "\e645"; } } // 微信
+
+
+

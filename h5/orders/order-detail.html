@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单</title>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <!-- <link rel="stylesheet" href="../member/stylesheets/index.css"> -->
+    <link rel="stylesheet" href="../cart/stylesheets/cart.css">
+    <link rel="stylesheet" href="stylesheets/order-detail.css">
+    <script src="../lib/flexible.js"></script>
+</head>
+<body>
+<div class="layout-page both-layout-page order-wrapper">
+    <div class="top-nav text-center">
+        <div class="layout-title">
+            <div class="title-left">
+                <a href="#" class="title-back">
+                    <i class="iconfont iconfont-angle-left"></i>
+                </a>
+            </div>
+            <div class="title-content">订单详情</div>
+        </div>
+    </div>
+    <div class="layout-content order-detail-wrapper">
+        <!-- 售后中用been类，售后完成用done -->
+        <div class="well order-detail-status done">
+            <div class="header">
+                配送订单
+                <div class="btn btn-primary-dark btn-outline fr">发票</div>
+            </div>
+            <div class="main">
+                <i class="iconfont"></i>
+                <span class="val">已完成</span>
+            </div>
+        </div>
+        <div class="well order-detail-logistic">
+            <div class="header">物流信息</div>
+            <div class="main">
+                <ul class="progress-list">
+                    <li class="progress-item flex-row-between flex-center">
+                        <div class="progress-item-wrapper -col-content">
+                            <p class="info">您已经签收配送的订单包裹，<span class="oec-primary-light">配送完成</span></p>
+                            <p class="date">2016.10.18 12:00</p>
+                        </div>
+                        <div class="col-right">
+                            <i class="iconfont iconfont-angle-right"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="well order-detail-address">
+            <div class="header">收货信息</div>
+            <div class="main">
+                <p>
+                    <span class="address-name">羊小铃</span>
+                    <span class="address-phone fr">185****0934</span>
+                </p>
+                <p class="address-info">上海市徐汇区桂林路396号浦原科技商派大楼2号楼5楼技术部</p>
+            </div>
+        </div>
+        <div class="well order-detail-goods">
+            <div class="header">商品信息</div>
+            <div class="main">
+                <ul class="goods-list">
+                    <li class="goods-item">
+                        <div class="goods-item-main">
+                            <div class="goods-item-img">
+                                <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                            </div>
+                            <div class="goods-item-info">
+                                <div class="goods-item-top">
+                                    <a href="#"><p class="goods-item-title">2016春季新品adidas高帮运动跑鞋由我创造快我所快、超跑运动</p></a>
+                                </div>
+                                <div class="goods-item-bottom">
+                                    <p class="goods-item-price"><span class="price">￥79.00</span><span class="count">1</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="goods-item">
+                        <div class="goods-item-main">
+                            <div class="goods-item-img">
+                                <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                            </div>
+                            <div class="goods-item-info">
+                                <div class="goods-item-top">
+                                    <a href="#"><p class="goods-item-title">2016春季新品adidas高帮运动跑鞋由我创造快我所快、超跑运动</p></a>
+                                </div>
+                                <div class="goods-item-bottom">
+                                    <p class="goods-item-price"><span class="price">￥79.00</span><span class="count">1</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="order-detail-list order-price-detail">
+                    <li class="order-price-delivery">
+                        <div class="-col-key">运费</div>
+                        <div class="-col-value">￥5.00</div>
+                    </li>
+                    <li class="order-price-special">
+                        <div class="-col-key">优惠金额</div>
+                        <div class="-col-value">-￥50.00</div>
+                    </li>
+                </ul>
+                <div class="order-detail-list order-price-total">
+                    <div class="-col-key">实付金额</div>
+                    <div class="-col-value">￥370.00</div>
+                </div>
+            </div>
+        </div>
+        <div class="well order-detail-shop">
+            <div class="header">门店信息</div>
+            <div class="main">
+                <ul class="order-detail-list">
+                    <li class="order-pickup-date">
+                        <div class="-col-key">预约时间：</div>
+                        <div class="-col-value">2016.12.12 12:00</div>
+                    </li>
+                    <li class="order-pickup-shopinfo">
+                        <div class="-col-key">预约门店：</div>
+                        <div class="-col-value">智慧门店</div>
+                    </li>
+                    <li class="order-pickup-number">
+                        <div class="-col-key">自提单号：</div>
+                        <div class="-col-value">KJ34567890876544</div>
+                    </li>
+                </ul>
+                <div class="order-shop-address">
+                    <div class="-col-key">门店地址：</div>
+                    <div class="-col-value flex-row-between flex-center">
+                        <div class="-col-content">
+                            上海徐汇区桂林路396号浦原科技2号楼商派大厦(&lt;500m)
+                        </div>
+                        <div class="-col-right">
+                            <i class="iconfont iconfont-location-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="well order-detail-brief">
+            <div class="header">订单信息</div>
+            <div class="main">
+                <ul class="order-detail-list">
+                    <li class="order-reference">
+                        <div class="-col-key">订单来源：</div>
+                        <div class="-col-value">线下门店</div>
+                    </li>
+                    <li class="order-number">
+                        <div class="-col-key">订单号码：</div>
+                        <div class="-col-value">KJ23456789876544</div>
+                    </li>
+                    <li class="order-date">
+                        <div class="-col-key">下单日期：</div>
+                        <div class="-col-value">2016.12.12 12:00</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav text-center order-detail-bottom">
+        <div class="btn-group-justified">
+            <div class="btn btn-primary-dark btn-navigate">门店导航</div>
+            <div class="btn btn-primary-light btn-comment">立即评价</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

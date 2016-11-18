@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品评论</title>
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/comment-good.css">
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/flexible.js"></script>
+</head>
+<body>
+    <div class="layout-page top-layout-page comment-good">
+        <!-- 商品评论标题 -->
+        <div class="top-nav text-center">
+            <div class="layout-title comment-good-title">
+                <div class="title-left">
+                    <a href="#" class="title-back">
+                        <i class="iconfont iconfont-angle-left"></i>
+                    </a>
+                </div>
+                <div class="title-content">
+                    商品评论
+                </div>
+            </div>
+            <!-- data-length 导航列表长度 data-act 选中列表序号，从1开始-->
+            <div class="layout-nav" data-length="5" data-act="1">
+                <ul class="btn-group-justified">
+                    <li class="btn btn-link">
+                        <p class="layout-nav-info">全部</p>
+                        <p class="layout-nav-value">120</p>
+                    </li>
+                    <li class="btn btn-link">
+                        <p class="layout-nav-info">好评</p>
+                        <p class="layout-nav-value">60</p>
+                    </li>
+                    <li class="btn btn-link">
+                        <p class="layout-nav-info">中评</p>
+                        <p class="layout-nav-value">50</p>
+                    </li>
+                    <li class="btn btn-link">
+                        <p class="layout-nav-info">差评</p>
+                        <p class="layout-nav-value">10</p>
+                    </li>
+                    <li class="btn btn-link">
+                        <p class="layout-nav-info">有图</p>
+                        <p class="layout-nav-value">10</p>
+                    </li>
+                </ul>
+                <div class="layout-nav-status"></div>
+            </div>
+        </div>
+        <!-- 评论分类 -->
+        <!-- <div class="comment-good-category-list">
+            <div class="comment-good-category-item active">
+                <div class="comment-good-category-group">
+                    <div class="comment-good-category-item-label">全部</div>
+                    <div class="comment-good-category-item-num">120</div>
+                </div>
+            </div>
+            <div class="comment-good-category-item">
+                <div class="comment-good-category-group">
+                    <div class="comment-good-category-item-label">全部</div>
+                    <div class="comment-good-category-item-num">120</div>
+                </div>
+            </div>
+            <div class="comment-good-category-item">
+                <div class="comment-good-category-group">
+                    <div class="comment-good-category-item-label">全部</div>
+                    <div class="comment-good-category-item-num">120</div>
+                </div>
+            </div>
+            <div class="comment-good-category-item">
+                <div class="comment-good-category-group">
+                    <div class="comment-good-category-item-label">全部</div>
+                    <div class="comment-good-category-item-num">120</div>
+                </div>
+            </div>
+            <div class="comment-good-category-item">
+                <div class="comment-good-category-group">
+                    <div class="comment-good-category-item-label">全部</div>
+                    <div class="comment-good-category-item-num">120</div>
+                </div>
+            </div>
+        </div> -->
+        <!-- 评论关键词 -->
+        <div class="comment-good-tips well">
+            <span class="comment-good-tips-item">嘻哈(53)</span><span class="comment-good-tips-item">欧美系(23)</span><span class="comment-good-tips-item  active">时尚(253)</span><span class="comment-good-tips-item">高贵优雅(253)</span><span class="comment-good-tips-item">蠢萌蠢萌(3)</span><span class="comment-good-tips-item">少女系(253)</span><span class="comment-good-tips-item">嘻哈(253)</span><span class="comment-good-tips-item">欧美系(253)</span><span class="comment-good-tips-item">时尚(3)</span><span class="comment-good-tips-item">漂亮(25)</span>
+        </div>
+        <!-- 评论列表 -->
+        <div class="comment-good-comment-list well">
+            <!-- 评论 -->
+            <div class="comment-good-comment-item">
+                <!-- 评论人和内容 -->
+                <div class="comment-good-comment-title">
+                    <div class="flex-row-between flex-center">
+                        <div class="-col-left">
+                            <div class="comment-good-comment-title-img"><img src="images/detail/detail-image3.png" alt=""></div>
+                        </div>
+                        <div class="-col-content">会飞的猪筅森</div>
+                        <div class="-col-right">
+                            <div class="scores">
+                                <div class="scores-img"><span><i class="iconfont iconfont-star"></i></span><span><i class="iconfont iconfont-star"></i></span><span><i class="iconfont iconfont-star-o"></i></span><span><i class="iconfont iconfont-star-o"></i></span><span><i class="iconfont iconfont-star-o"></i></span></div><div class="scores-wg">9</div><div class="scores-dian">.</div><div class="scores-xs">2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-good-comment-content">服务不错质量也好，是正品，样式潮流，愉快的购物体验</div>
+                    <div class="comment-good-comment-images">
+                        <img src="images/detail/detail-image2.png" alt="">
+                        <img src="images/detail/detail-image2.png" alt="">
+                        <img src="images/detail/detail-image2.png" alt="">
+                    </div>
+                </div>
+                <!-- 评论时间 -->
+                <div class="comment-good-comment-bottom">
+                    <div class="comment-good-comment-bottom-left">2016-02-19 19:20</div>
+                    <div class="comment-good-comment-bottom-right">
+                        <div class="comment-good-comment-bottom-msg">
+                            <div class="comment-good-comment-bottom-msg-triangle"></div><i class="iconfont iconfont-comment"></i><div class="comment-good-comment-bottom-msg-num">34</div></div><div class="comment-good-comment-bottom-storeUp"><i class="iconfont iconfont-heart"></i><div class="comment-good-comment-bottom-storeUp-num">13</div></div>
+                    </div>
+                </div>
+                <!-- 评论回复 -->
+                <div class="comment-good-comment-reply-btn-group">
+                    <input type="text" class="comment-good-comment-reply-reply-input" placeholder="请输入您的评论"><div class="comment-good-comment-reply-reply-btn">发布</div>
+                </div>
+                <!-- 评论回复列表 -->
+                <div class="comment-good-comment-reply-list">
+                    <!-- 评论回复 -->
+                    <div class="comment-good-comment-reply">
+                        <div class="comment-good-comment-reply-comment">
+                            <div class="comment-good-comment-reply-comment-text-group">
+                                <div class="comment-good-comment-reply-comment-content"><span class="comment-good-comment-reply-comment-content-label">王小二：</span><span  class="comment-good-comment-reply-comment-content-value">我也买了一双，还不错，你是怎么分辨正品的？</span></div><div class="comment-good-comment-reply-comment-btn">回复</div>
+                            </div><div class="comment-good-comment-reply-comment-btn-group">
+                                <input type="text" class="comment-good-comment-reply-comment-reply-input" placeholder="请输入您的回复"><div class="comment-good-comment-reply-comment-reply-btn">发布</div>
+                            </div>
+                            <!-- 评论回复回复 -->
+                            <div class="comment-good-comment-reply-item">
+                                <div class="comment-good-comment-reply-item-label">回复</div><div class="comment-good-comment-reply-item-content">王小二：网站物美价廉，必是珍品，买就对了</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-good-comment-reply">
+                        <div class="comment-good-comment-reply-comment">
+                            <div class="comment-good-comment-reply-comment-text-group">
+                                <div class="comment-good-comment-reply-comment-content"><span class="comment-good-comment-reply-comment-content-label">王小二：</span><span  class="comment-good-comment-reply-comment-content-value">我也买了一双，还不错，你是怎么分辨正品的？</span></div><div class="comment-good-comment-reply-comment-btn">回复</div>
+                            </div><div class="comment-good-comment-reply-comment-btn-group">
+                                <input type="text" class="comment-good-comment-reply-comment-reply-input" placeholder="请输入您的回复"><div class="comment-good-comment-reply-comment-reply-btn">发布</div>
+                            </div>
+                            <!-- 评论回复回复 -->
+                            <div class="comment-good-comment-reply-item">
+                                <div class="comment-good-comment-reply-item-label">回复</div><div class="comment-good-comment-reply-item-content">王小二：网站物美价廉，必是珍品，买就对了</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-good-comment-item">
+                <!-- 评论人和内容 -->
+                <div class="comment-good-comment-title">
+                    <div class="flex-row-between flex-center">
+                        <div class="-col-left">
+                            <div class="comment-good-comment-title-img"><img src="images/detail/detail-image3.png" alt=""></div>
+                        </div>
+                        <div class="-col-content">会飞的猪筅森</div>
+                        <div class="-col-right">
+                            <div class="scores">
+                                <div class="scores-img"><span><i class="iconfont iconfont-star"></i></span><span><i class="iconfont iconfont-star"></i></span><span><i class="iconfont iconfont-star-o"></i></span><span><i class="iconfont iconfont-star-o"></i></span><span><i class="iconfont iconfont-star-o"></i></span></div><div class="scores-wg">9</div><div class="scores-dian">.</div><div class="scores-xs">2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-good-comment-content">服务不错质量也好，是正品，样式潮流，愉快的购物体验</div>
+                    <div class="comment-good-comment-images">
+                        <img src="images/detail/detail-image2.png" alt="">
+                        <img src="images/detail/detail-image2.png" alt="">
+                        <img src="images/detail/detail-image2.png" alt="">
+                    </div>
+                </div>
+                <!-- 评论时间 -->
+                <div class="comment-good-comment-bottom">
+                    <div class="comment-good-comment-bottom-left">2016-02-19 19:20</div>
+                    <div class="comment-good-comment-bottom-right">
+                        <div class="comment-good-comment-bottom-msg active">
+                            <div class="comment-good-comment-bottom-msg-triangle"></div><i class="iconfont iconfont-comment"></i><i class="iconfont iconfont-comment-solid"></i><div class="comment-good-comment-bottom-msg-num">34</div></div><div class="comment-good-comment-bottom-storeUp"><i class="iconfont iconfont-heart"></i><div class="comment-good-comment-bottom-storeUp-num">13</div></div>
+                    </div>
+                </div>
+                <!-- 评论回复 -->
+                <div class="comment-good-comment-reply-btn-group">
+                    <input type="text" class="comment-good-comment-reply-reply-input" placeholder="请输入您的评论"><div class="comment-good-comment-reply-reply-btn">发布</div>
+                </div>
+                <!-- 评论回复列表 -->
+                <div class="comment-good-comment-reply-list">
+                    <!-- 评论回复 -->
+                    <div class="comment-good-comment-reply">
+                        <div class="comment-good-comment-reply-comment">
+                            <div class="comment-good-comment-reply-comment-text-group">
+                                <div class="comment-good-comment-reply-comment-content"><span class="comment-good-comment-reply-comment-content-label">王小二：</span><span  class="comment-good-comment-reply-comment-content-value">我也买了一双，还不错，你是怎么分辨正品的？</span></div><div class="comment-good-comment-reply-comment-btn">回复</div>
+                            </div><div class="comment-good-comment-reply-comment-btn-group">
+                                <input type="text" class="comment-good-comment-reply-comment-reply-input" placeholder="请输入您的回复"><div class="comment-good-comment-reply-comment-reply-btn">发布</div>
+                            </div>
+                            <!-- 评论回复回复 -->
+                            <div class="comment-good-comment-reply-item">
+                                <div class="comment-good-comment-reply-item-label">回复</div><div class="comment-good-comment-reply-item-content">王小二：网站物美价廉，必是珍品，买就对了</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-good-comment-reply">
+                        <div class="comment-good-comment-reply-comment">
+                            <div class="comment-good-comment-reply-comment-text-group">
+                                <div class="comment-good-comment-reply-comment-content"><span class="comment-good-comment-reply-comment-content-label">王小二：</span><span  class="comment-good-comment-reply-comment-content-value">我也买了一双，还不错，你是怎么分辨正品的？</span></div><div class="comment-good-comment-reply-comment-btn">回复</div>
+                            </div><div class="comment-good-comment-reply-comment-btn-group">
+                                <input type="text" class="comment-good-comment-reply-comment-reply-input" placeholder="请输入您的回复"><div class="comment-good-comment-reply-comment-reply-btn">发布</div>
+                            </div>
+                            <!-- 评论回复回复 -->
+                            <div class="comment-good-comment-reply-item">
+                                <div class="comment-good-comment-reply-item-label">回复</div><div class="comment-good-comment-reply-item-content">王小二：网站物美价廉，必是珍品，买就对了</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-good-comment-item">
+                <!-- 评论人和内容 -->
+                <div class="comment-good-comment-title">
+                    <div class="flex-row-between flex-center">
+                        <div class="-col-left">
+                            <div class="comment-good-comment-title-img"><img src="images/detail/detail-image3.png" alt=""></div>
+                        </div>
+                        <div class="-col-content">会飞的猪筅森</div>
+                        <div class="-col-right">
+                            <div class="scores">
+                                <div class="scores-img"><span><i class="iconfont iconfont-star"></i></span><span><i class="iconfont iconfont-star"></i></span><span><i class="iconfont iconfont-star-o"></i></span><span><i class="iconfont iconfont-star-o"></i></span><span><i class="iconfont iconfont-star-o"></i></span></div><div class="scores-wg">9</div><div class="scores-dian">.</div><div class="scores-xs">2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-good-comment-content">服务不错质量也好，是正品，样式潮流，愉快的购物体验</div>
+                    <div class="comment-good-comment-images">
+                        <img src="images/detail/detail-image2.png" alt="">
+                        <img src="images/detail/detail-image2.png" alt="">
+                        <img src="images/detail/detail-image2.png" alt="">
+                    </div>
+                </div>
+                <!-- 评论时间 -->
+                <div class="comment-good-comment-bottom">
+                    <div class="comment-good-comment-bottom-left">2016-02-19 19:20</div>
+                    <div class="comment-good-comment-bottom-right">
+                        <div class="comment-good-comment-bottom-msg">
+                            <div class="comment-good-comment-bottom-msg-triangle"></div><i class="iconfont iconfont-comment"></i><div class="comment-good-comment-bottom-msg-num">34</div></div><div class="comment-good-comment-bottom-storeUp active"><i class="iconfont iconfont-heart"></i><i class="iconfont iconfont-heart-solid"></i><div class="comment-good-comment-bottom-storeUp-num">13</div></div>
+                    </div>
+                </div>
+                <!-- 评论回复 -->
+                <div class="comment-good-comment-reply-btn-group">
+                    <input type="text" class="comment-good-comment-reply-reply-input" placeholder="请输入您的评论"><div class="comment-good-comment-reply-reply-btn">发布</div>
+                </div>
+                <!-- 评论回复列表 -->
+                <div class="comment-good-comment-reply-list">
+                    <!-- 评论回复 -->
+                    <div class="comment-good-comment-reply">
+                        <div class="comment-good-comment-reply-comment">
+                            <div class="comment-good-comment-reply-comment-text-group">
+                                <div class="comment-good-comment-reply-comment-content"><span class="comment-good-comment-reply-comment-content-label">王小二：</span><span  class="comment-good-comment-reply-comment-content-value">我也买了一双，还不错，你是怎么分辨正品的？</span></div><div class="comment-good-comment-reply-comment-btn">回复</div>
+                            </div><div class="comment-good-comment-reply-comment-btn-group">
+                                <input type="text" class="comment-good-comment-reply-comment-reply-input" placeholder="请输入您的回复"><div class="comment-good-comment-reply-comment-reply-btn">发布</div>
+                            </div>
+                            <!-- 评论回复回复 -->
+                            <div class="comment-good-comment-reply-item">
+                                <div class="comment-good-comment-reply-item-label">回复</div><div class="comment-good-comment-reply-item-content">王小二：网站物美价廉，必是珍品，买就对了</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-good-comment-reply">
+                        <div class="comment-good-comment-reply-comment">
+                            <div class="comment-good-comment-reply-comment-text-group">
+                                <div class="comment-good-comment-reply-comment-content"><span class="comment-good-comment-reply-comment-content-label">王小二：</span><span  class="comment-good-comment-reply-comment-content-value">我也买了一双，还不错，你是怎么分辨正品的？</span></div><div class="comment-good-comment-reply-comment-btn">回复</div>
+                            </div><div class="comment-good-comment-reply-comment-btn-group">
+                                <input type="text" class="comment-good-comment-reply-comment-reply-input" placeholder="请输入您的回复"><div class="comment-good-comment-reply-comment-reply-btn">发布</div>
+                            </div>
+                            <!-- 评论回复回复 -->
+                            <div class="comment-good-comment-reply-item">
+                                <div class="comment-good-comment-reply-item-label">回复</div><div class="comment-good-comment-reply-item-content">王小二：网站物美价廉，必是珍品，买就对了</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-good-comment-item">
+                <!-- 评论人和内容 -->
+                <div class="comment-good-comment-title">
+                    <div class="flex-row-between flex-center">
+                        <div class="-col-left">
+                            <div class="comment-good-comment-title-img"><img src="images/detail/detail-image3.png" alt=""></div>
+                        </div>
+                        <div class="-col-content">会飞的猪筅森</div>
+                        <div class="-col-right">
+                            <div class="scores">
+                                <div class="scores-img"><span><i class="iconfont iconfont-star"></i></span><span><i class="iconfont iconfont-star"></i></span><span><i class="iconfont iconfont-star-o"></i></span><span><i class="iconfont iconfont-star-o"></i></span><span><i class="iconfont iconfont-star-o"></i></span></div><div class="scores-wg">9</div><div class="scores-dian">.</div><div class="scores-xs">2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-good-comment-content">服务不错质量也好，是正品，样式潮流，愉快的购物体验</div>
+                    <div class="comment-good-comment-images">
+                        <img src="images/detail/detail-image2.png" alt="">
+                        <img src="images/detail/detail-image2.png" alt="">
+                        <img src="images/detail/detail-image2.png" alt="">
+                    </div>
+                </div>
+                <!-- 评论时间 -->
+                <div class="comment-good-comment-bottom">
+                    <div class="comment-good-comment-bottom-left">2016-02-19 19:20</div>
+                    <div class="comment-good-comment-bottom-right">
+                        <div class="comment-good-comment-bottom-msg">
+                            <div class="comment-good-comment-bottom-msg-triangle"></div><i class="iconfont iconfont-comment"></i><div class="comment-good-comment-bottom-msg-num">34</div></div><div class="comment-good-comment-bottom-storeUp break"><i class="iconfont iconfont-heart"></i><i class="iconfont iconfont-heart-solid"></i><i class="iconfont iconfont-heartbreak"></i><div class="comment-good-comment-bottom-storeUp-num">13</div></div>
+                    </div>
+                </div>
+                <!-- 评论回复 -->
+                <div class="comment-good-comment-reply-btn-group">
+                    <input type="text" class="comment-good-comment-reply-reply-input" placeholder="请输入您的评论"><div class="comment-good-comment-reply-reply-btn">发布</div>
+                </div>
+                <!-- 评论回复列表 -->
+                <div class="comment-good-comment-reply-list">
+                    <!-- 评论回复 -->
+                    <div class="comment-good-comment-reply">
+                        <div class="comment-good-comment-reply-comment">
+                            <div class="comment-good-comment-reply-comment-text-group">
+                                <div class="comment-good-comment-reply-comment-content"><span class="comment-good-comment-reply-comment-content-label">王小二：</span><span  class="comment-good-comment-reply-comment-content-value">我也买了一双，还不错，你是怎么分辨正品的？</span></div><div class="comment-good-comment-reply-comment-btn">回复</div>
+                            </div><div class="comment-good-comment-reply-comment-btn-group">
+                                <input type="text" class="comment-good-comment-reply-comment-reply-input" placeholder="请输入您的回复"><div class="comment-good-comment-reply-comment-reply-btn">发布</div>
+                            </div>
+                            <!-- 评论回复回复 -->
+                            <div class="comment-good-comment-reply-item">
+                                <div class="comment-good-comment-reply-item-label">回复</div><div class="comment-good-comment-reply-item-content">王小二：网站物美价廉，必是珍品，买就对了</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-good-comment-reply">
+                        <div class="comment-good-comment-reply-comment">
+                            <div class="comment-good-comment-reply-comment-text-group">
+                                <div class="comment-good-comment-reply-comment-content"><span class="comment-good-comment-reply-comment-content-label">王小二：</span><span  class="comment-good-comment-reply-comment-content-value">我也买了一双，还不错，你是怎么分辨正品的？</span></div><div class="comment-good-comment-reply-comment-btn">回复</div>
+                            </div><div class="comment-good-comment-reply-comment-btn-group">
+                                <input type="text" class="comment-good-comment-reply-comment-reply-input" placeholder="请输入您的回复"><div class="comment-good-comment-reply-comment-reply-btn">发布</div>
+                            </div>
+                            <!-- 评论回复回复 -->
+                            <div class="comment-good-comment-reply-item">
+                                <div class="comment-good-comment-reply-item-label">回复</div><div class="comment-good-comment-reply-item-content">王小二：网站物美价廉，必是珍品，买就对了</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+body{
+    background-color: rgb(245,245,245);
+}
+
+.new-shopping-address{
+    background-color: rgb(245,245,245);
+    &.layout-page.both-layout-page{
+        padding-bottom: 0px;
+        padding-top: px2rem(90px);
+    }
+    // 收获信息
+    .new-shopping-address-info{
+        padding-left: px2rem(30px);
+        padding-right: px2rem(30px);
+        .form-group{
+            @include font-dpr(13px);
+            color: rgb(51,51,51);
+
+            .input-group-title{
+                width: px2rem(112px + 48px);
+            }
+            height: px2rem(14px + 26px + 50px);
+            line-height: px2rem(14px + 26px + 50px);
+            &::before, &::after{
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+    // 确认按钮
+    .new-shopping-address-sure{
+        width: initial;
+        height: px2rem(100px);
+        line-height: px2rem(100px);
+        margin-top: px2rem(30px);
+        padding: 0;
+        @include font-dpr(20px);
+        font-weight: bold;
+        &.active{
+            background-color: rgb(255,49,122);
+        }
+    }
+}

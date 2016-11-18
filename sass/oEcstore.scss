@@ -1,0 +1,28 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+
+// reset page style
+// 
+ @import "compass/reset";
+ @import "oecstore/reset";
+ @import "oecstore/variables.scss";
+ @import "oecstore/iconfont.scss";
+ @import "oecstore/types.scss";
+ @import "oecstore/empty-style.scss";
+ @import "oecstore/layout.scss";
+ @import "oecstore/form.scss";
+ @import "oecstore/buttons.scss";
+ @import "oecstore/dialog.scss";
+ @import "oecstore/select.scss";
+ @import "oecstore/date.scss";
+ @import "oecstore/area.scss";
+ @import "oecstore/groundGlass.scss";
+ @import "oecstore/slider.scss";
+ @import "oecstore/component.scss";
+ 
+
+
+

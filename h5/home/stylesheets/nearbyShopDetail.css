@@ -1,0 +1,454 @@
+/* line 7, ../sass/nearbyShopDetail.scss */
+.shop-detail-content {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+/* line 11, ../sass/nearbyShopDetail.scss */
+.shop-detail-content > div:not(.shop-detail-content-header) {
+  line-height: 1.06667rem;
+  border-top: 1px solid #e1e1e1;
+}
+/* line 14, ../sass/nearbyShopDetail.scss */
+.shop-detail-content > div:not(.shop-detail-content-header) .-col-left {
+  min-width: 1.6rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 18, ../sass/nearbyShopDetail.scss */
+.shop-detail-content > div:not(.shop-detail-content-header) .-col-content {
+  padding-left: 0.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 23, ../sass/nearbyShopDetail.scss */
+.shop-detail-content > div:not(.shop-detail-content-header) .-col-right > div {
+  color: #666;
+  font-size: 1.1667em;
+  line-height: 0.53333rem;
+  padding-left: 0.26667rem;
+  padding-right: 0.26667rem;
+  margin-top: 0.26667rem;
+  margin-bottom: 0.26667rem;
+  border-left: 1px solid #e1e1e1;
+}
+/* line 36, ../sass/nearbyShopDetail.scss */
+.shop-detail-content .iconfont-location-arrow {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 40, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header {
+  padding-top: 0.26667rem;
+  padding-bottom: 0.26667rem;
+}
+/* line 43, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header .-col-left {
+  position: relative;
+  width: 1.86667rem;
+  height: 1.86667rem;
+  -moz-border-radius: 0.04rem;
+  -webkit-border-radius: 0.04rem;
+  border-radius: 0.04rem;
+  overflow: hidden;
+}
+/* line 49, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header .-col-left img {
+  height: 100%;
+}
+/* line 52, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header .-col-left .label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: .833em;
+  width: 0.82667rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  padding: 0 0 0 0.16rem;
+  border: 0;
+  -moz-border-radius: 0.26667rem 0 0 0.26667rem;
+  -webkit-border-radius: 0.26667rem;
+  border-radius: 0.26667rem 0 0 0.26667rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+}
+/* line 68, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header .-col-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  height: 1.86667rem;
+  padding: 0.13333rem 0;
+  margin-left: 0.4rem;
+}
+/* line 75, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header .shop-detail-content-title .title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+/* line 79, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header .shop-detail-content-title > span {
+  vertical-align: middle;
+}
+/* line 82, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header .shop-detail-content-title .label {
+  -moz-border-radius: 0.06667rem;
+  -webkit-border-radius: 0.06667rem;
+  border-radius: 0.06667rem;
+  padding: 2px .35em;
+  margin-left: 0.26667rem;
+}
+/* line 89, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-header .shop-detail-content-title-shop-time > span {
+  vertical-align: middle;
+}
+
+/* line 95, ../sass/nearbyShopDetail.scss */
+.shop-detail-content-traffic .-col-content, .shop-detail-content-address .-col-content {
+  color: #666;
+}
+
+/* line 101, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales > div {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+/* line 105, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales .shop-detail-sales-title {
+  height: 1.12rem;
+  line-height: 1.12rem;
+}
+/* line 108, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales .shop-detail-sales-title .-col-left {
+  font-size: 1.084em;
+  font-weight: bold;
+}
+/* line 112, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales .shop-detail-sales-title .-col-right {
+  color: #666;
+}
+/* line 114, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales .shop-detail-sales-title .-col-right .iconfont {
+  font-size: 0.83em;
+}
+/* line 118, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales .shop-detail-sales-title + .shop-detail-sales-list {
+  padding: 0;
+}
+
+/* line 124, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+/* line 127, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item {
+  height: 2.4rem;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 0.26667rem;
+  padding-bottom: 0.26667rem;
+}
+/* line 132, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item .-col-left {
+  width: 1.86667rem;
+  height: 1.86667rem;
+}
+/* line 135, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item .-col-left img {
+  height: 100%;
+}
+/* line 139, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item .-col-content {
+  margin-left: 0.26667rem;
+  padding-top: 0.26667rem;
+  padding-bottom: 0.13333rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  height: 1.86667rem;
+  overflow: hidden;
+}
+/* line 147, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item .-col-right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+/* line 151, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item-title {
+  font-size: 1.084em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 156, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item-price > span {
+  margin-right: .2em;
+}
+/* line 160, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item-price-shop {
+  font-size: 1.1667em;
+  color: #ff317a;
+}
+/* line 164, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item-price-mart {
+  font-size: .83em;
+  color: #999;
+  text-decoration: line-through;
+}
+/* line 169, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item-time-range {
+  font-size: .83em;
+}
+/* line 172, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item-sales-num {
+  color: #666;
+}
+/* line 174, ../sass/nearbyShopDetail.scss */
+.shop-detail-sales-list .shop-detail-sales-item-sales-num .iconfont {
+  top: -1px;
+  margin-left: .3em;
+  font-size: .83em;
+}
+
+/* line 182, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+/* line 185, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-title {
+  height: 1.12rem;
+  line-height: 1.12rem;
+}
+/* line 187, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-title .-col-left {
+  font-size: 1.084em;
+  font-weight: bold;
+  color: #333333;
+}
+/* line 192, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-title .-col-right {
+  color: #666;
+}
+/* line 194, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-title .-col-right .iconfont {
+  font-size: .83em;
+}
+/* line 199, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content {
+  border-top: 1px solid #e1e1e1;
+}
+/* line 202, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-title {
+  padding-top: 0.4rem;
+}
+/* line 204, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-title .flex-row-between > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 207, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-title .-col-content {
+  padding-left: 0.4rem;
+}
+/* line 211, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-title-img {
+  width: 0.86667rem;
+  height: 0.86667rem;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* line 216, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-title-img img {
+  width: 0.86667rem;
+  height: 0.86667rem;
+}
+/* line 221, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-content {
+  padding: 0.53333rem 0.13333rem;
+}
+/* line 224, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-bottom {
+  line-height: 0.56rem;
+  padding-bottom: 0.48rem;
+}
+/* line 227, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-bottom > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+/* line 231, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-bottom-left {
+  line-height: 0.32rem;
+  height: 0.56rem;
+  font-size: .83em;
+  color: #999;
+  padding-top: 0.24rem;
+}
+/* line 238, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-bottom-right {
+  float: right;
+  margin-right: 0.13333rem;
+}
+/* line 241, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-bottom-right > div {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 1.75em;
+  color: #999;
+}
+/* line 247, ../sass/nearbyShopDetail.scss */
+.shop-detail-leave-message .shop-detail-leave-message-content-bottom-msg {
+  margin-right: 0.8rem;
+}
+
+/* line 252, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.13333rem;
+  overflow: hidden;
+}
+/* line 257, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album img {
+  width: 8rem;
+  height: 8rem;
+}
+/* line 261, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album .album-tip {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 271, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album .album-tip-main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 3.25333rem;
+  height: 1.92rem;
+}
+/* line 277, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album .album-tip-main .iconfont {
+  font-size: 1.33333rem;
+}
+/* line 281, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album .album-tip-img {
+  margin-bottom: 0.26667rem;
+}
+/* line 284, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album .close {
+  font-size: 1.833em;
+  color: #cdcdcd;
+  margin: 0.06667rem;
+  z-index: 1;
+}
+/* line 290, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album .album-page {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.13333rem;
+  font-size: 0.833em;
+  z-index: 1;
+  overflow: hidden;
+}
+/* line 298, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album .album-page > span {
+  float: left;
+}
+/* line 301, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album .album-page .album-page-current {
+  color: #FF317A;
+}
+/* line 305, ../sass/nearbyShopDetail.scss */
+.dialog-shop-album::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: -0.8rem;
+  margin-bottom: -0.8rem;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+}

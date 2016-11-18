@@ -1,0 +1,156 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+
+.nearby-shop-detail-sales-detail{
+    // 详情图片和价格
+    .nearby-shop-detail-sales-detail-good{
+        .nearby-shop-detail-sales-detail-good-img{
+            width: 10rem;
+            height: px2rem(400px);
+            img{
+                width: 10rem;
+                height: px2rem(400px);
+            }
+        }
+        .nearby-shop-detail-sales-detail-good-title{
+            margin-top: px2rem(-50px);
+            color: rgb(255,255,255);
+            >div{
+                @include inline-block;
+                width: 10rem;
+                height: px2rem(50px);
+                line-height: px2rem(50px);
+                padding-left: px2rem(38px);
+                padding-right: px2rem(36px);
+                background-color: rgba(0,0,0,.5);
+                >div{
+                    @include inline-block;
+                }
+            }
+            .nearby-shop-detail-sales-detail-good-title-left{
+
+            }
+            .nearby-shop-detail-sales-detail-good-title-right{
+                float: right;
+            }
+        }
+        .nearby-shop-detail-sales-detail-good-price{
+            height: px2rem(100px);
+            padding-top: px2rem(40px);
+            padding-bottom: px2rem(30px);
+            padding-left: px2rem(40px);
+            padding-right: px2rem(40px);
+            background-color: rgb(255,255,255);
+            color: rgb(153,153,153);
+            border-bottom:1px solid $border-color;
+            div{
+                @include inline-block;
+            }
+            .nearby-shop-detail-sales-detail-good-price-shop{
+                color: rgb(255,49,122);
+                .nearby-shop-detail-sales-detail-good-shop-price{
+                    font-size:1.6667em;
+                }
+            }
+            .nearby-shop-detail-sales-detail-good-price-market{
+                text-decoration: line-through;
+            }
+            .nearby-shop-detail-sales-detail-good-price-share{
+                font-size:1.25em;
+                height: px2rem(40px);
+                line-height: px2rem(40px);
+                float: right;
+                border-left:1px solid $border-color;
+                padding-left: px2rem(50px);
+            }
+        }
+    }
+    // 详情条形码
+    .nearby-shop-detail-sales-detail-qcore{
+        .nearby-shop-detail-sales-detail-qcore-img{
+            position: relative;
+            border-bottom: 1px dashed $border-color;
+            margin-left: px2rem(30px);
+            margin-right: px2rem(30px);
+            padding-top: px2rem(30px);
+            padding-bottom: px2rem(30px);
+            text-align: center;
+            .nearby-shop-detail-sales-detail-qcore-img-before, .nearby-shop-detail-sales-detail-qcore-img-after{
+                position: absolute;
+                top: px2rem(60px + 193px + 60px + 24px + 4px - 20px);
+                @include inline-block;
+                width: px2rem(20px);
+                height: px2rem(40px);
+                background-color: rgb(245,245,245);
+                z-index: 2;
+            }
+            .nearby-shop-detail-sales-detail-qcore-img-before{
+                left: px2rem(-30px - 20px);
+            }
+            .nearby-shop-detail-sales-detail-qcore-img-after{
+                right: px2rem(-30px - 20px);
+            }
+            &:before, &:after{
+                position: absolute;
+                top: px2rem(60px + 193px + 60px + 24px + 4px - 20px);
+                content: ' ';
+                @include inline-block;
+                width: px2rem(40px);
+                height: px2rem(40px);
+                @include border-radius(50%);
+                background-color: rgb(245,245,245);
+                @include box-shadow(0 px2rem(2px) px2rem(10px) 0 rgba(0,0,0,.15) inset);
+            }
+            &:before{
+                left: px2rem(-30px - 20px);
+            }
+            &:after{
+                right: px2rem(-30px - 20px);
+            }
+            img{
+                width: px2rem(532px);
+                height: px2rem(193px);
+            }
+            .nearby-shop-detail-sales-detail-qcore-label{
+                padding: px2rem(30px) 0;
+                color: rgb(102,102,102);
+            }
+        }
+        >div:not(.nearby-shop-detail-sales-detail-qcore-img){
+            height: px2rem(80px);
+            border-top:1px solid $border-color;
+            line-height: px2rem(80px);
+            margin-left: px2rem(40px);
+            margin-right: px2rem(40px);
+            &:before{
+                content: ' ';
+                display: block;
+                width: 100%;
+                clear: both;
+            }
+            &:after{
+                content: ' ';
+                display: block;
+                width: 100%;
+                clear: both;
+            }
+            >div{
+                @include inline-block;
+                &[class*='-right']{
+                    float: right;
+                    .iconfont{
+                        margin-left: px2rem(20px);
+                    }
+                }
+            }
+            .iconfont{
+                @include font-dpr(10px);
+            }
+        }
+        .nearby-shop-detail-sales-detail-qcore-favorites{
+            border-top-width: 0px !important;
+        }
+    }
+}
+

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算</title>
+
+    <link rel="stylesheet" href="../../stylesheets/oEcstore.css">
+    <link rel="stylesheet" href="stylesheets/cart.css">
+    <script src="../lib/flexible.js"></script>
+</head>
+<body>
+<div class="layout-page top-layout-page bottom-layout-page">
+    <div class="top-nav text-center">
+        <div class="layout-title">
+            <div class="title-left">
+                <a href="#" class="title-back">
+                    <i class="iconfont iconfont-angle-left"></i>
+                </a>
+            </div>
+            <div class="title-content">结算</div>
+            <div class="title-right">
+                <div class="title-more">
+                    <i class="iconfont iconfont-ellipsis-v"></i>
+                </div>
+            </div>
+            <!-- 增加act类 展示出来 -->
+            <div class="title-nav">
+                <a href="#"><i class="iconfont iconfont-home"></i>主页</a>
+                <a href="#"><i class="iconfont iconfont-list-grid"></i>分类</a>
+                <a href="#"><i class="iconfont iconfont-shopcart-empty"></i>购物车</a>
+                <a href="#"><i class="iconfont iconfont-user"></i>我的</a>
+            </div>
+        </div>
+    </div>
+<!-- 结算页几种状态 
+checkout-empty 表示数据为空，比如收货地址为空时的状态 
+checkout-required 表示必填状态，比如收货地址必填或者选填
+checkout-disabled 表示是否开启填写状态 -->
+    <div class="layout-content checkout-wrapper checkbox">
+        <div class="well checkout-delivery">
+            <div class="checkout-header flex-row-between flex-center">
+                <div class="-col-left">配送信息</div>
+                <div class="-col-content">
+                    <div class="btn btn-mode on">送货上门<i class="iconfont iconfont-check"></i></div>
+                    <div class="btn btn-mode">门店自提<i class="iconfont iconfont-check"></i></div>
+                </div>
+            </div>
+            <div class="checkout-main">
+                <ul>
+                    <li class="cart-delivery-express flex-row-between flex-center">
+                        <div class="-col-left">送货上门</div>
+                        <div class="-col-content">上海市徐汇区桂林路</div>
+                        <div class="-col-right"><i class="iconfont iconfont-angle-right"></i></div>
+                    </li>
+                    <li class="cart-delivery-date flex-row-between flex-center">
+                        <div class="-col-left">自提时间</div>
+                        <div class="-col-content placeholder">请选择您的自提时间</div>
+                        <div class="-col-right"><i class="iconfont iconfont-angle-right"></i></div>
+                    </li>
+                    <li class="cart-delivery-pickedup flex-row-between flex-center">
+                        <div class="-col-left">服务信息</div>
+                        <div class="-col-content"><a href="">您可以到上海徐汇区桂林路提货(500m)</a></div>
+                        <div class="-col-right"><a href=""><i class="iconfont iconfont-location-arrow"></i></a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="well checkout-address checkout-empty checkout-required">
+            <div class="checkout-address-info">
+                <a href="#" class="checkout-address-brief flex-row-between flex-center">
+                    <div class="-col-content">
+                        <div class="checkout-header">
+                            <span class="address-name">羊小铃</span>
+                            <span class="address-phone">185****0934</span>
+                        </div>
+                        <div class="checkout-main">
+                        上海市徐汇区桂林路396号浦原科技商派大楼2号楼5楼技术部（周末不收货）
+                        </div>
+                    </div>
+                    <div class="-col-right"><i class="iconfont iconfont-angle-right"></i></div>
+                </a>
+                <div class="checkout-bottom">
+                    运费：<span class="addr-price">￥5</span>
+                </div>
+            </div>
+            <div class="checkout-address-empty">
+                <a href="">
+                    <i class="iconfont iconfont-error"></i>
+                    请添加收货地址<span class="selectable">(选填)</span><span class="required">(必填)</span>
+                </a>
+            </div>
+        </div>
+        <div class="well checkout-promotion">
+            <div class="checkout-header flex-row-between flex-center">
+                <span class="-col-left">优惠方式</span>
+                <span class="-col-right">
+                    <span class="promotion-desc">已优惠金额</span>
+                    <span class="promotion-price">-￥23.80</span>
+                </span>
+            </div>
+            <div class="checkout-main">
+                <ul>
+                    <li class="checkout-promotion-coupon flex-row-between flex-center">
+                        <div class="-col-left">
+                            <input type="checkbox" id="invoice"><label for="invoice">优惠券</label>
+                        </div>
+                        <div class="-col-content">
+                            满500减20
+                        </div>
+                        <div class="-col-right"><i class="iconfont iconfont-angle-right"></i></div>
+                    </li>
+                    <li class="checkout-promotion-exchange flex-row-between flex-center placeholder">
+                        <div class="-col-left">
+                            <div class="checkbox">
+                                <input type="checkbox" id="invoice"><label for="invoice">积分抵扣（<span class="credit-num">可用740积分</span>）</label>
+                            </div>
+                        </div>
+                        <div class="-col-content">
+                            -￥3.80
+                        </div>
+                        <div class="-col-right"><i class="iconfont iconfont-angle-right"></i></div>
+                    </li>
+                    <li class="checkout-promotion-others flex-row-between flex-center">
+                        <div class="-col-left">
+                            <div class="checkbox">
+                                <input type="checkbox" id="invoice"><label for="invoice">其他优惠券</label>
+                            </div>
+                        </div>
+                        <div class="-col-content placeholder">
+                            输入优惠券码
+                        </div>
+                        <div class="-col-right"><i class="iconfont iconfont-angle-right"></i></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="well checkout-pay">
+            <div class="checkout-header flex-row-between flex-center">
+                <span class="-col-left">支付方式</span>
+                <span class="-col-right">
+                    <span class="pay-desc">还需支付</span>
+                    <span class="pay-price">-￥573.80</span>
+                </span>
+            </div>
+            <div class="checkout-main">
+                <ul>
+                    <li class="checkout-pay-item flex-row-between flex-center">
+                        <div class="-col-left">
+                            <input type="checkbox" id="invoice1"><label for="invoice1"></label>
+                        </div>
+                        <div class="-col-content">
+                            <div class="checkout-pay-img">
+                                <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                            </div>
+                            <div class="checkout-pay-info">
+                                <p class="checkout-pay-title">微信支付</p>
+                                <p class="checkout-pay-tip">推荐已安装微信客户端的用户使用</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="checkout-pay-item flex-row-between flex-center">
+                        <div class="-col-left">
+                            <input type="checkbox" id="invoice"><label for="invoice"></label>
+                        </div>
+                        <div class="-col-content">
+                            <div class="checkout-pay-img">
+                                <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                            </div>
+                            <div class="checkout-pay-info">
+                                <p class="checkout-pay-title">预存款支付</p>
+                                <p class="checkout-pay-tip">使用预存余额完成支付</p>
+                                <span class="checkout-pay-side">预存款余额:<span class="deposit-price">￥278.00</span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="checkout-pay-item flex-row-between flex-center">
+                        <div class="-col-left">
+                            <input type="checkbox" id="invoice"><label for="invoice"></label>
+                        </div>
+                        <div class="-col-content">
+                            <div class="checkout-pay-img">
+                                <img src="../../images/source/shopping-cart/shopping-cart-image1.png" alt="">
+                            </div>
+                            <div class="checkout-pay-info">
+                                <p class="checkout-pay-title">支付宝支付</p>
+                                <p class="checkout-pay-tip">推荐已安装支付宝客户端的用户使用</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="checkout-bottom">
+                选择其他支付方式<i class="iconfont iconfont-angle-down"></i>
+            </div>
+        </div>
+        <div class="well checkout-invoice">
+            <div class="checkout-header flex-row-between flex-center">
+                <div class="-col-left">
+                    <div class="checkbox">
+                        <input type="checkbox" id="invoice"><label for="invoice">开具发票</label>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-main">
+                <ul>
+                    <li class="checkout-invoice-type flex-row-between flex-center">
+                        <div class="-col-left">发票类型</div>
+                        <div class="-col-content">
+                            <div class="btn btn-mode on">个人发票<i class="iconfont iconfont-check"></i></div>
+                            <div class="btn btn-mode">公司发票<i class="iconfont iconfont-check"></i></div>
+                        </div>
+                    </li>
+                    <li class="checkout-invoice-title flex-row-between flex-center">
+                        <div class="-col-left">发票抬头</div>
+                        <div class="-col-content placeholder">
+                            <input type="text" placeholder="请输入公司名称" class="ipt-invoice-company">
+                        </div>
+                    </li>
+                    <li class="checkout-invoice-info flex-row-between flex-center">
+                        <div class="-col-left">发票内容</div>
+                        <div class="-col-content">办公用品</div>
+                        <div class="-col-right"><i class="iconfont iconfont-angle-right"></i></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="well checkout-msg checkout-disabled">
+            <div class="checkout-header flex-row-between flex-center">
+                <div class="-col-left">
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkoutMsg"><label for="checkoutMsg">备注信息</label>
+                    </div>
+                </div>
+                <div class="-col-right">100字以内</div>
+            </div>
+            <div class="checkout-main">
+                <textarea name="msg" placeholder="请填写您的要求" class="ipt-checkout-msg"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav text-center">
+        <div class="checkout-submit">
+            <div class="btn btn-block btn-primary-light">提交订单</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

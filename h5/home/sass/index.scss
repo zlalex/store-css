@@ -1,0 +1,210 @@
+@import "../../../sass/oecstore/init.scss";
+
+@import "compass/css3/box";
+
+.home{
+    // 首页顶部搜索框样式
+    .home-top-search{
+        height: 100%;
+        padding: 0 px2rem($margin-base);
+        @include height($top-nav-height);
+        .home-top-addrselect{
+            padding: 0px px2rem($margin-base);
+            font-size:1.25em;
+            .home-addrselect-name{
+                color: $gray-light;
+            }
+            .iconfont{
+                font-size:.67em;
+                margin-left: px2rem(10px);
+            }
+        }
+        .home-top-search-goods{
+            font-size:1.084em;
+            padding: 0 px2rem($margin-base);
+            text-align:left;
+        }
+    }
+    
+}
+// 回到顶部
+.back-top{
+    position: fixed;
+    right: px2rem(1.5 * $margin-base);
+    bottom: px2rem(190px);
+    width: px2rem(80px);
+    @include height(px2rem(80px));
+    text-align:center;
+    color:#fff;
+    background-color: rgba(0,0,0,.6);
+    @include border-radius(50%);
+    .iconfont{
+        font-size:1.667em;
+    }
+}
+// 模块样式
+// 模块标题
+$blue: #64e1ea;
+$orange: rgb(254,150,19);
+
+.widget-header{
+    border-bottom:1px solid $border-color;
+    padding: px2rem(20px);
+    line-height: px2rem(30px);
+    &::before{
+        content:'';
+        float:left;
+        display: inline-block;
+        width: .25em;
+        height: 1.25em;
+        border-radius:.5em;
+        background-color: transparent;
+    }
+    .-col-left{
+        padding-left: px2rem(10px);
+        font-size:1.25em;
+        color: rgb(51,51,51);
+    }
+    .-col-right{
+        color: rgb(102,102,102);
+        .iconfont{
+            top:-1px;
+            font-size:.833em;
+            margin-left: px2rem(10px);
+        }
+    }
+}
+.widget-theme-blue{
+    .widget-header{
+        &::before{
+            background-color: $blue;
+        }
+    }
+}
+.widget-theme-orange{
+    .widget-header{
+        &::before{
+            background-color: $orange;
+        }
+    }
+}
+// 首页轮播图样式
+.widget-silder {
+    background-color: rgb(255, 255, 255);
+}
+
+// 首页功能导航栏
+.widget-nav{
+    height: px2rem(180px);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: px2rem($margin-small);
+    border-bottom:1px solid $border-color;
+    text-align:center;
+    .nav-list{
+        width: 100%;
+        height: 100%;
+        padding-top: px2rem(35px);
+        @include display-box();
+        .nav-item{
+            height: 100%;
+            @include box-flex(1);
+            color: $gray;
+            img{
+                height: px2rem(80px);
+                width: px2rem(80px);
+                margin-bottom: px2rem(12px);
+            }
+        }
+    }
+}
+
+// 门店模块
+.widget-shop{
+    padding: 0px px2rem(20px);
+    .shop-detail{
+        padding-top:px2rem(27px);
+        padding-bottom:px2rem(27px);
+        border-bottom:1px solid $border-color;
+        .-col-left{
+            margin-right: px2rem(20px);
+            width: px2rem(80px);
+            height: px2rem(80px);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .-col-content{
+            margin-right:px2rem($margin-small);
+        }
+        .-col-right{
+            font-size:1.084em;
+            .iconfont{
+                color: rgb(153,153,153);
+            }
+        }
+    }
+    .shop-detail-title{
+        margin-bottom: px2rem(17px);
+        color: rgb(153,153,153);
+    }
+    .shop-detail-content{
+        font-size:1.084em;
+        .shop-detail-name{
+            color: rgb(51,51,51);
+        }
+        .shop-detail-address{
+            color: rgb(102,102,102);
+        }
+        .shop-detail-range{
+            color: rgb(45,184,168);
+        }
+    }
+}
+
+// 广告模块
+.widget-shop-adware{
+    overflow: hidden;
+    img{
+        width: 100%;
+        min-height: px2rem(150px);
+    }
+}
+.widget-entry{
+    overflow:hidden;
+    .widget-main{
+        overflow:hidden;
+    }
+    .img-entry-list{
+        overflow:hidden;
+        margin:-1px;
+        .img-entry-item{
+            float:left;
+            border:1px solid $border-color;
+        }
+        .item-size-4{
+            width:50%;
+            height:px2rem(379px);
+        }
+        .item-size-3{
+            width:33.33%;
+            height:px2rem(230px);
+        }
+        .item-size-2{
+            width:50%;
+            height:px2rem(150px);
+        }
+        .item-size-1{
+            width:25%;
+            height:px2rem(230px);
+        }
+        img{
+            height:100%;
+            vertical-align:top;
+        }
+    }
+}
+.widget-recommend{
+    overflow:hidden;
+    margin-top:px2rem($padding-base);
+}
